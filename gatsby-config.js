@@ -2,7 +2,6 @@ const { dependencies } = require('./package.json')
 
 // Get Major.Minor
 const gatsbyVersion = dependencies.gatsby.substr(1, 3)
-const styledVersion = dependencies['styled-components'].substr(0, 3)
 // Get current year.
 const year = new Date().getFullYear()
 
@@ -63,10 +62,6 @@ module.exports = {
       },
       src: {
         href: 'https://github.com/rockchalkwushock/codybrunner.rocks'
-      },
-      styled: {
-        href: 'https://www.styled-components.com/',
-        text: `Styled with styled-components ${styledVersion}`
       }
     },
     market: [
@@ -95,7 +90,7 @@ module.exports = {
       { id: 3, href: '/posts', text: 'Blog' },
       { id: 4, href: '/tags', text: 'Tags' }
     ],
-    siteTitle: 'Cody Rocks!',
+    siteTitle: 'Cody Brunner - Full-Stack JavaScript Developer',
     siteUrl: 'https://codybrunner.rocks',
     social: [
       {
