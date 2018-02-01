@@ -1,37 +1,22 @@
 /* eslint-disable no-undef */
 import React from 'react'
-import styled from 'styled-components'
 
-import { Card, Icon, Link, ProfilePic } from '../components'
-
-const Container = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`
-
-const SubGrid = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  padding: 2em 1em;
-`
-
-const List = styled.ul`
-  display: grid;
-  grid-auto-flow: ${({ flow }) => (flow ? 'column' : 'row')};
-  grid-gap: ${({ space }) => (space ? '50px' : '10px')};
-  grid-template-columns: 1fr;
-`
+import {
+  Card,
+  FlexContainer,
+  Grid,
+  Icon,
+  Link,
+  List,
+  ProfilePic
+} from '../components'
 
 const IndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   const { jobTitle, market, social, siteAuthor } = data.site.siteMetadata
   return (
-    <Container>
-      <SubGrid>
+    <FlexContainer>
+      <Grid>
         <ProfilePic />
         <h2>{siteAuthor}</h2>
         <h4>{jobTitle}</h4>
@@ -47,16 +32,16 @@ const IndexPage = ({ data }) => {
             <Link ext href={m.href} key={m.label} text={m.text} />
           ))}
         </List>
-      </SubGrid>
-      <SubGrid>
+      </Grid>
+      <Grid>
         <h1>Recent Posts</h1>
         <List>
           {posts.map(({ node: post }) => (
             <Card key={post.fields.slug} post={post} />
           ))}
         </List>
-      </SubGrid>
-    </Container>
+      </Grid>
+    </FlexContainer>
   )
 }
 

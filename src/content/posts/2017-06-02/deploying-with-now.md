@@ -2,7 +2,7 @@
 date: "2017-06-02"
 draft: false
 title: "Deploying with Now"
-tags: ["command-line, Zeit, now-cli, hosting, deploying"]
+tags: ["command-line", "Zeit", "now-cli", "hosting", "deploying"]
 ---
 
 I am a huge fan of what [Zeit.co](https://zeit.co) is doing these days. Seems whatever they put out is a winner & the [now-cli](https://zeit.co/now) is no different. One three letter word can deploy your product in literally a matter of seconds. In this post I will walk through the basics of deploying using the now-cli as well as touch on some of the configurations, aliasing, buying domains, & scaling with the new `now scale` command. Please note this is being written from the standpoint of deploying node based projects; however information on static & docker deployments can be found as well.
