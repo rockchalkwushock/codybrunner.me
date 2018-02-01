@@ -8,7 +8,7 @@ const PostsPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <FlexContainer>
-      <Grid>
+      <Grid alternate>
         <h1>Cody's Blog</h1>
         <List>
           {posts.map(({ node: post }) => (

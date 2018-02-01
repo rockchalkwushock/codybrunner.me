@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
           ))}
         </List>
       </Grid>
-      <Grid>
+      <Grid alternate>
         <h1>Recent Posts</h1>
         <List>
           {posts.map(({ node: post }) => (

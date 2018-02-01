@@ -3,14 +3,11 @@ import styled from 'styled-components'
 /**
  * TODO
  *
- * 1. Target the background-color of .gatsby-highlight and give a higher contrast.
  * 2. Go through old posts and fix broken things.
- * 3. Link colors need to be fixed.
- * 4. Need to set top & bottom margin for pictures (gatsby-config)
  */
 
 const Content = styled.section`
-  padding: 2em 0 0 0;
+  padding: 1em 0;
 
   > h1,
   h2,
@@ -45,13 +42,15 @@ const Content = styled.section`
   }
 
   > p a {
-    color: red;
+    color: ${({ theme }) => theme.post.linkClr};
+    font-weight: ${({ theme }) => theme.post.linkWt};
+    text-decoration: underline ${({ theme }) => theme.post.linkClr};
     transition: all 0.2s ease-in-out;
     :visited {
-      color: red;
+      color: ${({ theme }) => theme.post.linkClr};
     }
     :hover {
-      color: green;
+      color: ${({ theme }) => theme.post.linkHvClr};
     }
   }
 
@@ -88,6 +87,14 @@ const Content = styled.section`
 
   > p:last-child {
     text-align: center;
+  }
+
+  .gatsby-resp-image-link {
+    padding: 0.25em 0;
+  }
+
+  .gatsby-highlight pre {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 `
 

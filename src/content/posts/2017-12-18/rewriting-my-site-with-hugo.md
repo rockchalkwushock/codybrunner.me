@@ -221,4 +221,4 @@ I really enjoy using `hugo`…_now_ that things are in place and I don’t have 
 
 > **Happy Coding!**
 
-**~ Cody** :rocke
+**~ Cody** :rocket:
