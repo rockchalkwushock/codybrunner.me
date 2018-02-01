@@ -8,7 +8,7 @@ const Footer = styled.footer`
   justify-content: center;
   padding: 1em;
 
-  @media (min-width: 736px) {
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
     flex-direction: row;
     font-size: 100%;
     justify-content: space-between;

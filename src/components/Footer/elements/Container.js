@@ -8,8 +8,8 @@ const Container = styled.div`
   justify-content: center;
   text-align: center;
 
-  @media (min-width: 736px) {
-    align-items: ${props => (props.left ? 'left' : 'right')};
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
+    align-items: ${({ left }) => (left ? 'left' : 'right')};
   }
 `
 

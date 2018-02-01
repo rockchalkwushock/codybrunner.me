@@ -8,24 +8,24 @@ import { bool, string } from 'prop-types'
 const UnstyledLink = props => <Link {...props} />
 
 const ExternalLink = styled.a`
-  color: ${props => props.theme.site.linkClr};
+  color: ${({ theme }) => theme.site.linkClr};
   transition: all 0.2s ease-in;
   :visited {
-    color: ${props => props.theme.site.linkClr};
+    color: ${({ theme }) => theme.site.linkClr};
   }
   :hover {
-    color: ${props => props.theme.site.linkHvClr};
+    color: ${({ theme }) => theme.site.linkHvClr};
   }
 `
 
 const InternalLink = styled(UnstyledLink)`
-  color: ${props => props.theme.site.linkClr};
+  color: ${({ theme }) => theme.site.linkClr};
   transition: all 0.2s ease-in;
   :visited {
-    color: ${props => props.theme.site.linkClr};
+    color: ${({ theme }) => theme.site.linkClr};
   }
   :hover {
-    color: ${props => props.theme.site.linkHvClr};
+    color: ${({ theme }) => theme.site.linkHvClr};
   }
 `
 ExternalLink.displayName = 'ExternalLink'
@@ -35,7 +35,7 @@ const SiteLink = ({ children, ext, href, text }) =>
   ext ? (
     <ExternalLink href={href}>{children || text}</ExternalLink>
   ) : (
-    <InternalLink to={href}>{text}</InternalLink>
+    <InternalLink to={href}>{children || text}</InternalLink>
   )
 
 SiteLink.propTypes = {

@@ -3,7 +3,11 @@ import styled from 'styled-components'
 import { string } from 'prop-types'
 
 const StyledIcon = styled.i`
-  color: ${props => props.theme.site.bg};
+  color: ${({ theme }) => theme.site.linkClr};
+  transition: all 0.2s ease-in-out;
+  :hover {
+    color: ${({ theme }) => theme.site.linkHvClr};
+  }
 `
 
 StyledIcon.displayName = 'Icon'

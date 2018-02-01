@@ -25,6 +25,7 @@ export default injectGlobal`
   }
 
   body {
+    background-color: #7a9eb1;
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden;

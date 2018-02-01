@@ -11,7 +11,7 @@ import '../lib/global'
 // Site Theme
 import theme from '../lib/theme'
 // Layout Components
-import { Footer, Main, NavBar, Wrapper } from '../components'
+import { Footer, NavBar, Wrapper } from '../components'
 
 const LayoutWrapper = ({ children, data }) => {
   const { buildTime, siteMetadata } = data.site
@@ -34,7 +34,7 @@ const LayoutWrapper = ({ children, data }) => {
           ]}
         />
         <NavBar location={location.pathname} menu={siteMenu} />
-        <Main>{children()}</Main>
+        {children()}
         <Footer
           buildTime={buildTime}
           copyright={siteCopyright}

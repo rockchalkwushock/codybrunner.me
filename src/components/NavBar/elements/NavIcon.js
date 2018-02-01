@@ -6,7 +6,7 @@ const NavIcon = styled.button`
   cursor: pointer;
   outline: none;
 
-  @media (min-width: 736px) {
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
     display: none;
   }
 `

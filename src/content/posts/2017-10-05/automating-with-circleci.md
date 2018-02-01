@@ -2,10 +2,8 @@
 date: "2017-10-05"
 draft: false
 title: "Automating with CircleCi 2.0"
-tags: ["ci/cd, circleci, now-cli, Zeit, deploying"]
+tags: ["ci/cd", "circleci", "now-cli", "Zeit", "deploying"]
 ---
-
-> _Disclaimer: I only claim to be an expert at my ABC’s & the “Rock Chalk Chant”. There are many ways to configure the following and likely some that are better; this is just what I have learned along the way._
 
 I’ve been playing around with CircleCi 2.0 for the last month or two on various projects and wanted to share what I have learned during that time. A project I will be starting soon will be using [create-react-app](https://github.com/facebookincubator/create-react-app) & the static build will be deployed to [Now](https://zeit.co/now) using the `now-cli`. So this article will show a method for automating this with CircleCi using workflows.
 
