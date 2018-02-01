@@ -4,7 +4,7 @@ import { arrayOf, string } from 'prop-types'
 
 import Link from '../../Link'
 
-const CardTag = styled.button`
+const Tag = styled.button`
   background-color: ${({ theme }) => theme.site.fg};
   border: none;
   border-radius: 10px;
@@ -21,13 +21,13 @@ const CardTag = styled.button`
 
 const CardTags = ({ tags }) =>
   tags.map(t => (
-    <CardTag key={t}>
+    <Tag key={t}>
       <Link href={`/tags/${t}`} text={t} />
-    </CardTag>
+    </Tag>
   ))
 
 CardTags.propTypes = {
   tags: arrayOf(string).isRequired
 }
-
+export { Tag }
 export default CardTags

@@ -1,11 +1,11 @@
 /* eslint-disable no-undef, react/no-danger */
 import React from 'react'
 
-const PostTemplate = ({ data }) => {
-  const { html } = data.markdownRemark
-  console.log(data)
-  return <div dangerouslySetInnerHTML={{ __html: html }} />
-}
+import { Post } from '../components'
+
+const PostTemplate = ({ data }) => (
+  <Post post={data.markdownRemark} site={data.site} />
+)
 
 export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {

@@ -1,7 +1,14 @@
 import React from 'react'
 import { arrayOf, shape, string } from 'prop-types'
 
-import { Card, CardDate, CardExcerpt, CardTitle, CardTags } from './elements'
+import {
+  Card,
+  CardDate,
+  CardExcerpt,
+  CardTitle,
+  CardTags,
+  Tag
+} from './elements'
 import Link from '../Link'
 
 const SiteCard = ({ post }) => (
@@ -29,4 +36,5 @@ SiteCard.propTypes = {
   })
 }
 
+export { Tag }
 export default SiteCard
