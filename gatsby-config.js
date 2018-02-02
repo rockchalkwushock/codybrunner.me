@@ -46,6 +46,7 @@ module.exports = {
     'gatsby-transformer-sharp'
   ],
   siteMetadata: {
+    disqusShortname: 'codybrunner-rocks',
     jobTitle: 'Full-Stack JavaScript Developer',
     links: {
       creativeCommons: {

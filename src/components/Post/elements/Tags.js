@@ -9,6 +9,9 @@ const Tags = styled.ul`
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
 `
 
 Tags.displayName = 'Tags'

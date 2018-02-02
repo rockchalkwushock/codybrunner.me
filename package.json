@@ -2,8 +2,7 @@
   "name": "codybrunner.rocks",
   "version": "0.1.0",
   "license": "MIT",
-  "author":
-    "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
   "description": "My personal website & tech blog built with Gatsby.",
   "repository": "",
   "scripts": {
@@ -31,9 +30,11 @@
     "gatsby-transformer-sharp": "^1.6.17",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-disqus-comments": "^1.1.1",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
+    "react-share": "^2.0.0",
     "styled-components": "^3.1.4"
   },
   "devDependencies": {
@@ -75,7 +76,9 @@
   },
   "jest": {
     "bail": true,
-    "collectCoverageFrom": ["src/components/**/*.js"],
+    "collectCoverageFrom": [
+      "src/components/**/*.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 50,
@@ -87,11 +90,18 @@
     "moduleNameMapper": {
       ".+\\.(png|jpg|jpeg|svg)$": "identity-obj-proxy"
     },
-    "setupFiles": ["./jest.setup.js"],
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
     "setupTestFrameworkScriptFile": "jest-styled-components",
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": ["/node_modules/", "/.cache/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.transform.js"
     }

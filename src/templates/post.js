@@ -27,6 +27,7 @@ export const postQuery = graphql`
     }
     site {
       siteMetadata {
+        disqusShortname
         siteUrl
       }
     }
