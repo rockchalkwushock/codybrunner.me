@@ -50,10 +50,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         allMarkdownRemark {
           edges {
             node {
+              excerpt(pruneLength: 250)
               fields {
                 slug
               }
               frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                draft
+                tags
                 title
               }
             }

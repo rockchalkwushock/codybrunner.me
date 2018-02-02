@@ -8,6 +8,8 @@ import Grid from './Grid'
 import NavBar from './NavBar'
 import Post from './Post'
 import ProfilePic from './ProfilePic'
+import Tags from './Tags'
+import Term from './Term'
 import Wrapper from './Wrapper'
 
 export {
@@ -21,5 +23,7 @@ export {
   NavBar,
   Post,
   ProfilePic,
+  Tags,
+  Term,
   Wrapper
 }

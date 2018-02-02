@@ -1,8 +1,14 @@
 import React from 'react'
+import { arrayOf, shape, string } from 'prop-types'
 
-const TagsTemplate = props => {
-  console.log(props)
-  return <h1>Tags</h1>
+import { Tags } from '../components'
+
+const TagsTemplate = ({ pathContext }) => <Tags tags={pathContext.tags} />
+
+TagsTemplate.propTypes = {
+  pathContext: shape({
+    tags: arrayOf(string).isRequired
+  }).isRequired
 }
 
 export default TagsTemplate
