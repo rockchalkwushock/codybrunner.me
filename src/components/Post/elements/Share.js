@@ -15,7 +15,7 @@ import {
 } from 'react-share'
 import { string } from 'prop-types'
 
-import List from '../../List'
+import { List } from '../../commons'
 
 const ShareList = List.extend`
   display: flex;

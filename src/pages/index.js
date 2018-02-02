@@ -1,49 +1,14 @@
 /* eslint-disable no-undef */
 import React from 'react'
 
-import {
-  Card,
-  FlexContainer,
-  Grid,
-  Icon,
-  Link,
-  List,
-  ProfilePic
-} from '../components'
+import { HomeView } from '../components'
 
-const IndexPage = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
-  const { jobTitle, market, social, siteAuthor } = data.site.siteMetadata
-  return (
-    <FlexContainer>
-      <Grid>
-        <ProfilePic />
-        <h2>{siteAuthor}</h2>
-        <h4>{jobTitle}</h4>
-        <List flow>
-          {social.map(s => (
-            <Link ext href={s.href} key={s.label}>
-              <Icon className={s.className} />
-            </Link>
-          ))}
-        </List>
-        <List flow space>
-          {market.map(m => (
-            <Link ext href={m.href} key={m.label} text={m.text} />
-          ))}
-        </List>
-      </Grid>
-      <Grid alternate>
-        <h1>Recent Posts</h1>
-        <List>
-          {posts.map(({ node: post }) => (
-            <Card key={post.fields.slug} post={post} />
-          ))}
-        </List>
-      </Grid>
-    </FlexContainer>
-  )
-}
+const IndexPage = ({ data }) => (
+  <HomeView
+    meta={data.site.siteMetadata}
+    posts={data.allMarkdownRemark.edges}
+  />
+)
 
 export const pageQuery = graphql`
   query HomePageQuery {

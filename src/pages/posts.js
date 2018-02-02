@@ -2,23 +2,11 @@
 // TODO: Add SEO, Styled Header for more fancy fancy
 import React from 'react'
 
-import { Card, FlexContainer, Grid, List } from '../components'
+import { PostsView } from '../components'
 
-const PostsPage = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
-  return (
-    <FlexContainer>
-      <Grid alternate>
-        <h1>Cody's Blog</h1>
-        <List>
-          {posts.map(({ node: post }) => (
-            <Card key={post.fields.slug} post={post} />
-          ))}
-        </List>
-      </Grid>
-    </FlexContainer>
-  )
-}
+const PostsPage = ({ data }) => (
+  <PostsView posts={data.allMarkdownRemark.edges} />
+)
 
 // FIXME: Will need to add filter and possibly limit for pagination.
 // Probably will need totalCount for pagination as well.

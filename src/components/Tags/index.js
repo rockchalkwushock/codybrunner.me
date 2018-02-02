@@ -1,8 +1,6 @@
 import React from 'react'
 
-import FlexContainer from '../FlexContainer'
-import Grid from '../Grid'
-import Link from '../Link'
+import { FlexContainer, Grid, Link } from '../commons'
 
 // TODO: Need to create ternary in the event no tags exist which would be like wtf?
 // TODO: Styling

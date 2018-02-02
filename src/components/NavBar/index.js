@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { arrayOf, number, shape, string } from 'prop-types'
 
 import { Nav, NavIcon, NavList } from './elements'
-import Icon from '../Icon'
-import Link from '../Link'
+import { Icon, Link } from '../commons'
 
 class NavBar extends Component {
   static propTypes = {

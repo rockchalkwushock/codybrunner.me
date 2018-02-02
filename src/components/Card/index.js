@@ -1,6 +1,7 @@
 import React from 'react'
 import { arrayOf, bool, shape, string } from 'prop-types'
 
+import { Link } from '../commons'
 import {
   Card,
   CardDate,
@@ -9,7 +10,6 @@ import {
   CardTags,
   Tag
 } from './elements'
-import Link from '../Link'
 
 const SiteCard = ({ post }) => (
   <Card draft={post.frontmatter.draft}>

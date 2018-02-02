@@ -1,9 +1,7 @@
 import React from 'react'
 
 import Card from '../Card'
-import FlexContainer from '../FlexContainer'
-import Grid from '../Grid'
-import List from '../List'
+import { FlexContainer, Grid, List } from '../commons'
 
 // TODO: Need to create ternary in the event no posts exist for term, etc.
 

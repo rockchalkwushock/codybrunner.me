@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+/**
+ * REVIEW:
+ *
+ * This is the site wrapper.
+ * All the generic site them is applied here.
+ */
+
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.site.bg};
   color: ${({ theme }) => theme.site.ftClr};

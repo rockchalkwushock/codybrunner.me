@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { arrayOf, string } from 'prop-types'
 
-import Link from '../../Link'
+import { Link } from '../../commons'
 
 const Tag = styled.button`
   background-color: ${({ theme }) => theme.site.fg};

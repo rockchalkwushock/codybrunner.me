@@ -2,7 +2,7 @@ import React from 'react'
 import { shape, string } from 'prop-types'
 
 import { Container, Footer } from './elements'
-import Link from '../Link'
+import { Link } from '../commons'
 
 const SiteFooter = ({ buildTime, copyright, links, siteUrl }) => {
   const { creativeCommons, gatsby, now, src } = links
