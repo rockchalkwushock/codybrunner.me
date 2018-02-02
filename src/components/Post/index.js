@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
-import { arrayOf, number, shape, string } from 'prop-types'
+import { arrayOf, bool, number, shape, string } from 'prop-types'
 
 import { Content, Disqus, Header, Post, Share, Tags } from './elements'
 
@@ -9,7 +9,7 @@ const SitePost = ({ post, site }) => {
   const { disqusShortname, siteUrl } = site.siteMetadata
   const postUrl = `${siteUrl}${fields.slug}`
   return (
-    <Post>
+    <Post draft={frontmatter.draft}>
       <Header
         date={frontmatter.date}
         time={timeToRead}
@@ -37,6 +37,7 @@ SitePost.propTypes = {
     }).isRequired,
     frontmatter: shape({
       date: string.isRequired,
+      draft: bool.isRequired,
       tags: arrayOf(string).isRequired,
       title: string.isRequired
     }).isRequired,

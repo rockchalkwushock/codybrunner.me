@@ -1,5 +1,5 @@
 import React from 'react'
-import { arrayOf, shape, string } from 'prop-types'
+import { arrayOf, bool, shape, string } from 'prop-types'
 
 import {
   Card,
@@ -12,7 +12,7 @@ import {
 import Link from '../Link'
 
 const SiteCard = ({ post }) => (
-  <Card>
+  <Card draft={post.frontmatter.draft}>
     <CardTitle>
       <Link href={post.fields.slug} text={post.frontmatter.title} />
     </CardTitle>
@@ -30,6 +30,7 @@ SiteCard.propTypes = {
     }),
     frontmatter: shape({
       date: string.isRequired,
+      draft: bool.isRequired,
       tags: arrayOf(string).isRequired,
       title: string.isRequired
     })

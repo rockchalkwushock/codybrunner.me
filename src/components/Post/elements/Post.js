@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import { bool } from 'prop-types'
 
 const Post = styled.article`
   background-color: ${({ theme }) => theme.post.bg};
+  border: ${({ draft }) => (draft ? '6px dashed red' : 'none')};
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
@@ -15,5 +17,8 @@ const Post = styled.article`
 `
 
 Post.displayName = 'Post'
+Post.propTypes = {
+  draft: bool.isRequired
+}
 
 export default Post
