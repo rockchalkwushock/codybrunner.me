@@ -3,13 +3,15 @@ import React from 'react'
 import { arrayOf, bool, number, shape, string } from 'prop-types'
 
 import { Content, Disqus, Header, Post, Share, Tags } from './elements'
+import SEO from '../SEO'
 
-const SitePost = ({ post, site }) => {
+const SitePost = ({ meta, post }) => {
   const { fields, frontmatter, html, timeToRead, wordCount } = post
-  const { disqusShortname, siteUrl } = site.siteMetadata
-  const postUrl = `${siteUrl}${fields.slug}`
+  const { disqusShortname, url } = meta
+  const postUrl = `${url}${fields.slug}`
   return (
     <Post draft={frontmatter.draft}>
+      <SEO post={post} postSeo site={meta} />
       <Header
         date={frontmatter.date}
         time={timeToRead}
@@ -31,6 +33,10 @@ const SitePost = ({ post, site }) => {
 }
 
 SitePost.propTypes = {
+  meta: shape({
+    disqusShortname: string.isRequired,
+    url: string.isRequired
+  }).isRequired,
   post: shape({
     fields: shape({
       slug: string.isRequired
@@ -45,12 +51,6 @@ SitePost.propTypes = {
     timeToRead: number.isRequired,
     wordCount: shape({
       words: number.isRequired
-    }).isRequired
-  }).isRequired,
-  site: shape({
-    siteMetadata: shape({
-      disqusShortname: string.isRequired,
-      siteUrl: string.isRequired
     }).isRequired
   }).isRequired
 }

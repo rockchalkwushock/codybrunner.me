@@ -46,8 +46,17 @@ module.exports = {
     'gatsby-transformer-sharp'
   ],
   siteMetadata: {
+    author: 'Cody Brunner',
+    copyright: `© 2017-${year} Cody Brunner`,
+    description:
+      'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
     disqusShortname: 'codybrunner-rocks',
+    googleVerify: 'TODO',
+    googleAnalytics: 'TODO',
     jobTitle: 'Full-Stack JavaScript Developer',
+    keywords:
+      'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
+    lang: 'en_US',
     links: {
       creativeCommons: {
         href: 'https://creativecommons.org/licenses/by/3.0/', // TODO update this url
@@ -78,21 +87,12 @@ module.exports = {
         text: 'Resume'
       }
     ],
-    siteAuthor: 'Cody Brunner',
-    siteCopyright: `© 2017-${year} Cody Brunner`,
-    siteDescription:
-      'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
-    siteKeywords:
-      'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
-    siteLang: 'en',
-    siteMenu: [
+    menu: [
       { id: 1, href: '/', text: 'Home' },
       { id: 2, href: '/about', text: 'About' },
       { id: 3, href: '/posts', text: 'Blog' },
       { id: 4, href: '/tags', text: 'Tags' }
     ],
-    siteTitle: 'Cody Brunner - Full-Stack JavaScript Developer',
-    siteUrl: 'https://codybrunner.rocks',
     social: [
       {
         className: 'fab fa-github fa-2x',
@@ -103,6 +103,11 @@ module.exports = {
         className: 'fab fa-instagram fa-2x',
         href: 'https://www.instagram.com/rockchalkwushock/',
         label: 'Instagram'
+      },
+      {
+        className: 'fab fa-linkedin fa-2x',
+        href: 'https://www.linkedin.com/in/cody-brunner-324930158/',
+        label: 'LinkedIn'
       },
       {
         className: 'fab fa-telegram-plane fa-2x',
@@ -119,6 +124,9 @@ module.exports = {
         href: 'https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw',
         label: 'Youtube'
       }
-    ]
+    ],
+    title: 'Cody Brunner - Full-Stack JavaScript Developer',
+    twitter: '@RockChalkDev',
+    url: 'https://codybrunner.rocks'
   }
 }

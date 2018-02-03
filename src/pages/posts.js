@@ -5,7 +5,10 @@ import React from 'react'
 import { PostsView } from '../components'
 
 const PostsPage = ({ data }) => (
-  <PostsView posts={data.allMarkdownRemark.edges} />
+  <PostsView
+    posts={data.allMarkdownRemark.edges}
+    site={data.site.siteMetadata}
+  />
 )
 
 // FIXME: Will need to add filter and possibly limit for pagination.
@@ -27,6 +30,19 @@ export const query = graphql`
             title
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        copyright
+        description
+        googleVerify
+        keywords
+        lang
+        title
+        twitter
+        url
       }
     }
   }

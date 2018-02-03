@@ -33,10 +33,21 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
+        author
+        copyright
+        description
+        googleVerify
         jobTitle
+        keywords
+        lang
         market {
           href
           label
+          text
+        }
+        menu {
+          id
+          href
           text
         }
         social {
@@ -44,18 +55,9 @@ export const pageQuery = graphql`
           href
           label
         }
-        siteAuthor
-        siteCopyright
-        siteDescription
-        siteKeywords
-        siteLang
-        siteMenu {
-          id
-          href
-          text
-        }
-        siteTitle
-        siteUrl
+        title
+        twitter
+        url
       }
     }
   }

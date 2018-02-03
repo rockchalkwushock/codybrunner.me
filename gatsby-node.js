@@ -56,7 +56,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               }
               frontmatter {
                 date(formatString: "MMMM DD, YYYY")
+                description
                 draft
+                keywords
                 tags
                 title
               }

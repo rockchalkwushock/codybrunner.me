@@ -13,9 +13,9 @@ import theme from '../lib/theme'
 // Layout Components
 import { Footer, NavBar, Wrapper } from '../components'
 
-const LayoutWrapper = ({ children, data }) => {
+const LayoutWrapper = ({ children, data, location }) => {
   const { buildTime, siteMetadata } = data.site
-  const { siteCopyright, links, siteMenu, siteUrl } = siteMetadata
+  const { copyright, links, menu, url } = siteMetadata
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
@@ -33,13 +33,13 @@ const LayoutWrapper = ({ children, data }) => {
             }
           ]}
         />
-        <NavBar location={location.pathname} menu={siteMenu} />
+        <NavBar location={location.pathname} menu={menu} />
         {children()}
         <Footer
           buildTime={buildTime}
-          copyright={siteCopyright}
+          copyright={copyright}
           links={links}
-          siteUrl={siteUrl}
+          siteUrl={url}
         />
       </Wrapper>
     </ThemeProvider>
@@ -55,6 +55,7 @@ export const templateWrapper = graphql`
     site {
       buildTime(formatString: "DD MMM YYYY")
       siteMetadata {
+        copyright
         links {
           creativeCommons {
             href
@@ -72,13 +73,12 @@ export const templateWrapper = graphql`
             href
           }
         }
-        siteCopyright
-        siteMenu {
+        menu {
           id
           href
           text
         }
-        siteUrl
+        url
       }
     }
   }

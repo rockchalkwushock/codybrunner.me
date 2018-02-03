@@ -4,7 +4,7 @@ import React from 'react'
 import { Post } from '../components'
 
 const PostTemplate = ({ data }) => (
-  <Post post={data.markdownRemark} site={data.site} />
+  <Post meta={data.site.siteMetadata} post={data.markdownRemark} />
 )
 
 export const postQuery = graphql`
@@ -15,7 +15,9 @@ export const postQuery = graphql`
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        description
         draft
+        keywords
         tags
         title
       }
@@ -27,8 +29,16 @@ export const postQuery = graphql`
     }
     site {
       siteMetadata {
+        author
+        copyright
+        description
         disqusShortname
-        siteUrl
+        googleVerify
+        keywords
+        lang
+        title
+        twitter
+        url
       }
     }
   }

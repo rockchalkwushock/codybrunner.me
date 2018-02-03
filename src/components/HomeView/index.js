@@ -3,9 +3,11 @@ import React from 'react'
 import { FlexContainer, Grid, Icon, Link, List } from '../commons'
 import Card from '../Card'
 import ProfilePic from '../ProfilePic'
+import SEO from '../SEO'
 
 const HomeView = ({ meta, posts }) => (
   <FlexContainer>
+    <SEO site={meta} />
     <Grid>
       <ProfilePic />
       <h2>{meta.siteAuthor}</h2>
