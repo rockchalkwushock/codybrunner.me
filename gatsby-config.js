@@ -2,6 +2,7 @@ const { dependencies } = require('./package.json')
 
 // Get Major.Minor
 const gatsbyVersion = dependencies.gatsby.substr(1, 3)
+const styledVersion = dependencies['styled-components'].substr(1, 3)
 // Get current year.
 const year = new Date().getFullYear()
 
@@ -52,18 +53,17 @@ module.exports = {
       'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
     disqusShortname: 'codybrunner-rocks',
     googleVerify: 'TODO',
-    googleAnalytics: 'TODO',
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
       'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
     lang: 'en_US',
     links: {
       creativeCommons: {
-        href: 'https://creativecommons.org/licenses/by/3.0/', // TODO update this url
+        href: 'https://creativecommons.org/licenses/by/3.0', // TODO update this url
         text: 'All Rights Reserved.'
       },
       gatsby: {
-        href: 'https://gatsbyjs.org/',
+        href: 'https://gatsbyjs.org',
         text: `Powered by Gatsby ${gatsbyVersion}`
       },
       now: {
@@ -72,6 +72,10 @@ module.exports = {
       },
       src: {
         href: 'https://github.com/rockchalkwushock/codybrunner.rocks'
+      },
+      styled: {
+        href: 'https://www.styled-components.com',
+        text: `Styled with Styled-Components ${styledVersion}`
       }
     },
     market: [
@@ -101,19 +105,19 @@ module.exports = {
       },
       {
         className: 'fab fa-instagram fa-2x',
-        href: 'https://www.instagram.com/rockchalkwushock/',
+        href: 'https://www.instagram.com/rockchalkwushock',
         label: 'Instagram'
       },
       {
         className: 'fab fa-linkedin fa-2x',
-        href: 'https://www.linkedin.com/in/cody-brunner-324930158/',
+        href: 'https://www.linkedin.com/in/cody-brunner-324930158',
         label: 'LinkedIn'
       },
-      {
-        className: 'fab fa-telegram-plane fa-2x',
-        href: 'https://t.me/rockchalkwushock',
-        label: 'Telegram'
-      },
+      // {
+      //   className: 'fab fa-telegram-plane fa-2x',
+      //   href: 'https://t.me/rockchalkwushock',
+      //   label: 'Telegram'
+      // },
       {
         className: 'fab fa-twitter fa-2x',
         href: 'https://twitter.com/RockChalkDev',

@@ -39,7 +39,7 @@ export const sortedTags = (tags, Component) =>
       ...Component,
       key: term,
       props: {
-        children: `${term}--${termPosts.length}`,
+        children: `${term.toLowerCase()}  (${termPosts.length})`,
         sortkey: termPosts.length,
         to: `/tags/${term.toLowerCase()}`
       }

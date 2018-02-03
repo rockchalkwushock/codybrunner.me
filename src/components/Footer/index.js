@@ -5,7 +5,7 @@ import { Container, Footer } from './elements'
 import { Link } from '../commons'
 
 const SiteFooter = ({ buildTime, copyright, links, siteUrl }) => {
-  const { creativeCommons, gatsby, now, src } = links
+  const { creativeCommons, gatsby, now, src, styled } = links
   return (
     <Footer>
       <Container left>
@@ -14,6 +14,7 @@ const SiteFooter = ({ buildTime, copyright, links, siteUrl }) => {
         <Link ext href={creativeCommons.href} text={creativeCommons.text} />
       </Container>
       <Container>
+        <Link ext href={styled.href} text={styled.text} />
         <Link ext href={gatsby.href} text={gatsby.text} />
         <Link ext href={now.href} text={now.text} />
       </Container>
