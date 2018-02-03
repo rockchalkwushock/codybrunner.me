@@ -2,15 +2,8 @@
 import React from 'react'
 import { arrayOf, bool, number, shape, string } from 'prop-types'
 
-import {
-  Content,
-  Disqus,
-  Header,
-  Pagination,
-  Post,
-  Share,
-  Tags
-} from './elements'
+import { Content, Disqus, Header, Pagination, Post, Share } from './elements'
+import { Tags } from '../commons'
 import SEO from '../SEO'
 
 const SitePost = ({ ctx, meta, post }) => {

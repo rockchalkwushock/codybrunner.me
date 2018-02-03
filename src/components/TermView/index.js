@@ -3,8 +3,6 @@ import React from 'react'
 import Card from '../Card'
 import { FlexContainer, Grid, List, Link } from '../commons'
 
-// TODO: Need to create ternary in the event no posts exist for term, etc.
-
 const Term = ({ tag, taggedPosts }) =>
   taggedPosts ? (
     <FlexContainer>
@@ -13,7 +11,7 @@ const Term = ({ tag, taggedPosts }) =>
           {taggedPosts.length} post{taggedPosts.length === 1 ? '' : 's'} tagged
           with {tag}
         </h1>
-        <List>
+        <List gap={20}>
           {taggedPosts.map(post => <Card key={post.fields.slug} post={post} />)}
         </List>
       </Grid>

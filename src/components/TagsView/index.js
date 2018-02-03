@@ -1,15 +1,16 @@
 import React from 'react'
 
-import { FlexContainer, Grid, Link, Tag } from '../commons'
+import { FlexContainer, Grid, Link, List, Tag } from '../commons'
 import { sortedTags } from '../../lib/helpers'
 
-// TODO: Styling
+// FIXME: Come up with a better display than this, it's garbage
+// It also let's the footer jump up.
 const Tags = ({ tags }) =>
   tags ? (
     <FlexContainer>
       <Grid>
         <h1>Tags</h1>
-        {sortedTags(tags, <Tag />)}
+        <List tags>{sortedTags(tags, <Tag />)}</List>
       </Grid>
     </FlexContainer>
   ) : (

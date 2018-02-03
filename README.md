@@ -6,12 +6,12 @@
 * [ ] Images in SEO
 * [x] Pagination
 * [x] About page
-* [ ] Tags & Terms Styling
+* [x] Tags & Terms Styling
 * [ ] Finalize styling of site & clean up `theme.js` & theme across site.
-* [ ] Proofread posts, write up newest post. **Add keywords to older posts** _Ensure that frontmatter keys are matching for all posts_
+* [ ] Proofread posts, write up newest post.
 * [ ] Testing
 * [ ] Update Resume in Dropbox & link on HomePage
-* [ ] Possibly remove Telegram link
+* [x] Possibly remove Telegram link
 * [ ] Finalize updates to LinkedIn
 * [ ] RSS Feed with `feed` plugin (add RSS feed icon to Share component)
 * [ ] Add `plop` to generate initial post template for writing.
@@ -45,7 +45,7 @@
 
 ## Known Issues
 
-* [ ] Tag Buttons not working
+* [x] Tag Buttons not working
 * [ ] NavBar stays open on route change.
 
 ## v2

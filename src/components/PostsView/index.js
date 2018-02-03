@@ -9,7 +9,7 @@ const PostsView = ({ posts, site }) => (
     <SEO site={site} />
     <Grid alternate>
       <h1>Cody's Blog</h1>
-      <List>
+      <List gap={20}>
         {posts.map(({ node: post }) => (
           <Card key={post.fields.slug} post={post} />
         ))}

@@ -76,6 +76,10 @@ export const templateWrapper = graphql`
           src {
             href
           }
+          styled {
+            href
+            text
+          }
         }
         menu {
           id

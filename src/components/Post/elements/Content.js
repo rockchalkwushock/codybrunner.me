@@ -7,7 +7,7 @@ import styled from 'styled-components'
  */
 
 const Content = styled.section`
-  padding: 1em 0;
+  padding-top: 1em;
 
   > h1,
   h2,

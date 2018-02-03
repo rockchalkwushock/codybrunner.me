@@ -1,8 +1,8 @@
 import React from 'react'
 import { arrayOf, bool, shape, string } from 'prop-types'
 
-import { Link } from '../commons'
-import { Card, CardDate, CardExcerpt, CardTitle, CardTags } from './elements'
+import { Link, Tags } from '../commons'
+import { Card, CardDate, CardExcerpt, CardTitle } from './elements'
 
 const SiteCard = ({ post }) => (
   <Card draft={post.frontmatter.draft}>
@@ -11,7 +11,7 @@ const SiteCard = ({ post }) => (
     </CardTitle>
     <CardDate>{post.frontmatter.date}</CardDate>
     <CardExcerpt>{post.excerpt}</CardExcerpt>
-    <CardTags tags={post.frontmatter.tags} />
+    <Tags tags={post.frontmatter.tags} />
   </Card>
 )
 
