@@ -45,9 +45,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
   return new Promise((_resolve, reject) => {
     // FIXME: filter out 'drafts = true' at build time in production.
+    // NOTE: order is ASC because of next/prev context of array of posts.
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
           edges {
             node {
               excerpt(pruneLength: 250)
@@ -79,8 +80,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           path: post.fields.slug,
           component: resolve('src/templates/post.js'),
           context: {
-            next: i === posts.length - 1 ? false : posts[i + 1].node,
-            prev: i === 0 ? false : posts[i - 1].node,
+            next: i === posts.length - 1 ? null : posts[i + 1].node,
+            prev: i === 0 ? null : posts[i - 1].node,
             slug: post.fields.slug
           }
         })

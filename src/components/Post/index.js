@@ -2,10 +2,18 @@
 import React from 'react'
 import { arrayOf, bool, number, shape, string } from 'prop-types'
 
-import { Content, Disqus, Header, Post, Share, Tags } from './elements'
+import {
+  Content,
+  Disqus,
+  Header,
+  Pagination,
+  Post,
+  Share,
+  Tags
+} from './elements'
 import SEO from '../SEO'
 
-const SitePost = ({ meta, post }) => {
+const SitePost = ({ ctx, meta, post }) => {
   const { fields, frontmatter, html, timeToRead, wordCount } = post
   const { disqusShortname, url } = meta
   const postUrl = `${url}${fields.slug}`
@@ -20,6 +28,7 @@ const SitePost = ({ meta, post }) => {
       />
       <Content dangerouslySetInnerHTML={{ __html: html }} />
       <Tags tags={frontmatter.tags} />
+      <Pagination {...ctx} />
       <Share title={frontmatter.title} url={postUrl} />
       {process.env.NODE_ENV === 'production' ? (
         <Disqus
@@ -33,6 +42,15 @@ const SitePost = ({ meta, post }) => {
 }
 
 SitePost.propTypes = {
+  // ctx: shape({
+  //   next: shape({
+
+  //   }),
+  //   prev: shape({
+
+  //   }),
+  //   slug: string.isRequired
+  // }),
   meta: shape({
     disqusShortname: string.isRequired,
     url: string.isRequired

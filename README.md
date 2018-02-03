@@ -4,17 +4,18 @@
 
 * [ ] Logo
 * [ ] Images in SEO
-* [ ] Pagination
+* [x] Pagination
 * [ ] Related
 * [x] About page
 * [ ] Tags & Terms Styling
 * [ ] Finalize styling of site & clean up `theme.js` & theme across site.
-* [ ] Proofread posts, write up newest post.
+* [ ] Proofread posts, write up newest post. **Add keywords to older posts** _Ensure that frontmatter keys are matching for all posts_
 * [ ] Testing
 * [ ] Update Resume in Dropbox & link on HomePage
 * [ ] Possibly remove Telegram link
 * [ ] Finalize updates to LinkedIn
 * [ ] RSS Feed with `feed` plugin (add RSS feed icon to Share component)
+* [ ] Add `plop` to generate initial post template for writing.
 
 ## Accessibility
 

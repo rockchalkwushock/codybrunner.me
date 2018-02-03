@@ -10,7 +10,9 @@ const Header = styled.header`
 `
 const PostDate = styled.h4``
 const PostMeta = styled.h4``
-const PostTitle = styled.h1``
+const PostTitle = styled.h1`
+  text-align: center;
+`
 
 Header.displayName = 'Header'
 PostDate.displayName = 'Date'

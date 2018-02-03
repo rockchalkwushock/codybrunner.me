@@ -3,8 +3,12 @@ import React from 'react'
 
 import { SinglePost } from '../components'
 
-const PostTemplate = ({ data }) => (
-  <SinglePost meta={data.site.siteMetadata} post={data.markdownRemark} />
+const PostTemplate = ({ data, pathContext }) => (
+  <SinglePost
+    ctx={pathContext}
+    meta={data.site.siteMetadata}
+    post={data.markdownRemark}
+  />
 )
 
 export const postQuery = graphql`
