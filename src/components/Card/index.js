@@ -2,14 +2,7 @@ import React from 'react'
 import { arrayOf, bool, shape, string } from 'prop-types'
 
 import { Link } from '../commons'
-import {
-  Card,
-  CardDate,
-  CardExcerpt,
-  CardTitle,
-  CardTags,
-  Tag
-} from './elements'
+import { Card, CardDate, CardExcerpt, CardTitle, CardTags } from './elements'
 
 const SiteCard = ({ post }) => (
   <Card draft={post.frontmatter.draft}>
@@ -37,5 +30,4 @@ SiteCard.propTypes = {
   })
 }
 
-export { Tag }
 export default SiteCard

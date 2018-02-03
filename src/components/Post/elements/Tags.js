@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { arrayOf, string } from 'prop-types'
 
-import { Link } from '../../commons'
-import { Tag } from '../../Card'
+import { Tag } from '../../commons'
 
 const Tags = styled.ul`
   display: grid;
@@ -18,9 +17,9 @@ Tags.displayName = 'Tags'
 
 const PostTags = ({ tags }) => (
   <Tags>
-    {tags.map(t => (
-      <Tag key={t}>
-        <Link href={`/tags/${t}`} text={t} />
+    {tags.map(tag => (
+      <Tag key={tag} to={`/tags/${tag}`}>
+        {tag}
       </Tag>
     ))}
   </Tags>

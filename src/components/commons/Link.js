@@ -44,4 +44,5 @@ SiteLink.propTypes = {
   text: string
 }
 
+export { InternalLink }
 export default SiteLink

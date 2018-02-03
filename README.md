@@ -5,7 +5,6 @@
 * [ ] Logo
 * [ ] Images in SEO
 * [x] Pagination
-* [ ] Related
 * [x] About page
 * [ ] Tags & Terms Styling
 * [ ] Finalize styling of site & clean up `theme.js` & theme across site.
@@ -48,3 +47,9 @@
 
 * [ ] Tag Buttons not working
 * [ ] NavBar stays open on route change.
+
+## v2
+
+* [ ] Related Posts
+* [ ] Projects
+* [ ] Certifications

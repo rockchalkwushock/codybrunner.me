@@ -18,15 +18,17 @@ const createTagPages = (createPage, posts) => {
       })
     }
   })
-  const tags = Object.keys(postsByTags)
+
   // Create the tags page with the list of tags from our posts object.
   createPage({
     path: '/tags',
     component: resolve(`src/templates/tags.js`),
     context: {
-      tags: tags.sort()
+      tags: Object.entries(postsByTags)
     }
   })
+
+  const tags = Object.keys(postsByTags)
   // For each of the tags in the post object, create a tag page.
   tags.forEach(term => {
     const taggedPosts = postsByTags[term]
