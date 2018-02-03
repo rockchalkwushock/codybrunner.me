@@ -1,6 +1,8 @@
 ---
 date: "2017-07-11"
+description: "Looking back on one year of learning web-development."
 draft: false
+keywords: "personal reflection, web-development"
 title: "One Year of Web Development"
 tags: ["personal-life", "web-development"]
 ---

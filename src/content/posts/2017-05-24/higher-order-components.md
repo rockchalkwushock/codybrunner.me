@@ -1,8 +1,10 @@
 ---
 date: "2017-05-24"
+description: "A short piece on higher-order-functions in React."
 draft: false
+keywords: "JavaScript, higher-order-components, higher-order-functions, functional-programming"
 title: "Higher Order Components"
-tags: ["javascript"]
+tags: ["JavaScript"]
 ---
 
 No lie I love me some Higher Order Components(HOC)! It makes life so much easier to be able to apply whatever business logic, layout, styling, data, etc to components by wrapping them in an HOC. Think of an HOC as just that: a wrapper for your component that lifts up the logic that would normally be present making it reusable with other components needing the same data, layout, etc. It lends itself to more composable code & less writing of the same logic across multiple files. This very blog uses 2 HOC's. One for setting the global layout of the application & another for applying Google Analytics throughout all views.

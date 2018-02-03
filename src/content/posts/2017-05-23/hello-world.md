@@ -1,8 +1,10 @@
 ---
 date: "2017-05-23"
+descriptoin: "My frist blog post."
 draft: false
+keywords: "first post"
 title: "Hello World"
-tags: ["web-development"]
+tags: ["welcome"]
 ---
 
 Never in my life would I have thought this would be something I would do:

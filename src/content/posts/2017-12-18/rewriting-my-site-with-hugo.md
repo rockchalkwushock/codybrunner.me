@@ -1,8 +1,10 @@
 ---
 date: "2017-12-18"
+description: "What I learned while rebuilding my site/blog with Hugo."
 draft: false
+keywords: "Hugo, CMS, blog, now-cli, Zeit"
 title: "Rewriting my site with Hugo"
-tags: ["hugo", "now-cli"]
+tags: ["Hugo", "cli"]
 ---
 
 I had heard of [Hugo](https://gohugo.io) a while back, but never really looked into much until recently. I decided I wanted to give it a go with rewriting my website and this post is about what I learned along the way.

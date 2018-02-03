@@ -1,8 +1,10 @@
 ---
 date: "2017-12-19"
+description: "How to get started with iTerm2, zsh, & vscode."
 draft: false
-title: "Up & Running with Iterm & Zsh"
-tags: ["iTerm2", "zsh", "vscode", "shell", "command-line"]
+keywords: "iTerm2, zsh, vscode, powerlevel9k, command-line"
+title: "Up & Running with iTerm2 & Zsh"
+tags: ["iTerm2", "zsh", "vscode", "cli"]
 ---
 
 I have worked in the native Terminal on my Mac since I got started programming a year and a half ago. I had my customized setup for the bash environment and all my custom aliases and functions. To be honest it worked fine for me. Then one day I saw auto-completion for things I could not auto-complete in my shell and was like:

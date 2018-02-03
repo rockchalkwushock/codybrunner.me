@@ -1,8 +1,10 @@
 ---
 date: "2017-07-25"
+description: "Some items I picked up when re-learning Facebook's GraphQL."
 draft: false
+keywords: "Apollo, GraphQL, Jest, Dataloader, JavaScript"
 title: "What I Learned Re-learning GraphQL"
-tags: ["graphql", "javascript"]
+tags: ["Apollo", "DataLoader", "GraphQL", "Jest", "JavaScript"]
 ---
 
 I learned the basics of [Facebook’s GraphQL](http://graphql.org/) back in February while going through Mr. Stephen Grider’s excellent [tutorial](https://www.udemy.com/graphql-with-react-course/) on Udemy. I loved how flexible and easy to use this was in comparison to the rigidness of REST API structures. Getting the data you wanted to the client had never been easier. The ability to not under or over fetch data is what has sold most developers. I sat it to the side while I continued to work on current projects hoping to work with it more in the coming months. Five nearly six months later I have come back and found that the community, tools, and tech itself has evolved and progressed quite a bit. The following article is what I learned while getting back up to snuff on the subject matter.
