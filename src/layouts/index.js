@@ -19,20 +19,23 @@ const LayoutWrapper = ({ children, data, location }) => {
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
-        <Helmet
-          link={[
-            {
-              href: 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway',
-              rel: 'stylesheet'
-            }
-          ]}
-          script={[
-            {
-              defer: true,
-              src: 'https://use.fontawesome.com/releases/v5.0.4/js/all.js'
-            }
-          ]}
-        />
+        <Helmet>
+          {/* VERIFICATIONS */}
+          <meta
+            name="google-site-verification"
+            content={siteMetadata.googleVerify}
+          />
+          {/* EXTERNAL LINKS */}
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway"
+          />
+          {/* EXTERNAL SCRIPTS */}
+          <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"
+          />
+        </Helmet>
         <NavBar location={location.pathname} menu={menu} />
         {children()}
         <Footer
@@ -56,6 +59,7 @@ export const templateWrapper = graphql`
       buildTime(formatString: "DD MMM YYYY")
       siteMetadata {
         copyright
+        googleVerify
         links {
           creativeCommons {
             href

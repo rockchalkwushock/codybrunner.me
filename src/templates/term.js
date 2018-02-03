@@ -1,11 +1,11 @@
 import React from 'react'
 import { arrayOf, bool, shape, string } from 'prop-types'
 
-import { Term } from '../components'
+import { TermView } from '../components'
 
 // REVIEW: Weird propTypes error "checker not a function".
 
-const TermTemplate = ({ pathContext }) => <Term {...pathContext} />
+const TermTemplate = ({ pathContext }) => <TermView {...pathContext} />
 
 TermTemplate.propTypes = {
   pathContext: shape({

@@ -55,4 +55,5 @@ SitePost.propTypes = {
   }).isRequired
 }
 
+export { Content, Header, Post, Share }
 export default SitePost

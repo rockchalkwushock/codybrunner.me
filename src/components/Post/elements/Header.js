@@ -17,10 +17,10 @@ PostDate.displayName = 'Date'
 PostMeta.displayName = 'Meta'
 PostTitle.displayName = 'Title'
 
-const PostHeader = ({ date, time, title, words }) => (
+const PostHeader = ({ about, date, time, title, words }) => (
   <Header>
     <PostTitle>{title}</PostTitle>
-    <PostDate> {date} </PostDate>
+    <PostDate>{about ? `Last Updated: ${date}` : date}</PostDate>
     <PostMeta>{`${time} minutes • ${words} words`}</PostMeta>
   </Header>
 )

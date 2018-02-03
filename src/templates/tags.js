@@ -1,9 +1,9 @@
 import React from 'react'
 import { arrayOf, shape, string } from 'prop-types'
 
-import { Tags } from '../components'
+import { TagsView } from '../components'
 
-const TagsTemplate = ({ pathContext }) => <Tags tags={pathContext.tags} />
+const TagsTemplate = ({ pathContext }) => <TagsView tags={pathContext.tags} />
 
 TagsTemplate.propTypes = {
   pathContext: shape({

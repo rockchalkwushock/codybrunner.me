@@ -6,7 +6,7 @@
 * [ ] Images in SEO
 * [ ] Pagination
 * [ ] Related
-* [ ] About page
+* [x] About page
 * [ ] Tags & Terms Styling
 * [ ] Finalize styling of site & clean up `theme.js` & theme across site.
 * [ ] Proofread posts, write up newest post.

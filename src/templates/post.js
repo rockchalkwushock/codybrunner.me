@@ -1,10 +1,10 @@
 /* eslint-disable no-undef, react/no-danger */
 import React from 'react'
 
-import { Post } from '../components'
+import { SinglePost } from '../components'
 
 const PostTemplate = ({ data }) => (
-  <Post meta={data.site.siteMetadata} post={data.markdownRemark} />
+  <SinglePost meta={data.site.siteMetadata} post={data.markdownRemark} />
 )
 
 export const postQuery = graphql`
@@ -33,7 +33,6 @@ export const postQuery = graphql`
         copyright
         description
         disqusShortname
-        googleVerify
         keywords
         lang
         title

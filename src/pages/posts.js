@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-// TODO: Add SEO, Styled Header for more fancy fancy
+// TODO: Styled Header for more fancy fancy
 import React from 'react'
 
 import { PostsView } from '../components'
@@ -15,7 +15,10 @@ const PostsPage = ({ data }) => (
 // Probably will need totalCount for pagination as well.
 export const query = graphql`
   query BlogPageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      filter: { fields: { slug: { ne: "/about/" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       totalCount
       edges {
         node {
@@ -37,7 +40,6 @@ export const query = graphql`
         author
         copyright
         description
-        googleVerify
         keywords
         lang
         title

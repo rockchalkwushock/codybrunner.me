@@ -90,8 +90,6 @@ const SEO = ({ post, postSeo, site }) => {
         name="twitter:url"
         content={postSeo ? `${site.url}${post.fields.slug}` : site.url}
       />
-      {/* VERIFICATIONS */}
-      <meta name="google-site-verification" content={site.googleVerify} />
       <title itemProp="name" lang={site.lang}>
         {postSeo ? `Cody's Blog - ${post.frontmatter.title}` : site.title}
       </title>

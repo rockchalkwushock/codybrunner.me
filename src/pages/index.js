@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => (
 export const pageQuery = graphql`
   query HomePageQuery {
     allMarkdownRemark(
+      filter: { fields: { slug: { ne: "/about/" } } }
       limit: 5
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
