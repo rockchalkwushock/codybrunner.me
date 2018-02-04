@@ -25,6 +25,14 @@ class NavBar extends Component {
   state = {
     visible: false
   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location !== this.props.location) {
+      // Handle different route navigation & closing menu.
+      this.setState(state => ({ ...state, visible: false }))
+    }
+    // Handles traveling to same route & closing menu.
+    this.setState(state => ({ ...state, visible: false }))
+  }
   handleOnClick = () =>
     this.state.visible
       ? this.setState(state => ({ ...state, visible: false }))

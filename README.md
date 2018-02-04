@@ -51,7 +51,7 @@
 ## Known Issues
 
 * [x] Tag Buttons not working
-* [ ] NavBar stays open on route change.
+* [x] NavBar stays open on route change.
 
 ## v2
 
