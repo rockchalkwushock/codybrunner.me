@@ -4,6 +4,13 @@ import { arrayOf, number, shape, string } from 'prop-types'
 import { Nav, NavIcon, NavList } from './elements'
 import { Icon, Link } from '../commons'
 
+/**
+ * @fileOverview
+ * Site Navigation
+ *
+ * Present in all views.
+ */
+
 class NavBar extends Component {
   static propTypes = {
     menu: arrayOf(

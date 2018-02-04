@@ -4,7 +4,16 @@ import { bool } from 'prop-types'
 
 import { mergeStrings } from '../../lib/helpers'
 
-// TODO: Images.
+/**
+ * @fileOverview
+ * SEO Component
+ *
+ * Accepts post & site meta data from GraphQL Query.
+ * postSeo {Boolean} tells component whether or not to
+ * use post or site meta data.
+ *
+ * TODO: Images/Favicons/Icons
+ */
 
 const SEO = ({ post, postSeo, site }) => {
   const keywords = postSeo

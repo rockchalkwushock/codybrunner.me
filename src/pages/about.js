@@ -3,6 +3,14 @@ import React from 'react'
 
 import { AboutView } from '../components'
 
+/**
+ * @fileOverview
+ * Site About Page
+ *
+ * Calls AboutPageQuery
+ * Only looks for slug '/about/'
+ */
+
 const AboutPage = ({ data }) => (
   <AboutView
     content={data.markdownRemark}

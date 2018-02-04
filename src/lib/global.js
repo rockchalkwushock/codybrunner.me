@@ -1,5 +1,12 @@
 import { injectGlobal } from 'styled-components'
 
+/**
+ * @fileOverview
+ * Global Styling for application.
+ *
+ * NOTE: rem is figured from <html /> font-size.
+ */
+
 export default injectGlobal`
 *,
   *::before,
@@ -21,7 +28,7 @@ export default injectGlobal`
   }
 
   html {
-    font-size: 1em; /* This is where rem is figurd from! */
+    font-size: 1em;
   }
 
   body {

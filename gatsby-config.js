@@ -124,6 +124,8 @@ const prodOnly = [
 module.exports = {
   plugins: isProd ? [...plugins, ...prodOnly] : plugins,
   siteMetadata: {
+    aboutSnippet:
+      'Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!',
     author: 'Cody Brunner',
     business: [
       {
@@ -179,6 +181,8 @@ module.exports = {
     description:
       'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
     disqusShortname: 'codybrunner-rocks',
+    employment:
+      'Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.',
     googleVerify: 'TODO',
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:

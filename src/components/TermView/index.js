@@ -3,6 +3,17 @@ import React from 'react'
 import Card from '../Card'
 import { FlexContainer, Grid, List, Link } from '../commons'
 
+/**
+ * @fileOverview
+ * Individual Tag Page View
+ *
+ * Accepts the selected tag & corresponding posts
+ * from the GraphQL Query.
+ * Ternary expression is really not needed,
+ * but I will keep it in the off chance Gatsby
+ * has an internal error fetching the data.
+ */
+
 const Term = ({ tag, taggedPosts }) =>
   taggedPosts ? (
     <FlexContainer>

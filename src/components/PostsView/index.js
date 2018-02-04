@@ -4,6 +4,13 @@ import { FlexContainer, Grid, List } from '../commons'
 import Card from '../Card'
 import SEO from '../SEO'
 
+/**
+ * @fileOverview
+ * Posts Page View
+ *
+ * Accepts array of posts & siteMetadata from GraphQL Query.
+ */
+
 const PostsView = ({ posts, site }) => (
   <FlexContainer>
     <SEO site={site} />

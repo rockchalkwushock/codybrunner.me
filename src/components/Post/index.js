@@ -6,6 +6,15 @@ import { Content, Disqus, Header, Pagination, Post, Share } from './elements'
 import { Tags } from '../commons'
 import SEO from '../SEO'
 
+/**
+ * @fileOverview
+ * Individual Post
+ *
+ * Accepts individual post, pathContext, & siteMetadata from GraphQL Query.
+ * Has dynamic SEO based on post metadata.
+ * <Disqus /> ONLY in production.
+ */
+
 const SitePost = ({ ctx, meta, post }) => {
   const { fields, frontmatter, html, timeToRead, wordCount } = post
   const { disqusShortname, url } = meta

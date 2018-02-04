@@ -4,6 +4,15 @@ import { shape, string } from 'prop-types'
 import { Container, Footer } from './elements'
 import { Link } from '../commons'
 
+/**
+ * @fileOverview
+ * Footer for the site.
+ *
+ * Present in all views.
+ * Accepts data from site.siteMetadata & file in GraphQL Query.
+ * buildTime is a dynamic date generated at time of build by Gatsby.
+ */
+
 const SiteFooter = ({ buildTime, copyright, links, siteUrl }) => {
   const { creativeCommons, gatsby, now, src, styled } = links
   return (

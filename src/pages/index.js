@@ -3,6 +3,18 @@ import React from 'react'
 
 import { HomeView } from '../components'
 
+/**
+ * @fileOverview
+ * Site Home Page
+ *
+ * Calls HomePageQuery
+ * Filters out '/about/' slug
+ * `draft` is part of query for alt-css
+ * so I can see what is still considered
+ * a draft before publishing and running
+ * in produciton.
+ */
+
 const IndexPage = ({ data }) => (
   <HomeView
     meta={data.site.siteMetadata}
@@ -34,6 +46,7 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
+        aboutSnippet
         author
         business {
           className
@@ -47,6 +60,7 @@ export const pageQuery = graphql`
         }
         copyright
         description
+        employment
         googleVerify
         jobTitle
         keywords

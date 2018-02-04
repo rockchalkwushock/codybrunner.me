@@ -5,9 +5,16 @@
  * @param {String} str1 - site.keywords
  * @param {String} str2 - post.frontmatter.keywords
  *
+ * @description
+ * Takes in two strings & merges them into one. Should
+ * second string not be provided return first string.
+ *
+ * @example
+ * const str = mergeString('hello, world, peanuts', 'Jayhawks, JavaScript, beer')
+ * console.log(str) // 'hello, world, peanuts, Jayhawks, JavaScript, beer'
+ *
  * @returns {String}
  *
- * NOTE: check if str2 is null, throws error in production build.
  */
 export const mergeStrings = (str1, str2) =>
   str2 ? [...str1.split(', '), ...str2.split(', ')].join(', ') : str1
@@ -25,7 +32,8 @@ export const mergeStrings = (str1, str2) =>
  * required props. Sorts the array of components to
  * return ordered by most to least posts/term.
  *
- * @example sortedTags(tags, <Tag />) => (
+ * @example
+ * sortedTags(tags, <Tag />) => (
  *  ...,
  *  <Tag key="React" sortkey=4 to="/tags/react">React--(4)</Tag>,
  *  ...

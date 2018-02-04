@@ -1,8 +1,26 @@
 /* eslint-disable no-undef */
-// TODO: Styled Header for more fancy fancy
 import React from 'react'
 
 import { PostsView } from '../components'
+
+/**
+ * @fileOverview
+ * Site Posts Page
+ *
+ * Calls PostsPageQuery
+ * Filters out '/about/' slug
+ * `draft` is part of query for alt-css
+ * so I can see what is still considered
+ * a draft before publishing and running
+ * in produciton.
+ *
+ * REVIEW
+ * Will need to likely include `totalCount` & provide a `limit`
+ * for implementing pagination on this page. Not enough posts at
+ * this point in time to add this feature.
+ *
+ * TODO: Styled Header for more fancy fancy, like a background img header?
+ */
 
 const PostsPage = ({ data }) => (
   <PostsView
@@ -11,15 +29,12 @@ const PostsPage = ({ data }) => (
   />
 )
 
-// FIXME: Will need to add filter and possibly limit for pagination.
-// Probably will need totalCount for pagination as well.
-export const query = graphql`
-  query BlogPageQuery {
+export const PostsPageQuery = graphql`
+  query PostsPageQuery {
     allMarkdownRemark(
       filter: { fields: { slug: { ne: "/about/" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
-      totalCount
       edges {
         node {
           excerpt(pruneLength: 250)

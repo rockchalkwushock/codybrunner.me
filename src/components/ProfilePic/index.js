@@ -2,6 +2,16 @@ import styled from 'styled-components'
 
 import profilePic from '../../assets/profile_pic.jpg'
 
+/**
+ * @fileOverview
+ * Profile Pic
+ *
+ * REVIEW
+ * I would like to look at the perf diff of
+ * - importing into CSS (webpack)
+ * - `gatsby-image` utilizing the bells & whistles of `sharp`.
+ */
+
 const ProfilePic = styled.div`
   background-color: ${({ theme }) => theme.site.bg};
   background-image: url(${profilePic});

@@ -4,6 +4,13 @@ import { arrayOf, bool, shape, string } from 'prop-types'
 import { Link, Tags } from '../commons'
 import { Card, CardDate, CardExcerpt, CardTitle } from './elements'
 
+/**
+ * @fileOverview
+ * Card Component
+ *
+ * Accepts individual post data from GraphQL Query.
+ */
+
 const SiteCard = ({ post }) => (
   <Card draft={post.frontmatter.draft}>
     <CardTitle>
