@@ -16,7 +16,7 @@
 * [ ] Testing
 * [ ] Update Resume in Dropbox & link on HomePage
 * [ ] Finalize updates to LinkedIn
-* [ ] RSS Feed with `feed` plugin (add RSS feed icon to Share component) `fas fa-rss`
+* [x] RSS Feed with `feed` plugin (add RSS feed icon to Share component) `fas fa-rss`
 * [ ] Add `plop` to generate initial post template for writing.
 
 ## Accessibility
@@ -36,7 +36,7 @@
 * [x] Add `sitemap`
 * [x] Add `favicon`
 * [x] Add `sentry`
-* [ ] Filter `draft: true` in `gatsby-node.js`
+* [x] Filter `draft: true` in `gatsby-node.js`
 
 ## Perf
 

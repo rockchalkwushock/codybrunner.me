@@ -1,3 +1,5 @@
+// Package
+require('dotenv-safe').load()
 const { dependencies } = require('./package.json')
 
 // Get Major.Minor
@@ -26,7 +28,7 @@ const plugins = [
       plugins: [
         'gatsby-remark-autolink-headers',
         'gatsby-remark-emoji',
-        'gatsby-remark-external-links',
+        'gatsby-remark-external-links', // REVIEW: Might remove.
         {
           resolve: 'gatsby-remark-images',
           options: {
@@ -83,19 +85,21 @@ const prodOnly = [
   {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      trackingId: 'TODO',
+      trackingId: `${process.env.GOOGLE_ANALYTICS_ID}`,
       anonymize: true
     }
   },
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
+      background_color: '#7a9eb1',
+      description: 'Personal website, tech blog, & portfolio for Cody Brunner',
+      display: 'standalone',
+      lang: 'en-US',
       name: 'codybrunner.rocks',
       short_name: 'Cody Rocks',
       start_url: '/',
-      background_color: '#f7f0eb', // TODO
-      theme_color: '#a2466c', // TODO
-      display: 'minimal-ui' // REVIEW
+      theme_color: '#ffe1b6'
       // icons: [] TODO
     }
   },
@@ -112,7 +116,7 @@ const prodOnly = [
   {
     resolve: 'gatsby-plugin-sentry',
     options: {
-      dsn: 'TODO'
+      dsn: `${process.env.SENTRY_DSN}`
     }
   }
 ]
@@ -121,16 +125,29 @@ module.exports = {
   plugins: isProd ? [...plugins, ...prodOnly] : plugins,
   siteMetadata: {
     author: 'Cody Brunner',
+    business: [
+      {
+        className: 'fas fa-envelope',
+        href: 'mailto:rockchalkwushock@icloud.com',
+        label: 'Email'
+      },
+      {
+        className: 'fab fa-telegram-plane',
+        href: 'https://t.me/rockchalkwushock',
+        label: 'Telegram'
+      },
+      {
+        className: 'fas fa-file-pdf',
+        href:
+          'https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1',
+        label: 'Resume'
+      }
+    ],
     contacts: [
       {
         className: 'fab fa-github',
         href: 'https://github.com/rockchalkwushock',
         label: 'Github'
-      },
-      {
-        className: 'fas fa-envelope',
-        href: 'mailto:rockchalkwushock@icloud.com',
-        label: 'Email'
       },
       {
         className: 'fab fa-instagram',
@@ -143,15 +160,9 @@ module.exports = {
         label: 'LinkedIn'
       },
       {
-        className: 'fab fa-telegram-plane',
-        href: 'https://t.me/rockchalkwushock',
-        label: 'Telegram'
-      },
-      {
-        className: 'fas fa-file-pdf',
-        href:
-          'https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1',
-        label: 'Resume'
+        className: 'fas fa-rss',
+        href: 'rss.xml',
+        label: 'RSS Feed'
       },
       {
         className: 'fab fa-twitter',

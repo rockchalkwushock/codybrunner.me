@@ -35,6 +35,11 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         author
+        business {
+          className
+          href
+          label
+        }
         contacts {
           className
           href

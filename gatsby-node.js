@@ -4,6 +4,9 @@ const { resolve } = require('path')
 // Package
 const { createFilePath } = require('gatsby-source-filesystem')
 
+// Condition
+const isProd = process.env.NODE_ENV === 'production'
+
 const createTagPages = (createPage, posts) => {
   // Create an empty object to store the posts.
   const postsByTags = {}
@@ -43,14 +46,18 @@ const createTagPages = (createPage, posts) => {
   })
 }
 
+// Look up params for dev vs prod.
+const args = isProd
+  ? 'filter: { frontmatter: { draft: { ne: true } } } sort: { order: ASC, fields: [frontmatter___date] }'
+  : 'sort: { order: ASC, fields: [frontmatter___date] }'
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
   return new Promise((_resolve, reject) => {
-    // FIXME: filter out 'drafts = true' at build time in production.
     // NOTE: order is ASC because of next/prev context of array of posts.
     graphql(`
       {
-        allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(${args}) {
           edges {
             node {
               excerpt(pruneLength: 250)

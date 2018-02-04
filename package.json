@@ -14,6 +14,7 @@
     "test": "nps test"
   },
   "dependencies": {
+    "dotenv-safe": "^4.0.4",
     "gatsby": "^1.9.175",
     "gatsby-link": "^1.6.35",
     "gatsby-plugin-accessibilityjs": "^1.0.2",

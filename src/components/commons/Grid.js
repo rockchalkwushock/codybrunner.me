@@ -8,6 +8,7 @@ const Grid = styled.div`
   grid-gap: 10px;
   grid-template-columns: 1fr;
   justify-items: center;
+  margin: 1em 0;
   padding: 2em 1em;
 `
 

@@ -5,6 +5,14 @@ import Card from '../Card'
 import ProfilePic from '../ProfilePic'
 import SEO from '../SEO'
 
+const ExtendedGrid = Grid.extend`
+  grid-template-columns: 3fr;
+
+  > * {
+    grid-column: 1 / 4;
+  }
+`
+
 const HomeView = ({ meta, posts }) => (
   <FlexContainer>
     <SEO site={meta} />
@@ -20,6 +28,27 @@ const HomeView = ({ meta, posts }) => (
         ))}
       </List>
     </Grid>
+    <ExtendedGrid alternate>
+      <h2>About</h2>
+      <p>
+        Cody Brunner is a full-stack JavaScript developer residing in Wichita,
+        Kansas. Cody primarily works with Node, React, & GraphQL. When not
+        writing code he loves to go hiking, play with his dog & niece, and watch
+        his Jayhawks win!
+      </p>
+      <p>
+        Are you interested in contacting Cody for employment opportunities? Feel
+        free to reach out via email, call through Telegram, or checkout his
+        resume.
+      </p>
+      <List flow="column" gap={50}>
+        {meta.business.map(b => (
+          <Link ext href={b.href} key={b.label}>
+            <Icon className={b.className} />
+          </Link>
+        ))}
+      </List>
+    </ExtendedGrid>
     <Grid alternate>
       <h1>Recent Posts</h1>
       <List gap={20}>
