@@ -1,5 +1,9 @@
 # codybrunner.rocks
 
+## Notes to myself
+
+1. PrismJS does not have support for `zsh` must use `bash`. List [here](http://prismjs.com/#languages-list).
+
 ## Left todo for v1
 
 * [ ] Logo
@@ -11,9 +15,8 @@
 * [ ] Proofread posts, write up newest post.
 * [ ] Testing
 * [ ] Update Resume in Dropbox & link on HomePage
-* [x] Possibly remove Telegram link
 * [ ] Finalize updates to LinkedIn
-* [ ] RSS Feed with `feed` plugin (add RSS feed icon to Share component)
+* [ ] RSS Feed with `feed` plugin (add RSS feed icon to Share component) `fas fa-rss`
 * [ ] Add `plop` to generate initial post template for writing.
 
 ## Accessibility
@@ -22,26 +25,28 @@
 
 ## Ready for shipping
 
-* [ ] Add `canonical-urls`
-* [ ] Add `catch-links`
-* [ ] Add `google-analytics`
-* [ ] Add `manifest`
-* [ ] Add `no-sourcemaps`
-* [ ] Add `nprogress`
-* [ ] Add `sitemap`
-* [ ] Add `fastclick`
-* [ ] Add `favicon`
-* [ ] Add `sentry`
+* [x] Add `accessibilytjs`
+* [x] Add `canonical-urls`
+* [x] Add `catch-links`
+* [x] Add `feed`
+* [x] Add `google-analytics`
+* [x] Add `manifest`
+* [x] Add `no-sourcemaps`
+* [x] Add `nprogress`
+* [x] Add `sitemap`
+* [x] Add `favicon`
+* [x] Add `sentry`
 * [ ] Filter `draft: true` in `gatsby-node.js`
 
 ## Perf
 
 * [ ] Add `webpack-bundle-analyzer` and get baseline.
-* [ ] Add`preact`
-* [ ] Add `offline`
+* [x] Add`preact`
+* [x] Add `offline`
 * [ ] Customize `fontawesome` to cut down on bloat.
 * [ ] `google-fonts` plugin or get static assets.
 * [ ] Check perf of image in CSS vs using `gatsby-image`.
+* [ ] Look at imports of `react-share`.
 
 ## Known Issues
 
@@ -53,3 +58,4 @@
 * [ ] Related Posts
 * [ ] Projects
 * [ ] Certifications
+* [ ] Work more with `sharp`, `gatsby-image`. [Here](https://image-processing.gatsbyjs.org/) for more info.

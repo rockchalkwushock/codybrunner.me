@@ -5,49 +5,165 @@ const gatsbyVersion = dependencies.gatsby.substr(1, 3)
 const styledVersion = dependencies['styled-components'].substr(1, 3)
 // Get current year.
 const year = new Date().getFullYear()
+// Condition
+const isProd = process.env.NODE_ENV === 'production'
+// Default Plugins
+const plugins = [
+  'gatsby-plugin-react-helmet',
+  'gatsby-plugin-react-next',
+  'gatsby-plugin-sharp',
+  'gatsby-plugin-styled-components',
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'posts',
+      path: `${__dirname}/src/content/posts`
+    }
+  },
+  {
+    resolve: 'gatsby-transformer-remark',
+    options: {
+      plugins: [
+        'gatsby-remark-autolink-headers',
+        'gatsby-remark-emoji',
+        'gatsby-remark-external-links',
+        {
+          resolve: 'gatsby-remark-images',
+          options: {
+            linkImagesToOriginal: true,
+            maxWidth: 736,
+            sizeByPixelDensity: false
+          }
+        },
+        'gatsby-remark-prismjs',
+        {
+          resolve: 'gatsby-remark-responsive-iframe',
+          options: {
+            wrapperStyle: 'margin: 0.5em 0'
+          }
+        }
+      ]
+    }
+  },
+  'gatsby-transformer-sharp'
+]
+// Dev Plugins
+// const devOnly = [
+//   {
+//     resolve: 'gatsby-plugin-accessibilityjs',
+//     options: {
+//       injectStyles: false,
+//       errorClassName: false
+//     }
+//   }
+// ]
+// Prod Plugins
+const prodOnly = [
+  'gatsby-plugin-canonical-urls',
+  'gatsby-plugin-catch-links',
+  {
+    resolve: 'gatsby-plugin-favicon',
+    options: {
+      // logo: "./src/favicon.png", TODO
+      injectHTML: true,
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }
+  },
+  'gatsby-plugin-feed', // REVIEW: More configuration available.
+  {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: 'TODO',
+      anonymize: true
+    }
+  },
+  {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      name: 'codybrunner.rocks',
+      short_name: 'Cody Rocks',
+      start_url: '/',
+      background_color: '#f7f0eb', // TODO
+      theme_color: '#a2466c', // TODO
+      display: 'minimal-ui' // REVIEW
+      // icons: [] TODO
+    }
+  },
+  'gatsby-plugin-no-sourcemaps',
+  'gatsby-plugin-offline',
+  {
+    resolve: 'gatsby-plugin-nprogress',
+    options: {
+      color: '#ffe1b6',
+      showSpinner: false
+    }
+  },
+  'gatsby-plugin-preact',
+  {
+    resolve: 'gatsby-plugin-sentry',
+    options: {
+      dsn: 'TODO'
+    }
+  }
+]
 
 module.exports = {
-  plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/src/content/posts`
-      }
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-autolink-headers',
-          'gatsby-remark-emoji',
-          'gatsby-remark-external-links',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              linkImagesToOriginal: true,
-              maxWidth: 736,
-              sizeByPixelDensity: false
-            }
-          },
-          'gatsby-remark-prismjs',
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin: 0.5em 0'
-            }
-          }
-        ]
-      }
-    },
-    'gatsby-transformer-sharp'
-  ],
+  plugins: isProd ? [...plugins, ...prodOnly] : plugins,
   siteMetadata: {
     author: 'Cody Brunner',
+    contacts: [
+      {
+        className: 'fab fa-github',
+        href: 'https://github.com/rockchalkwushock',
+        label: 'Github'
+      },
+      {
+        className: 'fas fa-envelope',
+        href: 'mailto:rockchalkwushock@icloud.com',
+        label: 'Email'
+      },
+      {
+        className: 'fab fa-instagram',
+        href: 'https://www.instagram.com/rockchalkwushock',
+        label: 'Instagram'
+      },
+      {
+        className: 'fab fa-linkedin',
+        href: 'https://www.linkedin.com/in/cody-brunner-324930158',
+        label: 'LinkedIn'
+      },
+      {
+        className: 'fab fa-telegram-plane',
+        href: 'https://t.me/rockchalkwushock',
+        label: 'Telegram'
+      },
+      {
+        className: 'fas fa-file-pdf',
+        href:
+          'https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1',
+        label: 'Resume'
+      },
+      {
+        className: 'fab fa-twitter',
+        href: 'https://twitter.com/RockChalkDev',
+        label: 'Twitter'
+      },
+      {
+        className: 'fab fa-youtube',
+        href: 'https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw',
+        label: 'Youtube'
+      }
+    ],
     copyright: `© 2017-${year} Cody Brunner`,
     description:
       'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
@@ -78,56 +194,11 @@ module.exports = {
         text: `Styled with Styled-Components ${styledVersion}`
       }
     },
-    market: [
-      {
-        href: 'mailto:rockchalkwushock@icloud.com',
-        label: 'Email',
-        text: 'Email'
-      },
-      {
-        href:
-          'https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1',
-        label: 'Resume',
-        text: 'Resume'
-      }
-    ],
     menu: [
       { id: 1, href: '/', text: 'Home' },
       { id: 2, href: '/about', text: 'About' },
       { id: 3, href: '/posts', text: 'Blog' },
       { id: 4, href: '/tags', text: 'Tags' }
-    ],
-    social: [
-      {
-        className: 'fab fa-github fa-2x',
-        href: 'https://github.com/rockchalkwushock',
-        label: 'Github'
-      },
-      {
-        className: 'fab fa-instagram fa-2x',
-        href: 'https://www.instagram.com/rockchalkwushock',
-        label: 'Instagram'
-      },
-      {
-        className: 'fab fa-linkedin fa-2x',
-        href: 'https://www.linkedin.com/in/cody-brunner-324930158',
-        label: 'LinkedIn'
-      },
-      // {
-      //   className: 'fab fa-telegram-plane fa-2x',
-      //   href: 'https://t.me/rockchalkwushock',
-      //   label: 'Telegram'
-      // },
-      {
-        className: 'fab fa-twitter fa-2x',
-        href: 'https://twitter.com/RockChalkDev',
-        label: 'Twitter'
-      },
-      {
-        className: 'fab fa-youtube fa-2x',
-        href: 'https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw',
-        label: 'Youtube'
-      }
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',

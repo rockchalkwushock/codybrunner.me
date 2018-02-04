@@ -7,7 +7,7 @@ import Tag from './Tag'
 const Tags = ({ tags }) => (
   <List gap={8} tags>
     {tags.map(t => (
-      <Tag key={t} to={`/tags/${t}`}>
+      <Tag key={t} to={`/tags/${t.toLowerCase()}`}>
         {t.toLowerCase()}
       </Tag>
     ))}

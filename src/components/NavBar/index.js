@@ -28,7 +28,7 @@ class NavBar extends Component {
     return (
       <Nav>
         <NavIcon onClick={this.handleOnClick}>
-          <Icon className="fas fa-bars fa-3x" />
+          <Icon className="fas fa-bars" size={3} />
         </NavIcon>
         <NavList visible={this.state.visible}>{this.renderLinks()}</NavList>
       </Nav>

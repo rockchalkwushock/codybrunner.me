@@ -13,15 +13,10 @@ const HomeView = ({ meta, posts }) => (
       <h2>{meta.author}</h2>
       <h4>{meta.jobTitle}</h4>
       <List flow="column" gap={10}>
-        {meta.social.map(s => (
-          <Link ext href={s.href} key={s.label}>
-            <Icon className={s.className} />
+        {meta.contacts.map(c => (
+          <Link ext href={c.href} key={c.label}>
+            <Icon className={c.className} />
           </Link>
-        ))}
-      </List>
-      <List flow="column" gap={60}>
-        {meta.market.map(m => (
-          <Link ext href={m.href} key={m.label} text={m.text} />
         ))}
       </List>
     </Grid>
