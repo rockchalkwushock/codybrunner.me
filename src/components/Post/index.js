@@ -17,8 +17,8 @@ import SEO from '../SEO'
 
 const SitePost = ({ ctx, meta, post }) => {
   const { fields, frontmatter, html, timeToRead, wordCount } = post
-  const { disqusShortname, url } = meta
-  const postUrl = `${url}${fields.slug}`
+  const { disqusShortname, siteUrl } = meta
+  const postUrl = `${siteUrl}${fields.slug}`
   return (
     <Post draft={frontmatter.draft}>
       <SEO post={post} postSeo site={meta} />
@@ -55,7 +55,7 @@ SitePost.propTypes = {
   // }),
   meta: shape({
     disqusShortname: string.isRequired,
-    url: string.isRequired
+    siteUrl: string.isRequired
   }).isRequired,
   post: shape({
     fields: shape({

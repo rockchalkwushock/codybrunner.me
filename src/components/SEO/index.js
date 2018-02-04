@@ -36,7 +36,7 @@ const SEO = ({ post, postSeo, site }) => {
       />
       <meta name="keywords" content={keywords} />
       {process.env.NODE_ENV === 'production' ? (
-        <base target="_blank" href={site.url} />
+        <base target="_blank" href={site.siteUrl} />
       ) : null}
       {/* Schema.org Tags */}
       <meta
@@ -77,7 +77,7 @@ const SEO = ({ post, postSeo, site }) => {
       <meta property="og:image:width" content="2400" />
       <meta
         property="og:url"
-        content={postSeo ? `${site.url}${post.fields.slug}` : site.url}
+        content={postSeo ? `${site.siteUrl}${post.fields.slug}` : site.siteUrl}
       />
       <meta property="og:site_name" content={site.title} />
       <meta property="og:locale" content={site.lang} />
@@ -97,7 +97,7 @@ const SEO = ({ post, postSeo, site }) => {
       <meta name="twitter:image:alt" content="" />
       <meta
         name="twitter:url"
-        content={postSeo ? `${site.url}${post.fields.slug}` : site.url}
+        content={postSeo ? `${site.siteUrl}${post.fields.slug}` : site.siteUrl}
       />
       <title itemProp="name" lang={site.lang}>
         {postSeo ? `Cody's Blog - ${post.frontmatter.title}` : site.title}

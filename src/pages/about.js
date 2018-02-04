@@ -47,9 +47,9 @@ export const pageQuery = graphql`
         description
         keywords
         lang
+        siteUrl
         title
         twitter
-        url
       }
     }
   }

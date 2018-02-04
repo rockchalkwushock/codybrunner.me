@@ -39,9 +39,9 @@ export const postQuery = graphql`
         disqusShortname
         keywords
         lang
+        siteUrl
         title
         twitter
-        url
       }
     }
   }

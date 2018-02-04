@@ -13,6 +13,14 @@ import { HomeView } from '../components'
  * so I can see what is still considered
  * a draft before publishing and running
  * in produciton.
+ *
+ * REVIEW
+ * FIXME
+ * Before running `yarn build` to make sure any post with `draft: true`
+ * is not shown I must add `frontmatter: { draft: { ne: true } }`.
+ * It is not possible to make the query dynamic based on NODE_ENV
+ * due to the way Gatsby is handing the query to the GraphQL Parser.
+ * -- via conversation with @grajen3 in #gatsby channel.
  */
 
 const IndexPage = ({ data }) => (
@@ -70,9 +78,9 @@ export const pageQuery = graphql`
           href
           text
         }
+        siteUrl
         title
         twitter
-        url
       }
     }
   }

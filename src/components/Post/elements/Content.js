@@ -41,7 +41,10 @@ const Content = styled.section`
     margin: 0.25em 0;
   }
 
-  > p a {
+  > blockquote p em a,
+  > ol li a,
+  > p a,
+  > ul li a {
     color: ${({ theme }) => theme.post.linkClr};
     font-weight: ${({ theme }) => theme.post.linkWt};
     text-decoration: underline ${({ theme }) => theme.post.linkClr};

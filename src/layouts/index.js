@@ -16,7 +16,7 @@ import { Footer, NavBar, Wrapper } from '../components'
 
 const LayoutWrapper = ({ children, data, location }) => {
   const { buildTime, siteMetadata } = data.site
-  const { copyright, links, menu, url } = siteMetadata
+  const { copyright, links, menu, siteUrl } = siteMetadata
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
@@ -40,7 +40,7 @@ const LayoutWrapper = ({ children, data, location }) => {
           buildTime={buildTime}
           copyright={copyright}
           links={links}
-          siteUrl={url}
+          siteUrl={siteUrl}
         />
       </Wrapper>
     </ThemeProvider>
@@ -84,7 +84,7 @@ export const templateWrapper = graphql`
           href
           text
         }
-        url
+        siteUrl
       }
     }
   }

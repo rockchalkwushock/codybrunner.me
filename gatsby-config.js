@@ -34,7 +34,7 @@ const plugins = [
       plugins: [
         'gatsby-remark-autolink-headers',
         'gatsby-remark-emoji',
-        'gatsby-remark-external-links',
+        // 'gatsby-remark-external-links',
         {
           resolve: 'gatsby-remark-images',
           options: {
@@ -72,7 +72,7 @@ const prodOnly = [
   {
     resolve: 'gatsby-plugin-favicon',
     options: {
-      // logo: "./src/favicon.png", TODO
+      logo: './src/assets/favicon.png',
       injectHTML: true,
       icons: {
         android: true,
@@ -87,7 +87,56 @@ const prodOnly = [
       }
     }
   },
-  'gatsby-plugin-feed', // REVIEW: More configuration available.
+  {
+    resolve: 'gatsby-plugin-feed',
+    options: {
+      query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+      feeds: [
+        {
+          serialize: ({ query: { site, allMarkdownRemark } }) =>
+            allMarkdownRemark.edges.map(edge => ({
+              ...edge.node.frontmatter,
+              url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+              guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+              custom_elements: [{ 'content:encoded': edge.node.html }]
+            })),
+          query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] },
+                filter: {frontmatter: { draft: { ne: true } }}
+              ) {
+                edges {
+                  node {
+                    html
+                    fields { slug }
+                    frontmatter {
+                      description
+                      date
+                      title
+                    }
+                  }
+                }
+              }
+            }
+          `,
+          output: '/rss.xml'
+        }
+      ]
+    }
+  },
   {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
@@ -104,7 +153,7 @@ const prodOnly = [
       lang: 'en-US',
       name: 'codybrunner.rocks',
       short_name: 'Cody Rocks',
-      start_url: '/',
+      start_url: 'http://localhost:9000',
       theme_color: '#ffe1b6'
       // icons: [] TODO
     }
@@ -118,7 +167,7 @@ const prodOnly = [
       showSpinner: false
     }
   },
-  'gatsby-plugin-preact',
+  // 'gatsby-plugin-preact',
   {
     resolve: 'gatsby-plugin-sentry',
     options: {
@@ -224,6 +273,6 @@ module.exports = {
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',
-    url: 'https://codybrunner.rocks'
+    siteUrl: isProd ? 'http://localhost:9000' : '/'
   }
 }
