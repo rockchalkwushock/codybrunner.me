@@ -21,7 +21,7 @@
 
 ## Accessibility
 
-* [ ] Use `accessibilytjs` plugin to check site.
+* [x] Use `accessibilytjs` plugin to check site.
 
 ## Ready for shipping
 
@@ -43,8 +43,8 @@
 * [ ] Add `webpack-bundle-analyzer` and get baseline.
 * [x] Add`preact`
 * [x] Add `offline`
-* [ ] Customize `fontawesome` to cut down on bloat.
-* [ ] `google-fonts` plugin or get static assets.
+* [x] Customize `fontawesome` to cut down on bloat.
+* [x] `google-fonts` plugin or get static assets.
 * [ ] Check perf of image in CSS vs using `gatsby-image`.
 * [ ] Look at imports of `react-share`.
 

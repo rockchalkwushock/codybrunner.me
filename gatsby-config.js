@@ -11,6 +11,12 @@ const year = new Date().getFullYear()
 const isProd = process.env.NODE_ENV === 'production'
 // Default Plugins
 const plugins = [
+  {
+    resolve: 'gatsby-plugin-google-fonts',
+    options: {
+      fonts: ['Raleway']
+    }
+  },
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-react-next',
   'gatsby-plugin-sharp',
@@ -28,7 +34,7 @@ const plugins = [
       plugins: [
         'gatsby-remark-autolink-headers',
         'gatsby-remark-emoji',
-        'gatsby-remark-external-links', // REVIEW: Might remove.
+        'gatsby-remark-external-links',
         {
           resolve: 'gatsby-remark-images',
           options: {
@@ -50,15 +56,15 @@ const plugins = [
   'gatsby-transformer-sharp'
 ]
 // Dev Plugins
-// const devOnly = [
-//   {
-//     resolve: 'gatsby-plugin-accessibilityjs',
-//     options: {
-//       injectStyles: false,
-//       errorClassName: false
-//     }
-//   }
-// ]
+const devOnly = [
+  {
+    resolve: 'gatsby-plugin-accessibilityjs',
+    options: {
+      injectStyles: false,
+      errorClassName: false
+    }
+  }
+]
 // Prod Plugins
 const prodOnly = [
   'gatsby-plugin-canonical-urls',
@@ -122,7 +128,8 @@ const prodOnly = [
 ]
 
 module.exports = {
-  plugins: isProd ? [...plugins, ...prodOnly] : plugins,
+  pathPrefix: '/', // You need this for the /static/ assets with withPrefix()
+  plugins: isProd ? [...plugins, ...prodOnly] : [...plugins, ...devOnly],
   siteMetadata: {
     aboutSnippet:
       'Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!',

@@ -39,7 +39,7 @@ const HomeView = ({ meta, posts }) => (
       <Heading4>{meta.jobTitle}</Heading4>
       <List flow="column" gap={10}>
         {meta.contacts.map(c => (
-          <Link ext href={c.href} key={c.label}>
+          <Link ext href={c.href} key={c.label} label={c.label}>
             <Icon className={c.className} />
           </Link>
         ))}
@@ -51,7 +51,7 @@ const HomeView = ({ meta, posts }) => (
       <Text>{meta.employment}</Text>
       <List flow="column" gap={50}>
         {meta.business.map(b => (
-          <Link ext href={b.href} key={b.label}>
+          <Link ext href={b.href} key={b.label} label={b.label}>
             <Icon className={b.className} />
           </Link>
         ))}

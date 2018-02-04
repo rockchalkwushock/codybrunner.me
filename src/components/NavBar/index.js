@@ -34,7 +34,7 @@ class NavBar extends Component {
   render() {
     return (
       <Nav>
-        <NavIcon onClick={this.handleOnClick}>
+        <NavIcon aria-label="hamburger button" onClick={this.handleOnClick}>
           <Icon className="fas fa-bars" size={3} />
         </NavIcon>
         <NavList visible={this.state.visible}>{this.renderLinks()}</NavList>

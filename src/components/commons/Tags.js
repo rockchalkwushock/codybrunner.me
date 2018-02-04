@@ -7,7 +7,11 @@ import Tag from './Tag'
 const Tags = ({ tags }) => (
   <List gap={8} tags>
     {tags.map(t => (
-      <Tag key={t} to={`/tags/${t.toLowerCase()}`}>
+      <Tag
+        aria-label={`posts for ${t}`}
+        key={t}
+        to={`/tags/${t.toLowerCase()}`}
+      >
         {t.toLowerCase()}
       </Tag>
     ))}

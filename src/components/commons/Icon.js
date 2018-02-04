@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { number, string } from 'prop-types'
 
-const StyledIcon = styled.i`
+const StyledIcon = styled.svg`
   color: ${({ theme }) => theme.site.linkClr};
   font-size: ${({ size }) => `${size}em`};
   transition: all 0.2s ease-in-out;
