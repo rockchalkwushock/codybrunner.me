@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
 /**
- * TODO
+ * @fileOverview
  *
- * 2. Go through old posts and fix broken things.
+ * This is the styling for all html generated
+ * from markdown.
+ *
+ * themeing is based on: theme.post.<key>
  */
 
 const Content = styled.section`

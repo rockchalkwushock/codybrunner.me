@@ -6,7 +6,7 @@
 
 ## Left todo for v1
 
-* [ ] Logo
+* [x] Logo
 * [ ] Images in SEO
 * [x] Pagination
 * [x] About page
@@ -41,7 +41,7 @@
 ## Perf
 
 * [ ] Add `webpack-bundle-analyzer` and get baseline.
-* [x] Add`preact`
+* [x] Add`preact` -- Problems :cry: `Cannot read property 'pathname' of undefined`
 * [x] Add `offline`
 * [x] Customize `fontawesome` to cut down on bloat.
 * [x] `google-fonts` plugin or get static assets.

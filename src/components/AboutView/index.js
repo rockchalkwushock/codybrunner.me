@@ -14,7 +14,6 @@ import SEO from '../SEO'
 
 const AboutView = ({ content, meta, modTime }) => {
   const { fields, frontmatter, html, timeToRead } = content
-  // REVIEW: trailing slash, problematic? Plugin for handling this.
   const aboutUrl = `${meta.siteUrl}${fields.slug}`
   return (
     <Post draft={frontmatter.draft}>

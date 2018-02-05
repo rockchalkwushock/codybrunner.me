@@ -34,7 +34,6 @@ const plugins = [
       plugins: [
         'gatsby-remark-autolink-headers',
         'gatsby-remark-emoji',
-        // 'gatsby-remark-external-links',
         {
           resolve: 'gatsby-remark-images',
           options: {
@@ -70,6 +69,9 @@ const prodOnly = [
   'gatsby-plugin-canonical-urls',
   'gatsby-plugin-catch-links',
   {
+    // NOTE: Currently the other options for the webpack plugin are
+    // not enabled. Will need to edit the manifest.json directly
+    // prior to publishing to fix some null values & missing values.
     resolve: 'gatsby-plugin-favicon',
     options: {
       logo: './src/assets/favicon.png',
@@ -144,20 +146,24 @@ const prodOnly = [
       anonymize: true
     }
   },
-  {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      background_color: '#7a9eb1',
-      description: 'Personal website, tech blog, & portfolio for Cody Brunner',
-      display: 'standalone',
-      lang: 'en-US',
-      name: 'codybrunner.rocks',
-      short_name: 'Cody Rocks',
-      start_url: 'http://localhost:9000',
-      theme_color: '#ffe1b6'
-      // icons: [] TODO
-    }
-  },
+  // {
+  //   // NOTE: Favicon-Plugin generates a manifest & I will use it.
+  //   // At this point in time however much of the manifest
+  //   // does not get copied over into it so keep this data
+  //   // but uninstall the plugin and comment out the code.
+  //   resolve: 'gatsby-plugin-manifest',
+  //   options: {
+  //     background_color: '#7a9eb1',
+  //     description: 'Personal website, tech blog, & portfolio for Cody Brunner',
+  //     display: 'standalone',
+  //     lang: 'en-US',
+  //     name: 'codybrunner.rocks',
+  //     short_name: 'Cody Rocks',
+  //     start_url: 'http://localhost:9000',
+  //     theme_color: '#ffe1b6'
+  //     // icons: [] TODO
+  //   }
+  // },
   'gatsby-plugin-no-sourcemaps',
   'gatsby-plugin-offline',
   {
@@ -167,7 +173,6 @@ const prodOnly = [
       showSpinner: false
     }
   },
-  // 'gatsby-plugin-preact',
   {
     resolve: 'gatsby-plugin-sentry',
     options: {
@@ -246,7 +251,7 @@ module.exports = {
     lang: 'en_US',
     links: {
       creativeCommons: {
-        href: 'https://creativecommons.org/licenses/by/3.0', // TODO update this url
+        href: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
         text: 'All Rights Reserved.'
       },
       gatsby: {
