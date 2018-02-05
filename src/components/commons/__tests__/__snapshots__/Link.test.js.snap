@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <ExternalLink /> should render correctly 1`] = `
+.c0 {
+  color: #143a52;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.c0:visited {
+  color: #143a52;
+}
+
+.c0:hover {
+  color: #ffe1b6;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "fg": "",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+      },
+    }
+  }
+>
+  <ExternalLink
+    aria-label="link to cnn"
+    href="cnn.com"
+  >
+    <a
+      aria-label="link to cnn"
+      className="c0"
+      href="cnn.com"
+    />
+  </ExternalLink>
+</ThemeProvider>
+`;
+
+exports[`Component: <InternalLink /> should render correctly 1`] = `undefined`;
+
+exports[`Component: <Link /> should render correctly as ExternalLink 1`] = `
+<ExternalLink
+  href="https://cnn.com"
+>
+  CNN
+</ExternalLink>
+`;
+
+exports[`Component: <Link /> should render correctly as InternalLink 1`] = `
+<InternalLink
+  to="/about"
+>
+  About
+</InternalLink>
+`;

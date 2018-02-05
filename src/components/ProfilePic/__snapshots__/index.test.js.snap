@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <ProfilePic /> should render correctly 1`] = `
+.c0 {
+  background-color: #7a9eb1;
+  background-image: url();
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "fg": "",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+      },
+    }
+  }
+>
+  <ProfilePic>
+    <div
+      className="c0"
+    />
+  </ProfilePic>
+</ThemeProvider>
+`;

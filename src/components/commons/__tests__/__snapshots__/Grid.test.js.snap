@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <Grid /> should render correclty as alternate 1`] = `
+.c0 {
+  background-color: #f9f8eb;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 1em 0;
+  padding: 2em 1em;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "fg": "",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+      },
+    }
+  }
+>
+  <Grid
+    alternate={true}
+  >
+    <div
+      className="c0"
+    />
+  </Grid>
+</ThemeProvider>
+`;
+
+exports[`Component: <Grid /> should render correctly 1`] = `
+.c0 {
+  background-color: inherit;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 1em 0;
+  padding: 2em 1em;
+}
+
+<div
+  className="c0"
+/>
+`;

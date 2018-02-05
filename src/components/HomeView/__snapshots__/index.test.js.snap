@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <HomeView /> should render correctly 1`] = `
+<FlexContainer>
+  <SEO
+    site={
+      Object {
+        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!",
+        "author": "Cody Brunner",
+        "business": Array [
+          Object {
+            "className": "fas fa-envelope",
+            "href": "mailto:rockchalkwushock@icloud.com",
+            "label": "Email",
+          },
+          Object {
+            "className": "fab fa-telegram-plane",
+            "href": "https://t.me/rockchalkwushock",
+            "label": "Telegram",
+          },
+          Object {
+            "className": "fas fa-file-pdf",
+            "href": "https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1",
+            "label": "Resume",
+          },
+        ],
+        "contacts": Array [
+          Object {
+            "className": "fab fa-github",
+            "href": "https://github.com/rockchalkwushock",
+            "label": "Github",
+          },
+          Object {
+            "className": "fab fa-instagram",
+            "href": "https://www.instagram.com/rockchalkwushock",
+            "label": "Instagram",
+          },
+          Object {
+            "className": "fab fa-linkedin",
+            "href": "https://www.linkedin.com/in/cody-brunner-324930158",
+            "label": "LinkedIn",
+          },
+          Object {
+            "className": "fas fa-rss",
+            "href": "rss.xml",
+            "label": "RSS Feed",
+          },
+          Object {
+            "className": "fab fa-twitter",
+            "href": "https://twitter.com/RockChalkDev",
+            "label": "Twitter",
+          },
+          Object {
+            "className": "fab fa-youtube",
+            "href": "https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw",
+            "label": "Youtube",
+          },
+        ],
+        "copyright": "© 2017-2018 Cody Brunner",
+        "description": "Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas",
+        "disqusShortname": "codybrunner-rocks",
+        "employment": "Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.",
+        "googleVerify": "TODO",
+        "jobTitle": "Full-Stack JavaScript Developer",
+        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL",
+        "lang": "en_US",
+        "links": Object {
+          "creativeCommons": Object {
+            "href": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+            "text": "All Rights Reserved.",
+          },
+          "gatsby": Object {
+            "href": "https://gatsbyjs.org",
+            "text": "Powered by Gatsby 1.9",
+          },
+          "now": Object {
+            "href": "https://zeit.co/now",
+            "text": "Hosted on Now",
+          },
+          "src": Object {
+            "href": "https://github.com/rockchalkwushock/codybrunner.rocks",
+          },
+          "styled": Object {
+            "href": "https://www.styled-components.com",
+            "text": "Styled with Styled-Components 3.1",
+          },
+        },
+        "menu": Array [
+          Object {
+            "href": "/",
+            "id": 1,
+            "text": "Home",
+          },
+          Object {
+            "href": "/about",
+            "id": 2,
+            "text": "About",
+          },
+          Object {
+            "href": "/posts",
+            "id": 3,
+            "text": "Blog",
+          },
+          Object {
+            "href": "/tags",
+            "id": 4,
+            "text": "Tags",
+          },
+        ],
+        "siteUrl": "/",
+        "title": "Cody Brunner - Full-Stack JavaScript Developer",
+        "twitter": "@RockChalkDev",
+      }
+    }
+  />
+  <Grid>
+    <ProfilePic />
+    <Heading>
+      Cody Brunner
+    </Heading>
+    <styled.h4>
+      Full-Stack JavaScript Developer
+    </styled.h4>
+    <List
+      flow="column"
+      gap={10}
+    >
+      <SiteLink
+        ext={true}
+        href="https://github.com/rockchalkwushock"
+        key="Github"
+        label="Github"
+      >
+        <SiteIcon
+          className="fab fa-github"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://www.instagram.com/rockchalkwushock"
+        key="Instagram"
+        label="Instagram"
+      >
+        <SiteIcon
+          className="fab fa-instagram"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://www.linkedin.com/in/cody-brunner-324930158"
+        key="LinkedIn"
+        label="LinkedIn"
+      >
+        <SiteIcon
+          className="fab fa-linkedin"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="rss.xml"
+        key="RSS Feed"
+        label="RSS Feed"
+      >
+        <SiteIcon
+          className="fas fa-rss"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://twitter.com/RockChalkDev"
+        key="Twitter"
+        label="Twitter"
+      >
+        <SiteIcon
+          className="fab fa-twitter"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw"
+        key="Youtube"
+        label="Youtube"
+      >
+        <SiteIcon
+          className="fab fa-youtube"
+        />
+      </SiteLink>
+    </List>
+  </Grid>
+  <styled.div
+    alternate={true}
+  >
+    <Heading>
+      About
+    </Heading>
+    <Text>
+      Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!
+    </Text>
+    <Text>
+      Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.
+    </Text>
+    <List
+      flow="column"
+      gap={50}
+    >
+      <SiteLink
+        ext={true}
+        href="mailto:rockchalkwushock@icloud.com"
+        key="Email"
+        label="Email"
+      >
+        <SiteIcon
+          className="fas fa-envelope"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://t.me/rockchalkwushock"
+        key="Telegram"
+        label="Telegram"
+      >
+        <SiteIcon
+          className="fab fa-telegram-plane"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1"
+        key="Resume"
+        label="Resume"
+      >
+        <SiteIcon
+          className="fas fa-file-pdf"
+        />
+      </SiteLink>
+    </List>
+  </styled.div>
+  <Grid
+    alternate={true}
+  >
+    <Heading>
+      Recent Posts
+    </Heading>
+    <List
+      flow="row"
+      gap={20}
+    >
+      <SiteCard
+        key="/turdsspace/"
+        post={
+          Object {
+            "excerpt": "blah blah blah",
+            "fields": Object {
+              "slug": "/turdsspace/",
+            },
+            "frontmatter": Object {
+              "date": "February 03, 2018",
+              "draft": false,
+              "tags": Array [
+                "JavaScript",
+                "fp",
+                "oop",
+              ],
+              "title": "All About JS",
+            },
+          }
+        }
+      />
+    </List>
+  </Grid>
+</FlexContainer>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <NavBar /> should render correctly 1`] = `
+<Nav>
+  <NavIcon
+    aria-label="hamburger button"
+    onClick={[Function]}
+  >
+    <SiteIcon
+      className="fas fa-bars"
+      size={3}
+    />
+  </NavIcon>
+  <NavList
+    visible={false}
+  >
+    <SiteLink
+      href="/"
+      key="1"
+      text="Home"
+    />
+    <SiteLink
+      href="/about"
+      key="2"
+      text="About"
+    />
+    <SiteLink
+      href="/posts"
+      key="3"
+      text="Blog"
+    />
+    <SiteLink
+      href="/tags"
+      key="4"
+      text="Tags"
+    />
+  </NavList>
+</Nav>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <TermTemplate /> should render correctly 1`] = `
+<Term
+  tag="JavaScript"
+  taggedPosts={
+    Array [
+      Object {
+        "excerpt": "blah blah blah",
+        "fields": Object {
+          "slug": "/2018-02-03/all-about-js",
+        },
+        "frontmatter": Object {
+          "date": "February 03, 2018",
+          "draft": false,
+          "tags": Array [
+            "JavaScript",
+            "fp",
+            "oop",
+          ],
+          "title": "All About JS",
+        },
+      },
+    ]
+  }
+/>
+`;

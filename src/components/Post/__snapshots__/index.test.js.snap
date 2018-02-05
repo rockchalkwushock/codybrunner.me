@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <SitePost /> should render correctly 1`] = `
+<Post
+  draft={false}
+>
+  <SEO
+    post={
+      Object {
+        "excerpt": "blah blah blah",
+        "fields": Object {
+          "slug": "/turdsspace/",
+        },
+        "frontmatter": Object {
+          "date": "February 03, 2018",
+          "draft": false,
+          "tags": Array [
+            "JavaScript",
+            "fp",
+            "oop",
+          ],
+          "title": "All About JS",
+        },
+        "html": "post body",
+        "timeToRead": 17,
+        "wordCount": Object {
+          "words": 567,
+        },
+      }
+    }
+    postSeo={true}
+    site={
+      Object {
+        "disqusShortname": "turdf",
+        "siteUrl": "turdferguson.com",
+      }
+    }
+  />
+  <PostHeader
+    date="February 03, 2018"
+    time={17}
+    title="All About JS"
+    words={567}
+  />
+  <Content
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "post body",
+      }
+    }
+  />
+  <Tags
+    tags={
+      Array [
+        "JavaScript",
+        "fp",
+        "oop",
+      ]
+    }
+  />
+  <Pagination
+    next={Object {}}
+    prev={Object {}}
+    slug="/turdsspace/"
+  />
+  <Share
+    title="All About JS"
+    url="turdferguson.com/turdsspace/"
+  />
+</Post>
+`;

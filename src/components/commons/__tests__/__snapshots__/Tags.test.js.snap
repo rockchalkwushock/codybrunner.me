@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <Tags /> should render correctly 1`] = `
+<List
+  flow="row"
+  gap={8}
+  tags={true}
+>
+  <Tag
+    aria-label="posts for hello"
+    key="hello"
+    to="/tags/hello"
+  >
+    hello
+  </Tag>
+  <Tag
+    aria-label="posts for ALL CAPS"
+    key="ALL CAPS"
+    to="/tags/all caps"
+  >
+    all caps
+  </Tag>
+  <Tag
+    aria-label="posts for world"
+    key="world"
+    to="/tags/world"
+  >
+    world
+  </Tag>
+</List>
+`;

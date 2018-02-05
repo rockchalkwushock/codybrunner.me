@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <PostsView /> should render correctly 1`] = `
+<FlexContainer>
+  <SEO
+    site={Object {}}
+  />
+  <Grid
+    alternate={true}
+  >
+    <h1>
+      Cody's Blog
+    </h1>
+    <List
+      flow="row"
+      gap={20}
+    >
+      <SiteCard
+        key="/turdsspace/"
+        post={
+          Object {
+            "excerpt": "blah blah blah",
+            "fields": Object {
+              "slug": "/turdsspace/",
+            },
+            "frontmatter": Object {
+              "date": "February 03, 2018",
+              "draft": false,
+              "tags": Array [
+                "JavaScript",
+                "fp",
+                "oop",
+              ],
+              "title": "All About JS",
+            },
+          }
+        }
+      />
+    </List>
+  </Grid>
+</FlexContainer>
+`;

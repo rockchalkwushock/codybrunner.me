@@ -7,7 +7,7 @@ import { bool, string } from 'prop-types'
 /* istanbul ignore next */
 const UnstyledLink = props => <Link {...props} />
 
-const ExternalLink = styled.a`
+export const ExternalLink = styled.a`
   color: ${({ theme }) => theme.site.linkClr};
   transition: all 0.2s ease-in;
   :visited {
@@ -18,7 +18,7 @@ const ExternalLink = styled.a`
   }
 `
 
-const InternalLink = styled(UnstyledLink)`
+export const InternalLink = styled(UnstyledLink)`
   color: ${({ theme }) => theme.site.linkClr};
   transition: all 0.2s ease-in;
   :visited {
@@ -49,5 +49,4 @@ SiteLink.propTypes = {
   text: string
 }
 
-export { InternalLink }
 export default SiteLink

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <Footer /> should render correctly 1`] = `
+<Footer>
+  <Container
+    left={true}
+  >
+    <SiteLink
+      ext={true}
+      href="https://github.com/rockchalkwushock/codybrunner.rocks"
+      text="Last build: 02-03-99"
+    />
+    <SiteLink
+      ext={true}
+      href="turdferguson.com"
+      text="© Turd"
+    />
+    <SiteLink
+      ext={true}
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      text="All Rights Reserved."
+    />
+  </Container>
+  <Container>
+    <SiteLink
+      ext={true}
+      href="https://www.styled-components.com"
+      text="Styled with Styled-Components 3.1"
+    />
+    <SiteLink
+      ext={true}
+      href="https://gatsbyjs.org"
+      text="Powered by Gatsby 1.9"
+    />
+    <SiteLink
+      ext={true}
+      href="https://zeit.co/now"
+      text="Hosted on Now"
+    />
+  </Container>
+</Footer>
+`;

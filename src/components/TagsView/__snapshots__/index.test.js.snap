@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <TagsView /> should render correctly 1`] = `
+<FlexContainer>
+  <Grid>
+    <h1>
+      Tags
+    </h1>
+    <List
+      flow="row"
+      gap={5}
+      tags={true}
+    >
+      <Tag
+        key="one"
+        sortkey={3}
+        to="/tags/one"
+      >
+        one  (3)
+      </Tag>
+      <Tag
+        key="two"
+        sortkey={3}
+        to="/tags/two"
+      >
+        two  (3)
+      </Tag>
+      <Tag
+        key="three"
+        sortkey={3}
+        to="/tags/three"
+      >
+        three  (3)
+      </Tag>
+    </List>
+  </Grid>
+</FlexContainer>
+`;

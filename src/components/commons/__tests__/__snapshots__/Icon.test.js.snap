@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <Icon /> should render correctly 1`] = `
+<Icon
+  className="fab fa-twitter"
+  size={1.75}
+/>
+`;
+
+exports[`Component: <StyledIcon /> should render correclty 1`] = `
+.c0 {
+  color: #143a52;
+  font-size: 1.75em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c0:hover {
+  color: #ffe1b6;
+}
+
+@media (min-width:736px) {
+  .c0 {
+    font-size: 2em;
+  }
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "fg": "",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+      },
+    }
+  }
+>
+  <Icon
+    className="fab fa-twitter"
+    size={1.75}
+  >
+    <svg
+      className="fab fa-twitter c0"
+      size={1.75}
+    />
+  </Icon>
+</ThemeProvider>
+`;

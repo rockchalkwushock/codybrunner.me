@@ -57,7 +57,7 @@ const SEO = ({ post, postSeo, site }) => {
       />
       <meta
         itemProp="wordCount"
-        content={postSeo ? post.frontmatter.wordCount : ''}
+        content={postSeo ? post.wordCount.words : ''}
       />
       <meta itemProp="keywords" content={keywords} />
       <meta itemProp="image" content="" />
