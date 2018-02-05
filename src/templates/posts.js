@@ -22,34 +22,12 @@ import { PostsView } from '../components'
  * TODO: Styled Header for more fancy fancy, like a background img header?
  */
 
-const PostsPage = ({ data }) => (
-  <PostsView
-    posts={data.allMarkdownRemark.edges}
-    site={data.site.siteMetadata}
-  />
+const PostsTemplate = ({ data, pathContext }) => (
+  <PostsView posts={pathContext.posts} site={data.site.siteMetadata} />
 )
 
 export const PostsPageQuery = graphql`
   query PostsPageQuery {
-    allMarkdownRemark(
-      filter: { fields: { slug: { ne: "/about/" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            draft
-            tags
-            title
-          }
-        }
-      }
-    }
     site {
       siteMetadata {
         author
@@ -65,4 +43,4 @@ export const PostsPageQuery = graphql`
   }
 `
 
-export default PostsPage
+export default PostsTemplate

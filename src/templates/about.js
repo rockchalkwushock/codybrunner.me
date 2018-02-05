@@ -3,17 +3,11 @@ import React from 'react'
 
 import { AboutView } from '../components'
 
-/**
- * @fileOverview
- * Site About Page
- *
- * Calls AboutPageQuery
- * Only looks for slug '/about/'
- */
+// FIXME: wordCount not possible on backend, find a way
 
-const AboutPage = ({ data }) => (
+const AboutTemplate = ({ data, pathContext }) => (
   <AboutView
-    content={data.markdownRemark}
+    content={pathContext.content[0].node}
     meta={data.site.siteMetadata}
     modTime={data.file.modifiedTime}
   />
@@ -23,22 +17,6 @@ export const pageQuery = graphql`
   query AboutPageQuery {
     file {
       modifiedTime(formatString: "MMMM DD, YYYY")
-    }
-    markdownRemark(fields: { slug: { eq: "/about/" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        description
-        draft
-        tags
-        title
-      }
-      html
-      timeToRead
-      wordCount {
-        words
-      }
     }
     site {
       siteMetadata {
@@ -55,4 +33,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default AboutPage
+export default AboutTemplate

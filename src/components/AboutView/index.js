@@ -13,7 +13,7 @@ import SEO from '../SEO'
  */
 
 const AboutView = ({ content, meta, modTime }) => {
-  const { fields, frontmatter, html, timeToRead, wordCount } = content
+  const { fields, frontmatter, html, timeToRead } = content
   // REVIEW: trailing slash, problematic? Plugin for handling this.
   const aboutUrl = `${meta.siteUrl}${fields.slug}`
   return (
@@ -24,7 +24,6 @@ const AboutView = ({ content, meta, modTime }) => {
         date={modTime}
         time={timeToRead}
         title={frontmatter.title}
-        words={wordCount.words}
       />
       <Content dangerouslySetInnerHTML={{ __html: html }} />
       <Share title={frontmatter.title} url={aboutUrl} />

@@ -7,7 +7,61 @@ const { createFilePath } = require('gatsby-source-filesystem')
 // Condition
 const isProd = process.env.NODE_ENV === 'production'
 
-const createTagPages = (createPage, posts) => {
+// Look up params for GraphQL Query (dev vs prod).
+const args = isProd
+  ? 'filter: { frontmatter: { draft: { ne: true } } } sort: { order: ASC, fields: [frontmatter___date] }'
+  : 'sort: { order: ASC, fields: [frontmatter___date] }'
+
+const createHomePage = (createPage, posts) => {
+  createPage({
+    path: '/',
+    component: resolve('src/templates/index.js'),
+    context: {
+      posts: posts
+        .filter(({ node }) => node.fields.slug !== '/about/')
+        .reverse()
+        .slice(0, 5)
+    }
+  })
+}
+
+const createAboutPage = (createPage, posts) => {
+  createPage({
+    path: '/about',
+    component: resolve('src/templates/about.js'),
+    context: {
+      content: posts.filter(({ node }) => node.fields.slug === '/about/')
+    }
+  })
+}
+
+const createBlogPageAndPostsPages = (createPage, posts) => {
+  createPage({
+    path: '/posts',
+    component: resolve('src/templates/posts.js'),
+    context: {
+      posts: posts
+        .filter(({ node }) => node.fields.slug !== '/about/')
+        .reverse()
+    }
+  })
+
+  posts
+    .filter(({ node }) => node.fields.slug !== '/about/')
+    .map(({ node }, i) =>
+      createPage({
+        path: node.fields.slug,
+        component: resolve('src/templates/post.js'),
+        context: {
+          next: i === posts.length - 1 ? null : posts[i + 1].node,
+          prev: i === 0 ? null : posts[i - 1].node,
+          slug: node.fields.slug
+        }
+      })
+    )
+}
+
+const createTagsPageAndTermPages = (createPage, posts) => {
   // Create an empty object to store the posts.
   const postsByTags = {}
   // Loop through all nodes (our markdown posts) and add the tags to our post object.
@@ -25,31 +79,24 @@ const createTagPages = (createPage, posts) => {
   // Create the tags page with the list of tags from our posts object.
   createPage({
     path: '/tags',
-    component: resolve(`src/templates/tags.js`),
+    component: resolve('src/templates/tags.js'),
     context: {
       tags: Object.entries(postsByTags)
     }
   })
 
-  const tags = Object.keys(postsByTags)
   // For each of the tags in the post object, create a tag page.
-  tags.forEach(term => {
-    const taggedPosts = postsByTags[term]
+  Object.keys(postsByTags).forEach(term => {
     createPage({
       path: `/tags/${term}`,
       component: resolve(`src/templates/term.js`),
       context: {
-        taggedPosts,
+        taggedPosts: postsByTags[term],
         tag: term
       }
     })
   })
 }
-
-// Look up params for dev vs prod.
-const args = isProd
-  ? 'filter: { frontmatter: { draft: { ne: true } } } sort: { order: ASC, fields: [frontmatter___date] }'
-  : 'sort: { order: ASC, fields: [frontmatter___date] }'
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
@@ -72,6 +119,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 tags
                 title
               }
+              html
+              timeToRead
             }
           }
         }
@@ -81,20 +130,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       if (result.errors) return reject(result.errors)
       // Array of nodes(posts).
       const posts = result.data.allMarkdownRemark.edges
-      // Create all corresponding tag pages.
-      createTagPages(createPage, posts)
-      // Create posts.
-      posts.map(({ node: post }, i) =>
-        createPage({
-          path: post.fields.slug,
-          component: resolve('src/templates/post.js'),
-          context: {
-            next: i === posts.length - 1 ? null : posts[i + 1].node,
-            prev: i === 0 ? null : posts[i - 1].node,
-            slug: post.fields.slug
-          }
-        })
-      )
+      // Create home page.
+      createHomePage(createPage, posts)
+      // Create about page.
+      createAboutPage(createPage, posts)
+      // Create blog page and all corresponding posts.
+      createBlogPageAndPostsPages(createPage, posts)
+      // Create tag page and all corresponding term pages.
+      createTagsPageAndTermPages(createPage, posts)
       _resolve()
     })
   })
