@@ -13,11 +13,11 @@
 * [x] Tags & Terms Styling
 * [ ] Finalize styling of site & clean up `theme.js` & theme across site.
 * [ ] Proofread posts, write up newest post.
-* [ ] Testing
+* [x] Testing
 * [ ] Update Resume in Dropbox & link on HomePage
 * [ ] Finalize updates to LinkedIn
 * [x] RSS Feed with `feed` plugin (add RSS feed icon to Share component) `fas fa-rss`
-* [ ] Add `plop` to generate initial post template for writing.
+* [x] Add `plop` to generate initial post template for writing.
 
 ## Accessibility
 

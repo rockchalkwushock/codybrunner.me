@@ -6,6 +6,7 @@ module.exports = {
   scripts: {
     clean: series(rimraf('.cache'), rimraf('coverage'), rimraf('public')),
     commit: 'git cz',
+    generate: 'plop --plopfile ./generators/plopfile.js',
     reportCoverage: 'codecov',
     test: {
       default: 'jest --runInBand --updateSnapshot',

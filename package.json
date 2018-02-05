@@ -10,6 +10,7 @@
     "build": "nps clean && gatsby build",
     "cm": "nps commit",
     "dev": "nps clean && gatsby develop",
+    "new": "nps generate",
     "serve": "gatsby serve",
     "start": "nps",
     "test": "nps test"
@@ -68,6 +69,7 @@
     "lint-staged": "^6.1.0",
     "nps": "^5.7.1",
     "nps-utils": "^1.5.0",
+    "plop": "^1.9.1",
     "prettier": "^1.10.2",
     "react-test-renderer": "^16.2.0"
   },
