@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="apple-icon-180x180" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon">
+            <circle id="Background" stroke="#7A9EB1" stroke-width="1" fill="#7A9EB1" fill-rule="evenodd" cx="90" cy="90" r="90"></circle>
+            <g id="Text" fill="#FFE1B6" font-family="Chalkduster" font-size="90" font-weight="normal">
+                <text id="B">
+                    <tspan x="90" y="155">B</tspan>
+                </text>
+                <text id="C">
+                    <tspan x="21.4925373" y="91">C</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

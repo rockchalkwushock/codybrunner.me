@@ -26,7 +26,6 @@
 export default {
   post: {
     bg: '#f9f8eb',
-    fg: '',
     ftClr: '#000',
     ftFm: '"Raleway", sans-serif',
     ftSz: '1.1rem',

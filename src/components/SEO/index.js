@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { bool } from 'prop-types'
 
 import { mergeStrings } from '../../lib/helpers'
+import logo from '../../assets/logo.jpg'
 
 /**
  * @fileOverview
@@ -11,8 +12,6 @@ import { mergeStrings } from '../../lib/helpers'
  * Accepts post & site meta data from GraphQL Query.
  * postSeo {Boolean} tells component whether or not to
  * use post or site meta data.
- *
- * TODO: Images/Favicons/Icons
  */
 
 const SEO = ({ post, postSeo, site }) => {
@@ -60,7 +59,7 @@ const SEO = ({ post, postSeo, site }) => {
         content={postSeo ? post.wordCount.words : ''}
       />
       <meta itemProp="keywords" content={keywords} />
-      <meta itemProp="image" content="" />
+      <meta itemProp="image" content={logo} />
       {/* OpenGraph Tags */}
       <meta
         property="og:title"
@@ -70,11 +69,11 @@ const SEO = ({ post, postSeo, site }) => {
         property="og:description"
         content={postSeo ? post.frontmatter.description : site.description}
       />
-      <meta property="og:image" content="" />
-      <meta property="og:image:alt" content="" />
-      <meta property="og:image:type" content="image/jpg" />
-      <meta property="og:image:height" content="1256" />
-      <meta property="og:image:width" content="2400" />
+      <meta property="og:image" content={logo} />
+      <meta property="og:image:alt" content="Logo for codybrunner.rocks" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:height" content="300" />
+      <meta property="og:image:width" content="400" />
       <meta
         property="og:url"
         content={postSeo ? `${site.siteUrl}${post.fields.slug}` : site.siteUrl}
@@ -93,8 +92,8 @@ const SEO = ({ post, postSeo, site }) => {
         name="twitter:description"
         content={postSeo ? post.frontmatter.description : site.description}
       />
-      <meta name="twitter:image" content="" />
-      <meta name="twitter:image:alt" content="" />
+      <meta name="twitter:image" content={logo} />
+      <meta name="twitter:image:alt" content="Logo for codybrunner.rocks" />
       <meta
         name="twitter:url"
         content={postSeo ? `${site.siteUrl}${post.fields.slug}` : site.siteUrl}
