@@ -4,7 +4,8 @@ import { bool } from 'prop-types'
 const Post = styled.article`
   background-color: ${({ theme }) => theme.post.bg};
   border: ${({ draft }) => (draft ? '6px dashed red' : 'none')};
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.7);
+  border-radius: ${({ theme }) => theme.site.borderRadius};
+  box-shadow: ${({ theme }) => theme.site.shadow};
   display: flex;
   flex-direction: column;
   max-width: 736px;

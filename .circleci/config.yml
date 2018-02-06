@@ -67,7 +67,7 @@ jobs:
               now -t ${NOW_TOKEN} alias codybrunner.rocks
             elif [ "${CIRCLE_BRANCH}" == "development" ]; then
               now public -t ${NOW_TOKEN} -n=my-site --static
-              now -t ${NOW_TOKEN} alias codybrunner.beta
+              now -t ${NOW_TOKEN} alias codybrunner-beta
             else
               echo "This failed miserably!"
             fi

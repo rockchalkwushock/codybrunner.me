@@ -35,7 +35,7 @@ const Heading4 = Heading.withComponent('h4')
 const HomeView = ({ meta, posts }) => (
   <FlexContainer>
     <SEO site={meta} />
-    <Grid>
+    <Grid headCard>
       <ProfilePic />
       <Heading>{meta.author}</Heading>
       <Heading4>{meta.jobTitle}</Heading4>

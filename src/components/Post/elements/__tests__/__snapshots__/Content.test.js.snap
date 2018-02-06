@@ -22,10 +22,6 @@ exports[`Component: <Content /> should render correctly 1`] = `
   font-family: "Raleway",sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
-  letter-spacing: 1px;
   line-height: 1.618;
   padding: 0.5em 0;
 }
@@ -67,11 +63,11 @@ exports[`Component: <Content /> should render correctly 1`] = `
 
 .c0 > blockquote {
   background-color: rgba(0,0,0,0.1);
-  border-left: 10px solid #7a9eb1;
-  border-radius: 20px 0px;
-  border-right: 10px solid #7a9eb1;
-  margin: 0.5em 0;
+  border-left: 5px solid #7a9eb1;
+  border-radius: 5px;
+  margin: 0.5em auto;
   padding: 0.25em 0.75em;
+  width: 100%;
 }
 
 .c0 > blockquote p {
@@ -106,6 +102,12 @@ exports[`Component: <Content /> should render correctly 1`] = `
 
 .c0 .gatsby-highlight pre {
   background-color: rgba(0,0,0,0.1);
+}
+
+@media (min-width:736px) {
+  .c0 > blockquote {
+    width: 62%;
+  }
 }
 
 <ThemeProvider

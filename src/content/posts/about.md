@@ -7,13 +7,19 @@ tags: []
 title: "About Cody"
 ---
 
-Why hello there you sexy bot...I mean possible user not trolling my site :wink: Pleasure to make your internet acquaintance. My name is Cody and I'm a 29 year old full-stack JavaScript developer from [Wichita, Kansas](https://www.google.com/maps/place/Wichita,+KS/@37.6645261,-97.5837757,11z/data=!3m1!4b1!4m5!3m4!1s0x87badb6ad27f182d:0x9396d5bf74d33d3e!8m2!3d37.6871761!4d-97.330053?hl=en). Yep I just linked where I'm from because you were like: _"Where?"_, oh it's a fly-over state, gotcha! I've walked a really long and interesting path to get where I am today. I have studied medicine, law, & engineering so I'm pretty learned at this point :joy:. I served in the US Navy & in Afghanistan in 2010. In 2016, ultimately very unhappy with my last place of employment, the work I was doing, and studies in engineering I walked away from all of it. Sitting on the bank of Elliot Bay in Seattle, Washington I asked myself:
+Why hello there you sexy bot...I mean possible user not trolling my site :wink: Pleasure to make your internet acquaintance. My name is Cody and I'm a 29 year old full-stack JavaScript developer from [Wichita, Kansas](https://www.google.com/maps/place/Wichita,+KS/@37.6645261,-97.5837757,11z/data=!3m1!4b1!4m5!3m4!1s0x87badb6ad27f182d:0x9396d5bf74d33d3e!8m2!3d37.6871761!4d-97.330053?hl=en). Yep I just linked where I'm from because you were like: _"Where?"_, oh it's a fly-over state, gotcha! I've walked a really long and interesting path to get where I am today. I have studied medicine, law, & engineering so I'm pretty learned at this point :joy:. I served in the US Navy & in Afghanistan in 2010.
+
+## Two roads diverged in a yellow wood
+
+In 2016, ultimately very unhappy with my last place of employment, the work I was doing, and studies in engineering I walked away from all of it. Sitting on the bank of Elliot Bay in Seattle, Washington I asked myself:
 
 > _What makes you happy?_
 
 > _What was the last thing you were doing that really made you happy and challenged you?_
 
-It was pretty easy to answer looking back on it. All the time spent performing maintenance on a robot was tiresome, but when finally allowed the chance to show my chops programming the robots I instantly loved my job and was excited to be there. It's the challenge. That's what intrigued me and got me to the point I'd go to the library and map out the logic on a whiteboard for a robot to go from a home position to pick up a part and place it on a spindle all in one fluid motion. So armed with a vague understanding of HTML & CSS and a summer class in C I set off to become a web developer.
+It was pretty easy to answer looking back on it. All the time spent performing maintenance on a robot was tiresome, but when finally allowed the chance to show my chops programming the robots I instantly loved my job and was excited to be there.
+
+It's the challenge. That's what intrigued me and got me to the point I'd go to the library and map out the logic on a whiteboard for a robot to go from a home position to pick up a part and place it on a spindle all in one fluid motion. So armed with a vague understanding of HTML & CSS and a summer class in C I set off to become a web developer.
 
 Since beginning I have become very proficient with React, _and have quit using Redux for everything_ :see_no_evil:. I've published two NPM modules and made quite a few different projects ranging from client-side only to full-stack to API's. I have also come to learn that Chrome is a lot more forgiving when you make it bleed compared to a robot :joy:. If you'd like to see the progression of 18 months just take a look at [version 1](https://rockchalkwushock.github.io/rcws-development/) of this site. Version 1 being built with `create-react-app` and not utilizing any production aspects at all because I knew nothing about them. The current version of this website is built using the awesomeness for `react`, `styled-components`, & `grapqhl` package up nicely in the static generator `gatsby`.
 
@@ -23,7 +29,7 @@ I am proficient in HTML5, CSS3, & Vanilla JavaScript (ES6 & Beyond) and possess 
 
 ## Free Time & Hobbies
 
-I really enjoy spending time out in nature camping & hiking. One of the reasons I would :heart: to move to the Pacific NorthWest and spend my weekends exploring the vast beauty of that region. I'm a dog lover. If you let me bring my dog to work I'll work pretty cheap! Kansas Jayhawks fan which obviously means vacation will be from mid-March to the first week of April for me every year, just go ahead and pencil me in right there! I enjoy live music, fishing, skydiving, a good dark beer from time to time, and learning new things that interest me.
+I really enjoy spending time out in nature camping & hiking. One of the reasons I would :heart: to move to the Pacific Northwest and spend my weekends exploring the vast beauty of that region. I'm a dog lover. If you let me bring my dog to work I'll work pretty cheap! Kansas Jayhawks fan which obviously means vacation will be from mid-March to the first week of April for me every year, just go ahead and pencil me in right there! I enjoy live music, fishing, skydiving, a good dark beer from time to time, and learning new things that interest me.
 
 ## Next Up
 

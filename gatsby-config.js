@@ -13,6 +13,8 @@ const styledVersion = dependencies['styled-components'].substr(1, 3)
 const year = new Date().getFullYear()
 // Condition
 const isProd = process.env.NODE_ENV === 'production'
+// REVIEW: Change when ready to role out of beta to actual domain.
+const SITE_DOMAIN = 'https://codybrunner-beta.now.sh'
 // Default Plugins
 const plugins = [
   {
@@ -282,6 +284,6 @@ module.exports = {
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',
-    siteUrl: isProd ? 'https://codybrunner.rocks' : '/'
+    siteUrl: isProd ? SITE_DOMAIN : '/'
   }
 }

@@ -4,6 +4,10 @@ import { bool } from 'prop-types'
 const Grid = styled.div`
   background-color: ${({ alternate, theme }) =>
     alternate ? theme.post.bg : 'inherit'};
+  border-radius: ${({ headCard, theme }) =>
+    headCard ? '0px' : theme.site.borderRadius};
+  box-shadow: ${({ headCard, theme }) =>
+    headCard ? 'unset' : theme.site.shadow};
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr;
@@ -14,7 +18,8 @@ const Grid = styled.div`
 
 Grid.displayName = 'Grid'
 Grid.propTypes = {
-  alternate: bool
+  alternate: bool,
+  headCard: bool
 }
 
 export default Grid

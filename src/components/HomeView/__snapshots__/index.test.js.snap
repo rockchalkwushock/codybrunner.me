@@ -108,7 +108,9 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       }
     }
   />
-  <Grid>
+  <Grid
+    headCard={true}
+  >
     <ProfilePic />
     <Heading>
       Cody Brunner
