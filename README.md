@@ -26,6 +26,10 @@
 * [ ] Check perf of image in CSS vs using `gatsby-image`.
 * [ ] Look at imports of `react-share`.
 
+## Browser Troubleshooting
+
+1. Tags in Card are not displaying correclty in Safari on Mobile.
+
 ## v2
 
 * [ ] Related Posts

@@ -274,8 +274,7 @@ module.exports = {
     menu: [
       { id: 1, href: '/', text: 'Home' },
       { id: 2, href: '/about', text: 'About' },
-      { id: 3, href: '/posts/1', text: 'Blog' }, // '/posts/1' is from using `gatsby-paginate`
-      { id: 4, href: '/tags', text: 'Tags' }
+      { id: 3, href: '/posts/1', text: 'Blog' } // '/posts/1' is from using `gatsby-paginate`
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',

@@ -6,7 +6,6 @@ import NavBar from './NavBar'
 import PostsView from './PostsView'
 import ProfilePic from './ProfilePic'
 import SinglePost from './Post'
-import TagsView from './TagsView'
 import TermView from './TermView'
 import { Wrapper } from './commons'
 
@@ -19,7 +18,6 @@ export {
   PostsView,
   ProfilePic,
   SinglePost,
-  TagsView,
   TermView,
   Wrapper
 }
