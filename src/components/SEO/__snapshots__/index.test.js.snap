@@ -47,7 +47,7 @@ exports[`Component: <SEO /> should render correctly as post data 1`] = `
     itemProp="keywords"
   />
   <meta
-    content=""
+    content={null}
     itemProp="image"
   />
   <meta
@@ -59,23 +59,23 @@ exports[`Component: <SEO /> should render correctly as post data 1`] = `
     property="og:description"
   />
   <meta
-    content=""
+    content={null}
     property="og:image"
   />
   <meta
-    content=""
+    content="Logo for codybrunner.rocks"
     property="og:image:alt"
   />
   <meta
-    content="image/jpg"
+    content="image/jpeg"
     property="og:image:type"
   />
   <meta
-    content="1256"
+    content="300"
     property="og:image:height"
   />
   <meta
-    content="2400"
+    content="400"
     property="og:image:width"
   />
   <meta
@@ -111,11 +111,11 @@ exports[`Component: <SEO /> should render correctly as post data 1`] = `
     name="twitter:description"
   />
   <meta
-    content=""
+    content={null}
     name="twitter:image"
   />
   <meta
-    content=""
+    content="Logo for codybrunner.rocks"
     name="twitter:image:alt"
   />
   <meta
@@ -178,7 +178,7 @@ exports[`Component: <SEO /> should render correctly as site data 1`] = `
     itemProp="keywords"
   />
   <meta
-    content=""
+    content={null}
     itemProp="image"
   />
   <meta
@@ -190,23 +190,23 @@ exports[`Component: <SEO /> should render correctly as site data 1`] = `
     property="og:description"
   />
   <meta
-    content=""
+    content={null}
     property="og:image"
   />
   <meta
-    content=""
+    content="Logo for codybrunner.rocks"
     property="og:image:alt"
   />
   <meta
-    content="image/jpg"
+    content="image/jpeg"
     property="og:image:type"
   />
   <meta
-    content="1256"
+    content="300"
     property="og:image:height"
   />
   <meta
-    content="2400"
+    content="400"
     property="og:image:width"
   />
   <meta
@@ -242,11 +242,11 @@ exports[`Component: <SEO /> should render correctly as site data 1`] = `
     name="twitter:description"
   />
   <meta
-    content=""
+    content={null}
     name="twitter:image"
   />
   <meta
-    content=""
+    content="Logo for codybrunner.rocks"
     name="twitter:image:alt"
   />
   <meta

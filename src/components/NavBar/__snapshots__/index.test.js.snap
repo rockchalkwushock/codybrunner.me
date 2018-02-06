@@ -7,8 +7,8 @@ exports[`Component: <NavBar /> should render correctly 1`] = `
     onClick={[Function]}
   >
     <SiteIcon
-      className="fas fa-bars"
-      size={3}
+      icon="bars"
+      size="3x"
     />
   </NavIcon>
   <NavList
@@ -28,11 +28,6 @@ exports[`Component: <NavBar /> should render correctly 1`] = `
       href="/posts/1"
       key="3"
       text="Blog"
-    />
-    <SiteLink
-      href="/tags"
-      key="4"
-      text="Tags"
     />
   </NavList>
 </Nav>

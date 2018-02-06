@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <Card /> should render correctly 1`] = `
+.c0 {
+  background-color: #7a9eb1;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.7);
+  padding: 1em;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.c0:hover {
+  box-shadow: unset;
+}
+
+@media (min-width:736px) {
+  .c0 {
+    width: 60%;
+  }
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "borderRadius": "10px",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+        "shadow": "1px 1px 5px 1px rgba(0, 0, 0, 0.7)",
+        "transition": "all 0.3s ease-in-out",
+      },
+    }
+  }
+>
+  <Card
+    draft={false}
+  >
+    <div
+      className="c0"
+    />
+  </Card>
+</ThemeProvider>
+`;
+
+exports[`Component: <CardDate /> should render correctly 1`] = `
+.c0 {
+  padding-bottom: 0.5em;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "borderRadius": "10px",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+        "shadow": "1px 1px 5px 1px rgba(0, 0, 0, 0.7)",
+        "transition": "all 0.3s ease-in-out",
+      },
+    }
+  }
+>
+  <Date>
+    <h4
+      className="c0"
+    />
+  </Date>
+</ThemeProvider>
+`;
+
+exports[`Component: <CardExcerpt /> should render correctly 1`] = `
+.c0 {
+  text-align: justify;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "borderRadius": "10px",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+        "shadow": "1px 1px 5px 1px rgba(0, 0, 0, 0.7)",
+        "transition": "all 0.3s ease-in-out",
+      },
+    }
+  }
+>
+  <Excerpt>
+    <p
+      className="c0"
+    />
+  </Excerpt>
+</ThemeProvider>
+`;
+
+exports[`Component: <CardTitle /> should render correctly 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "borderRadius": "10px",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+        "shadow": "1px 1px 5px 1px rgba(0, 0, 0, 0.7)",
+        "transition": "all 0.3s ease-in-out",
+      },
+    }
+  }
+>
+  <Title>
+    <h2
+      className=""
+    />
+  </Title>
+</ThemeProvider>
+`;

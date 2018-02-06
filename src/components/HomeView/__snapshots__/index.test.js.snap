@@ -9,49 +9,49 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         "author": "Cody Brunner",
         "business": Array [
           Object {
-            "className": "fas fa-envelope",
+            "className": "fas, envelope",
             "href": "mailto:rockchalkwushock@icloud.com",
             "label": "Email",
           },
           Object {
-            "className": "fab fa-telegram-plane",
+            "className": "fab, telegram-plane",
             "href": "https://t.me/rockchalkwushock",
             "label": "Telegram",
           },
           Object {
-            "className": "fas fa-file-pdf",
+            "className": "fas, file-pdf",
             "href": "https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1",
             "label": "Resume",
           },
         ],
         "contacts": Array [
           Object {
-            "className": "fab fa-github",
+            "className": "fab, github",
             "href": "https://github.com/rockchalkwushock",
             "label": "Github",
           },
           Object {
-            "className": "fab fa-instagram",
+            "className": "fab, instagram",
             "href": "https://www.instagram.com/rockchalkwushock",
             "label": "Instagram",
           },
           Object {
-            "className": "fab fa-linkedin",
+            "className": "fab, linkedin",
             "href": "https://www.linkedin.com/in/cody-brunner",
             "label": "LinkedIn",
           },
           Object {
-            "className": "fas fa-rss",
+            "className": "fas, rss",
             "href": "rss.xml",
             "label": "RSS Feed",
           },
           Object {
-            "className": "fab fa-twitter",
+            "className": "fab, twitter",
             "href": "https://twitter.com/RockChalkDev",
             "label": "Twitter",
           },
           Object {
-            "className": "fab fa-youtube",
+            "className": "fab, youtube",
             "href": "https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw",
             "label": "Youtube",
           },
@@ -101,11 +101,6 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "id": 3,
             "text": "Blog",
           },
-          Object {
-            "href": "/tags",
-            "id": 4,
-            "text": "Tags",
-          },
         ],
         "siteUrl": "/",
         "title": "Cody Brunner - Full-Stack JavaScript Developer",
@@ -132,7 +127,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Github"
       >
         <SiteIcon
-          className="fab fa-github"
+          icon={
+            Array [
+              "fab",
+              "github",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -142,7 +143,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Instagram"
       >
         <SiteIcon
-          className="fab fa-instagram"
+          icon={
+            Array [
+              "fab",
+              "instagram",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -152,7 +159,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="LinkedIn"
       >
         <SiteIcon
-          className="fab fa-linkedin"
+          icon={
+            Array [
+              "fab",
+              "linkedin",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -162,7 +175,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="RSS Feed"
       >
         <SiteIcon
-          className="fas fa-rss"
+          icon={
+            Array [
+              "fas",
+              "rss",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -172,7 +191,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Twitter"
       >
         <SiteIcon
-          className="fab fa-twitter"
+          icon={
+            Array [
+              "fab",
+              "twitter",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -182,7 +207,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Youtube"
       >
         <SiteIcon
-          className="fab fa-youtube"
+          icon={
+            Array [
+              "fab",
+              "youtube",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
     </List>
@@ -210,7 +241,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Email"
       >
         <SiteIcon
-          className="fas fa-envelope"
+          icon={
+            Array [
+              "fas",
+              "envelope",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -220,7 +257,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Telegram"
       >
         <SiteIcon
-          className="fab fa-telegram-plane"
+          icon={
+            Array [
+              "fab",
+              "telegram-plane",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
       <SiteLink
@@ -230,7 +273,13 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         label="Resume"
       >
         <SiteIcon
-          className="fas fa-file-pdf"
+          icon={
+            Array [
+              "fas",
+              "file-pdf",
+            ]
+          }
+          size="2x"
         />
       </SiteLink>
     </List>

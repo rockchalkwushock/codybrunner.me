@@ -41,6 +41,7 @@ export default {
   },
   site: {
     bg: '#7a9eb1',
+    borderRadius: '10px',
     fg: '#ffe1b6',
     ftClr: '#143a52',
     ftFm: '"Raleway", sans-serif',
@@ -49,6 +50,8 @@ export default {
     linkClr: '#143a52',
     linkHvClr: '#ffe1b6',
     lnHt: '1.4',
-    ltSp: '0px'
+    ltSp: '0px',
+    shadow: '1px 1px 5px 1px rgba(0, 0, 0, 0.7)',
+    transition: 'all 0.3s ease-in-out'
   }
 }

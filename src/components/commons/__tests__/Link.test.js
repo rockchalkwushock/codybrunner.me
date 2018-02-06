@@ -32,7 +32,7 @@ describe('Component: <ExternalLink />', () => {
   })
   test('should have styles', () => {
     expect(wrapper).toHaveStyleRule('color', '#143a52')
-    expect(wrapper).toHaveStyleRule('transition', 'all 0.2s ease-in')
+    expect(wrapper).toHaveStyleRule('transition', 'all 0.3s ease-in-out')
     expect(wrapper).toHaveStyleRule('color', '#143a52', {
       modifier: ':visited'
     })
@@ -56,7 +56,7 @@ describe.skip('Component: <InternalLink />', () => {
   })
   test('should have styles', () => {
     expect(wrapper).toHaveStyleRule('color', '#143a52')
-    expect(wrapper).toHaveStyleRule('transition', 'all 0.2s ease-in')
+    expect(wrapper).toHaveStyleRule('transition', 'all 0.3s ease-in-out')
     expect(wrapper).toHaveStyleRule('color', '#143a52', {
       modifier: ':visited'
     })

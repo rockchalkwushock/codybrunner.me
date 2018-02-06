@@ -58,10 +58,10 @@ exports[`Component: <SitePost /> should render correctly 1`] = `
       ]
     }
   />
-  <Pagination
-    next={Object {}}
-    prev={Object {}}
-    slug="/turdsspace/"
+  <Paginate
+    nextPage={Object {}}
+    post={true}
+    prevPage={Object {}}
   />
   <Share
     title="All About JS"

@@ -36,7 +36,7 @@ const UnstyledIcon = props => <FontAwesomeIcon {...props} />
 
 export const StyledIcon = styled(UnstyledIcon)`
   color: ${({ theme }) => theme.site.linkClr};
-  transition: all 0.2s ease-in-out;
+  transition: ${({ theme }) => theme.site.transition};
   :hover {
     color: ${({ theme }) => theme.site.linkHvClr};
   }

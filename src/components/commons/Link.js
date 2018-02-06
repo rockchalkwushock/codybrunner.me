@@ -9,7 +9,7 @@ const UnstyledLink = props => <Link {...props} />
 
 export const ExternalLink = styled.a`
   color: ${({ theme }) => theme.site.linkClr};
-  transition: all 0.2s ease-in;
+  transition: ${({ theme }) => theme.site.transition};
   :visited {
     color: ${({ theme }) => theme.site.linkClr};
   }
@@ -20,7 +20,7 @@ export const ExternalLink = styled.a`
 
 export const InternalLink = styled(UnstyledLink)`
   color: ${({ theme }) => theme.site.linkClr};
-  transition: all 0.2s ease-in;
+  transition: ${({ theme }) => theme.site.transition};
   :visited {
     color: ${({ theme }) => theme.site.linkClr};
   }
