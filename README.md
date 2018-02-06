@@ -14,7 +14,8 @@
 * [x] Proofread posts, write up newest post.
 * [ ] Update Resume in Dropbox & link on HomePage
 * [ ] Finalize updates to LinkedIn
-* [ ] Remove Tags page and find a different way to supply _all_ tags.
+* [x] Remove Tags page and find a different way to supply _all_ tags.
+* [ ] Clean up tags
 
 ## Perf
 
@@ -30,7 +31,7 @@
 
 1. Tags in Card are not displaying correclty in Safari on Mobile.
 
-## v2
+## v2 features/wishlist
 
 * [ ] Related Posts
 * [ ] Projects
@@ -38,10 +39,4 @@
 * [ ] Work more with `sharp`, `gatsby-image`. [Here](https://image-processing.gatsbyjs.org/) for more info.
 * [ ] Add [line highlighting](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/#implementation-notes) to markdown code blocks
 * [ ] Pagination for tags, not really needed at the moment but it should be implemented and will be easys
-
-## LinkedIn Badge
-
-```html
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="cody-brunner"><a class="LI-simple-link" href='https://www.linkedin.com/in/cody-brunner?trk=profile-badge'>Cody Brunner</a></div>
-<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-```
+* [ ] Should really move to using `gatsby-image` for avatar on homepage. It will be more performant and the out of the box lazy-loading with blur up will be a better UX. At the moment importing the image into `js` & letting `webpack` do work loads 238KB :scream:

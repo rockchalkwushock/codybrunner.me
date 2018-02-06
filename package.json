@@ -2,9 +2,10 @@
   "name": "codybrunner.rocks",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
+  "author":
+    "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
   "description": "My personal website & tech blog built with Gatsby.",
-  "repository": "",
+  "repository": "https://github.com/rockchalkwushock/codybrunner.rocks.git",
   "scripts": {
     "build": "nps clean && gatsby build",
     "cm": "nps commit",
@@ -97,9 +98,7 @@
   },
   "jest": {
     "bail": true,
-    "collectCoverageFrom": [
-      "src/components/**/*.js"
-    ],
+    "collectCoverageFrom": ["src/components/**/*.js"],
     "coverageThreshold": {
       "global": {
         "branches": 50,
@@ -111,18 +110,11 @@
     "moduleNameMapper": {
       ".+\\.(png|jpg|jpeg|svg)$": "identity-obj-proxy"
     },
-    "setupFiles": [
-      "./jest.setup.js"
-    ],
+    "setupFiles": ["./jest.setup.js"],
     "setupTestFrameworkScriptFile": "jest-styled-components",
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/.cache/"
-    ],
+    "testPathIgnorePatterns": ["/node_modules/", "/.cache/"],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.transform.js"
     }
