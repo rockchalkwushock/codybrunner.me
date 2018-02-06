@@ -99,14 +99,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           })
         }
       })
-      // Create tags page
-      // createPage({
-      //   path: '/tags',
-      //   component: resolve('src/templates/tags.js'),
-      //   context: {
-      //     tags: Object.entries(postsByTags)
-      //   }
-      // })
 
       Object.keys(postsByTags).forEach(term => {
         // Create term pages with corresponding pages.

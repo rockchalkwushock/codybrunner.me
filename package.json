@@ -8,6 +8,7 @@
   "repository": "https://github.com/rockchalkwushock/codybrunner.rocks.git",
   "scripts": {
     "build": "nps clean && gatsby build",
+    "ci_build": "NODE_ENV=production gatsby build",
     "cm": "nps commit",
     "dev": "nps clean && gatsby develop",
     "new": "nps generate",

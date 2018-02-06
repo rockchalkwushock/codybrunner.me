@@ -1,5 +1,9 @@
 // Package
-require('dotenv-safe').load()
+if (!process.env.CI) {
+  // .env not present on Github or for CircleCi
+  require('dotenv-safe').load()
+}
+
 const { dependencies } = require('./package.json')
 
 // Get Major.Minor
@@ -278,6 +282,6 @@ module.exports = {
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',
-    siteUrl: isProd ? 'http://localhost:9000' : '/'
+    siteUrl: isProd ? 'https://codybrunner.rocks' : '/'
   }
 }
