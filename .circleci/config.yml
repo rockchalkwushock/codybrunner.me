@@ -46,8 +46,7 @@ jobs:
       - attach_workspace:
           at: ~/codybrunner.rocks
       - run: yarn install
-      - run:
-          name: GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SENTRY_DSN=${SENTRY_DSN} yarn ci_build
+      - run: GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SENTRY_DSN=${SENTRY_DSN} yarn ci_build
       - persist_to_workspace:
           root: .
           paths: .
