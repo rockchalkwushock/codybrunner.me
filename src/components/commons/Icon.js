@@ -1,10 +1,41 @@
 import React from 'react'
 import styled from 'styled-components'
-import { number, string } from 'prop-types'
+import fontawesome from '@fortawesome/fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
+import faTelegramPlane from '@fortawesome/fontawesome-free-brands/faTelegramPlane'
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+import faYoutube from '@fortawesome/fontawesome-free-brands/faYoutube'
+import faArrowCircleLeft from '@fortawesome/fontawesome-free-solid/faArrowCircleLeft'
+import faArrowCircleRight from '@fortawesome/fontawesome-free-solid/faArrowCircleRight'
+import faBars from '@fortawesome/fontawesome-free-solid/faBars'
+import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope'
+import faFilePdf from '@fortawesome/fontawesome-free-solid/faFilePdf'
+import faRss from '@fortawesome/fontawesome-free-solid/faRss'
 
-export const StyledIcon = styled.svg`
+// By setting things up like this react-fontawesome knows of the icons
+// I am also only using these icons from the libraries so less overhead.
+fontawesome.library.add(
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faTelegramPlane,
+  faTwitter,
+  faYoutube,
+  faArrowCircleLeft,
+  faArrowCircleRight,
+  faBars,
+  faEnvelope,
+  faFilePdf,
+  faRss
+)
+
+const UnstyledIcon = props => <FontAwesomeIcon {...props} />
+
+export const StyledIcon = styled(UnstyledIcon)`
   color: ${({ theme }) => theme.site.linkClr};
-  font-size: ${({ size }) => `${size}em`};
   transition: all 0.2s ease-in-out;
   :hover {
     color: ${({ theme }) => theme.site.linkHvClr};
@@ -15,20 +46,7 @@ export const StyledIcon = styled.svg`
 `
 
 StyledIcon.displayName = 'Icon'
-StyledIcon.defaultProps = {
-  size: 1.75
-}
-StyledIcon.propTypes = {
-  size: number
-}
 
-const SiteIcon = ({ className, size }) => (
-  <StyledIcon className={className} size={size} />
-)
-
-SiteIcon.propTypes = {
-  className: string.isRequired,
-  size: number
-}
+const SiteIcon = ({ icon, size }) => <StyledIcon icon={icon} size={size} />
 
 export default SiteIcon

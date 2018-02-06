@@ -43,7 +43,7 @@ class NavBar extends Component {
     return (
       <Nav>
         <NavIcon aria-label="hamburger button" onClick={this.handleOnClick}>
-          <Icon className="fas fa-bars" size={3} />
+          <Icon icon="bars" size="3x" />
         </NavIcon>
         <NavList visible={this.state.visible}>{this.renderLinks()}</NavList>
       </Nav>

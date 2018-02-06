@@ -25,7 +25,7 @@ exports[`Component: <NavBar /> should render correctly 1`] = `
       text="About"
     />
     <SiteLink
-      href="/posts"
+      href="/posts/1"
       key="3"
       text="Blog"
     />

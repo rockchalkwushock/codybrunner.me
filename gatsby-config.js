@@ -21,6 +21,7 @@ const plugins = [
   'gatsby-plugin-react-next',
   'gatsby-plugin-sharp',
   'gatsby-plugin-styled-components',
+  'gatsby-plugin-twitter',
   {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -182,7 +183,7 @@ const prodOnly = [
 ]
 
 module.exports = {
-  pathPrefix: '/', // You need this for the /static/ assets with withPrefix()
+  pathPrefix: '/',
   plugins: isProd ? [...plugins, ...prodOnly] : [...plugins, ...devOnly],
   siteMetadata: {
     aboutSnippet:
@@ -190,17 +191,17 @@ module.exports = {
     author: 'Cody Brunner',
     business: [
       {
-        className: 'fas fa-envelope',
+        className: 'fas, envelope',
         href: 'mailto:rockchalkwushock@icloud.com',
         label: 'Email'
       },
       {
-        className: 'fab fa-telegram-plane',
+        className: 'fab, telegram-plane',
         href: 'https://t.me/rockchalkwushock',
         label: 'Telegram'
       },
       {
-        className: 'fas fa-file-pdf',
+        className: 'fas, file-pdf',
         href:
           'https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1',
         label: 'Resume'
@@ -208,32 +209,32 @@ module.exports = {
     ],
     contacts: [
       {
-        className: 'fab fa-github',
+        className: 'fab, github',
         href: 'https://github.com/rockchalkwushock',
         label: 'Github'
       },
       {
-        className: 'fab fa-instagram',
+        className: 'fab, instagram',
         href: 'https://www.instagram.com/rockchalkwushock',
         label: 'Instagram'
       },
       {
-        className: 'fab fa-linkedin',
-        href: 'https://www.linkedin.com/in/cody-brunner-324930158',
+        className: 'fab, linkedin',
+        href: 'https://www.linkedin.com/in/cody-brunner',
         label: 'LinkedIn'
       },
       {
-        className: 'fas fa-rss',
+        className: 'fas, rss',
         href: 'rss.xml',
         label: 'RSS Feed'
       },
       {
-        className: 'fab fa-twitter',
+        className: 'fab, twitter',
         href: 'https://twitter.com/RockChalkDev',
         label: 'Twitter'
       },
       {
-        className: 'fab fa-youtube',
+        className: 'fab, youtube',
         href: 'https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw',
         label: 'Youtube'
       }
@@ -273,7 +274,7 @@ module.exports = {
     menu: [
       { id: 1, href: '/', text: 'Home' },
       { id: 2, href: '/about', text: 'About' },
-      { id: 3, href: '/posts', text: 'Blog' },
+      { id: 3, href: '/posts/1', text: 'Blog' }, // '/posts/1' is from using `gatsby-paginate`
       { id: 4, href: '/tags', text: 'Tags' }
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',

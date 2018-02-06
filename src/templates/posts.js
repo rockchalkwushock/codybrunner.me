@@ -14,16 +14,11 @@ import { PostsView } from '../components'
  * a draft before publishing and running
  * in produciton.
  *
- * REVIEW
- * Will need to likely include `totalCount` & provide a `limit`
- * for implementing pagination on this page. Not enough posts at
- * this point in time to add this feature.
- *
  * TODO: Styled Header for more fancy fancy, like a background img header?
  */
 
 const PostsTemplate = ({ data, pathContext }) => (
-  <PostsView posts={pathContext.posts} site={data.site.siteMetadata} />
+  <PostsView ctx={pathContext} site={data.site.siteMetadata} />
 )
 
 export const PostsPageQuery = graphql`

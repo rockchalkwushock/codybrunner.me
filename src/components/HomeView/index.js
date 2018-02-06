@@ -28,6 +28,8 @@ const Heading4 = Heading.withComponent('h4')
  * Home Page View
  *
  * Accepts siteMetadata & 5 most recent posts from GraphQL Query.
+ *
+ * c.className.split(', ') super boss!!
  */
 
 const HomeView = ({ meta, posts }) => (
@@ -40,7 +42,7 @@ const HomeView = ({ meta, posts }) => (
       <List flow="column" gap={10}>
         {meta.contacts.map(c => (
           <Link ext href={c.href} key={c.label} label={c.label}>
-            <Icon className={c.className} />
+            <Icon icon={c.className.split(', ')} size="2x" />
           </Link>
         ))}
       </List>
@@ -52,7 +54,7 @@ const HomeView = ({ meta, posts }) => (
       <List flow="column" gap={50}>
         {meta.business.map(b => (
           <Link ext href={b.href} key={b.label} label={b.label}>
-            <Icon className={b.className} />
+            <Icon icon={b.className.split(', ')} size="2x" />
           </Link>
         ))}
       </List>

@@ -2,8 +2,9 @@
 import React from 'react'
 import { arrayOf, bool, number, shape, string } from 'prop-types'
 
-import { Content, Disqus, Header, Pagination, Post, Share } from './elements'
+import { Content, Disqus, Header, Post, Share } from './elements'
 import { Tags } from '../commons'
+import Paginate from '../Paginate'
 import SEO from '../SEO'
 
 /**
@@ -30,7 +31,7 @@ const SitePost = ({ ctx, meta, post }) => {
       />
       <Content dangerouslySetInnerHTML={{ __html: html }} />
       <Tags tags={frontmatter.tags} />
-      <Pagination {...ctx} />
+      <Paginate post nextPage={ctx.next} prevPage={ctx.prev} />
       <Share title={frontmatter.title} url={postUrl} />
       {process.env.NODE_ENV === 'production' ? (
         <Disqus

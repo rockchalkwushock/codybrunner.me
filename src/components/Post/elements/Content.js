@@ -62,9 +62,9 @@ const Content = styled.section`
 
   > blockquote {
     background-color: rgba(0, 0, 0, 0.1);
-    border-left: 10px solid #7a9eb1;
+    border-left: 10px solid ${({ theme }) => theme.site.bg};
     border-radius: 20px 0px;
-    border-right: 10px solid #7a9eb1;
+    border-right: 10px solid ${({ theme }) => theme.site.bg};
     margin: 0.5em 0;
     padding: 0.25em 0.75em;
   }

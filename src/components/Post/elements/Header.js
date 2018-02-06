@@ -18,9 +18,7 @@ const PostHeader = ({ about, date, time, title, words }) => (
   <Header>
     <PostTitle>{title}</PostTitle>
     <PostDate>{about ? `Last Updated: ${date}` : date}</PostDate>
-    <PostMeta>
-      {about ? `${time} minutes` : `${time} minutes • ${words} words`}
-    </PostMeta>
+    {about ? null : <PostMeta>{`${time} minutes • ${words} words`}</PostMeta>}
   </Header>
 )
 

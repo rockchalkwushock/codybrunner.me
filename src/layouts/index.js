@@ -2,7 +2,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
-import { withPrefix } from 'gatsby-link'
 import { func } from 'prop-types'
 
 // PrismJS theme for markdown files
@@ -26,13 +25,6 @@ const LayoutWrapper = ({ children, data, location }) => {
             name="google-site-verification"
             content={siteMetadata.googleVerify}
           />
-          {/* THIRD-PARTY LINKS */}
-
-          <link rel="stylesheet" href={withPrefix('/css/fa-svg-with-js.css')} />
-          {/* THIRD-PARTY SCRIPTS */}
-          <script defer src={withPrefix('/js/fa-brands.min.js')} />
-          <script defer src={withPrefix('/js/fa-solid.min.js')} />
-          <script defer src={withPrefix('/js/fontawesome.min.js')} />
         </Helmet>
         <NavBar location={location.pathname} menu={menu} />
         {children()}

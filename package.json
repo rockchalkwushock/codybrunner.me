@@ -2,8 +2,7 @@
   "name": "codybrunner.rocks",
   "version": "0.1.0",
   "license": "MIT",
-  "author":
-    "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
   "description": "My personal website & tech blog built with Gatsby.",
   "repository": "",
   "scripts": {
@@ -16,9 +15,14 @@
     "test": "nps test"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3",
+    "@fortawesome/fontawesome-free-brands": "^5.0.6",
+    "@fortawesome/fontawesome-free-solid": "^5.0.6",
+    "@fortawesome/react-fontawesome": "^0.0.17",
     "dotenv-safe": "^4.0.4",
     "gatsby": "^1.9.175",
     "gatsby-link": "^1.6.35",
+    "gatsby-pagination": "^1.1.0",
     "gatsby-plugin-accessibilityjs": "^1.0.2",
     "gatsby-plugin-canonical-urls": "^1.0.12",
     "gatsby-plugin-catch-links": "^1.0.15",
@@ -35,6 +39,7 @@
     "gatsby-plugin-sharp": "^1.6.27",
     "gatsby-plugin-sitemap": "^1.2.11",
     "gatsby-plugin-styled-components": "^2.0.5",
+    "gatsby-plugin-twitter": "^1.0.16",
     "gatsby-remark-autolink-headers": "^1.4.11",
     "gatsby-remark-emoji": "^0.0.1",
     "gatsby-remark-images": "^1.5.41",
@@ -92,7 +97,9 @@
   },
   "jest": {
     "bail": true,
-    "collectCoverageFrom": ["src/components/**/*.js"],
+    "collectCoverageFrom": [
+      "src/components/**/*.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 50,
@@ -104,11 +111,18 @@
     "moduleNameMapper": {
       ".+\\.(png|jpg|jpeg|svg)$": "identity-obj-proxy"
     },
-    "setupFiles": ["./jest.setup.js"],
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
     "setupTestFrameworkScriptFile": "jest-styled-components",
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": ["/node_modules/", "/.cache/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.transform.js"
     }

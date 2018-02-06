@@ -37,7 +37,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
           },
           Object {
             "className": "fab fa-linkedin",
-            "href": "https://www.linkedin.com/in/cody-brunner-324930158",
+            "href": "https://www.linkedin.com/in/cody-brunner",
             "label": "LinkedIn",
           },
           Object {
@@ -97,7 +97,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "text": "About",
           },
           Object {
-            "href": "/posts",
+            "href": "/posts/1",
             "id": 3,
             "text": "Blog",
           },
@@ -147,7 +147,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       </SiteLink>
       <SiteLink
         ext={true}
-        href="https://www.linkedin.com/in/cody-brunner-324930158"
+        href="https://www.linkedin.com/in/cody-brunner"
         key="LinkedIn"
         label="LinkedIn"
       >
