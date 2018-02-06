@@ -54,7 +54,7 @@ With CircleCi we can create jobs that will run specific segments of our build,te
 	  - two
 ```
 
-> _NOTE: If you are new or unfamiliar with YAML syntax I would highly encourage you to use a YAML validator. If your code editor does not have an extension CircleCi provides a link to the following [site](https://codebeautify.org/yaml-validator). I am using the [vscode-yaml-validation](https://marketplace.visualstudio.com/items?itemName=djabraham.vscode-yaml-validation) extension with Visual Studio Code._
+> _**NOTE**: If you are new or unfamiliar with YAML syntax I would highly encourage you to use a YAML validator. If your code editor does not have an extension CircleCi provides a link to the following [site](https://codebeautify.org/yaml-validator). I am using the [vscode-yaml-validation](https://marketplace.visualstudio.com/items?itemName=djabraham.vscode-yaml-validation) extension with Visual Studio Code._
 
 The first job we will need setup is telling CircleCi to go get the code from Github & install the project dependencies. We will create a job called `checkout_code` and use one of the many pre-built `docker` images provided by CircleCi, find a list [here](https://circleci.com/docs/2.0/circleci-images/). CircleCi operates by spinning up a container environment that your code can be ran in. If you are working on a team chances are everyone's machines are slightly different with what versions of software they are running, etc, etc. Using continuous integration services like CircleCi, Travis CI, or the many many others your team can rest assured that the code is operating in the same environment every time it is tested, built, & deployed which means less surprises!
 
@@ -113,13 +113,13 @@ Now when we move on to a job that _attaches_ the workspace we will have `~/circl
 
 By using these commands in specific jobs we can now run certain jobs in parallel instead of running all jobs in series.
 
-> _NOTE: When `persisting_to_workspace` keep in mind that you cannot persist concurrently running jobs, this can only be done in series._
+> _**NOTE**: When `persisting_to_workspace` keep in mind that you cannot persist concurrently running jobs, this can only be done in series._
 
 ## Caching
 
 Caching can significantly cut down on the time it takes CircleCi to run the entire process from start to finish. The first process we tell CircleCi to do is to `restore_cache`. This step will look to see if a cache exists in the working directory. If it does not this step will be skipped and CircleCi will run `yarn install` to install the dependencies and then `save_cache` to `node_modules` in the working directory.
 
-We tell CircleCi to save using a specific `key` for the save_cache step to use with `restore_cache`. Should a cache exist when the checkout_code job is ran it will first look for a specific `yarn.lock` on the current branch, or it will look for a cache on any build on this branch, or finally the most recent cache from any branch. By setting up `restore_cache` in this manner CircleCi will search for the most recent & specific cache. In the event nothing has changed `yarn install` will not need to pull in new or updated dependencies, no wasted time! However let’s say we are currently using `react@15.6.0` and we update to `react@16` before pushing to our new branch: `react-16-woot-woot`. First CircleCi will look for a `yarn.lock` on this branch, but it’s a new branch so no dice and since it’s a new branch there are no prior builds so it reverts to the most recent cache from the most recent branch. When restoring the cache the diff will show that `react` has changed and when running `yarn install` yarn will go fetch and update **only** `react` in our dependencies in the container instead of fetching all our dependencies that are listed saving a lot of time (remember how long installing `create-react-app` took!).
+We tell CircleCi to save using a specific `key` for the `save_cache` step to use with `restore_cache`. Should a cache exist when the `checkout_code` job is ran it will first look for a specific `yarn.lock` on the current branch, or it will look for a cache on any build on this branch, or finally the most recent cache from any branch. By setting up `restore_cache` in this manner CircleCi will search for the most recent & specific cache. In the event nothing has changed `yarn install` will not need to pull in new or updated dependencies, no wasted time! However let’s say we are currently using `react@15.6.0` and we update to `react@16` before pushing to our new branch: `react-16-woot-woot`. First CircleCi will look for a `yarn.lock` on this branch, but it’s a new branch so no dice and since it’s a new branch there are no prior builds so it reverts to the most recent cache from the most recent branch. When restoring the cache the diff will show that `react` has changed and when running `yarn install` yarn will go fetch and update **only** `react` in our dependencies in the container instead of fetching all our dependencies that are listed saving a lot of time (remember how long installing `create-react-app` took!).
 
 ## Using Node Security Platform
 
@@ -127,7 +127,7 @@ I found this one day while aimlessly roaming the net and gave it a try. Similar 
 
 > _Many thanks to [Mark Erikson](https://twitter.com/acemarke) for showing me how to use `yarn why` to find out why a dependency is being used and to the Yarn team for this nifty feature!_
 
-In the below I check to see if this is the _production branch_ and check for vulnerabilities; any other branch regardless if there is a fail will pass the step with `|| true` for sake of _getting sh\*t done_ (I can always go look at the logs before pushing to production to see if nsp has been catching issues. A quick aside, you can write `bash` directly into your YAML or reference an external script `command: bash ./some_script.sh`.
+In the below I check to see if this is the _production branch_ and check for vulnerabilities; any other branch regardless if there is a fail will pass the step with `|| true` for sake of _getting $@#% done_ (I can always go look at the logs before pushing to production to see if nsp has been catching issues. A quick aside, you can write `bash` directly into your YAML or reference an external script `command: bash ./some_script.sh`.
 
 For more information on Node Security Platform visit their [website](https://nodesecurity.io/).
 
@@ -213,13 +213,13 @@ I ran into a bit of a problem when deploying initially and it dealt with the `PU
 
 The fix I found was to set `PUBLIC_URL` at the time of the build process; by doing this I could then alias the deployment instance to whatever I had set that env var to be later on in the deployment job.
 
-> _NOTE: use `now.sh` if you do not have a domain or you will be asked to purchase the domain by Zeit and the CI will hang at this prompt. If you have your own domain already just supply it as shown._
+> _**NOTE**: use `now.sh` if you do not have a domain or you will be asked to purchase the domain by Zeit and the CI will hang at this prompt. If you have your own domain already just supply it as shown._
 
 ## Deploying
 
 Before writing the deployment job we will need to get the `NOW_TOKEN` from Zeit and supply it as an environment variable to CircleCi.
 
-> _NOTE: You will need to create an account with Zeit and can do so very easily. If you are new to Zeit’s Now platform checkout this [article](https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102)!_
+> _**NOTE**: You will need to create an account with Zeit and can do so very easily. If you are new to Zeit’s Now platform checkout this [article](https://medium.com/@RockChalkDev/deploying-with-zeits-now-cli-796e41f05102)!_
 
 Visit [Zeit](https://zeit.co) & login to your account. Click on your avatar and navigate to Account Settings > Tokens. Copy the token and then navigate to CircleCi. From your homepage find the project deployment and click on it. Now click on the gear in the right corner. You should see Environment Variables in the left hand side bar, click this. Now you can add the token as an environment variable to your deployment. At build time this will be injected in place of `NOW_TOKEN` authenticating the process with Zeit.
 
@@ -262,7 +262,7 @@ now build -t ${NOW_TOKEN} -n=circleci-deployment --static
 
 In the above command we tell `now` to deploy (`now deploy` is the default command when calling `now`) the `./build directory`. We then authenticate via the CLI with the `NOW_TOKEN`. We will name the deployment so that our instance comes back looking like: `https://circleci-deployment-1gaff324r.now.sh` and lastly we will explicitly tell `now` this is a static deployment with `--static`.
 
-> _NOTE: If you omit `--static` `now` will default to a `node` deployment because it sees a `package.json` & will run the `build` & `start` scripts from this file._
+> _**NOTE**: If you omit `--static` `now` will default to a `node` deployment because it sees a `package.json` & will run the `build` & `start` scripts from this file._
 
 ```bash
 now -t ${NOW_TOKEN} alias circle-deployment.now.sh
@@ -324,7 +324,7 @@ workflows:
               only:
                 - development
                 - master
-- production
+                - production
 ```
 
 When using `requires` we are setting the jobs to run in series and should, for example, `checkout_code` fail the entire build will fail and stop. You can require any job as long as it was **before** the current job you are requiring it on. I really only want to build & deploy to Zeit when on specific branches. So if I had a branch like [feat/button](https://circleci.com/workflow-run/c983c64a-78e9-4a8d-8fdc-2eeb6fdcdaaa) I don’t want to build & deploy this I only want to test that it is not breaking the code base. This is where the `filters` option comes into play. You can provide it with options like `branches` and `tags` and to those options two more options `only` and `ignore`. So in my example I am only ever wanting to build & deploy when on `development`, `master`, or the `production` branch. You can see what the workflow looks like [here](https://circleci.com/workflow-run/2348a715-e98a-48b3-a745-d3afafc9335f) on the `development` branch and see that the same workflow fails on the `production` branch because there is currently a vulnerability [here](https://circleci.com/workflow-run/488701b9-7ecd-489e-a7fc-824a8d40c220). By using the workflows we can have 3 of our jobs running concurrently because these jobs don’t depend on one another, and we can choose which jobs will fail the `deployment` job.

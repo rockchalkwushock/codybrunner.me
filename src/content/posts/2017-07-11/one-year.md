@@ -60,8 +60,6 @@ I want to thank a few people for helping me along this last year:
 
 > _"If I have seen further, it is by standing on the shoulder of giants."_
 
-> * Sir Isaac Newton
-
 ## Goals
 
 1. First and foremost love me and quit being so self-destructive.
