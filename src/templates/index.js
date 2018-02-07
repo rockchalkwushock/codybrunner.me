@@ -4,11 +4,20 @@ import React from 'react'
 import { HomeView } from '../components'
 
 const HomeTemplate = ({ data, pathContext }) => (
-  <HomeView meta={data.site.siteMetadata} posts={pathContext.posts} />
+  <HomeView
+    meta={data.site.siteMetadata}
+    posts={pathContext.posts}
+    profilePic={data.profilePic.sizes}
+  />
 )
 
 export const homeQuery = graphql`
   query HomePageQuery {
+    profilePic: imageSharp(id: { regex: "/profile_pic/" }) {
+      sizes(maxHeight: 200, maxWidth: 200, quality: 90) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     site {
       siteMetadata {
         aboutSnippet

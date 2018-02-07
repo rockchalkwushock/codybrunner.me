@@ -5,7 +5,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
   <SEO
     site={
       Object {
-        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!",
+        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!",
         "author": "Cody Brunner",
         "business": Array [
           Object {
@@ -111,7 +111,19 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
   <Grid
     headCard={true}
   >
-    <ProfilePic />
+    <ProfilePic
+      alt="Cody Brunner"
+      sizes={
+        Object {
+          "aspectRatio": 1,
+          "base64": "really long string",
+          "sizes": "another string",
+          "src": "yep and another",
+          "srcSet": "even longer",
+        }
+      }
+      title="Cody Brunner"
+    />
     <Heading>
       Cody Brunner
     </Heading>
@@ -227,7 +239,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       About
     </Heading>
     <Text>
-      Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!
+      Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!
     </Text>
     <Text>
       Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.

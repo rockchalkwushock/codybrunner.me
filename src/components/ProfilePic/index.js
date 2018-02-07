@@ -1,20 +1,12 @@
+import React from 'react'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { number, shape, string } from 'prop-types'
 
-import profilePic from '../../assets/profile_pic.jpg'
+const UnStyledImage = props => <Img {...props} />
 
-/**
- * @fileOverview
- * Profile Pic
- *
- * REVIEW
- * I would like to look at the perf diff of
- * - importing into CSS (webpack)
- * - `gatsby-image` utilizing the bells & whistles of `sharp`.
- */
-
-const ProfilePic = styled.div`
+const ProfilePic = styled(UnStyledImage)`
   background-color: ${({ theme }) => theme.site.bg};
-  background-image: url(${profilePic});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,5 +18,16 @@ const ProfilePic = styled.div`
 `
 
 ProfilePic.displayName = 'ProfilePic'
+ProfilePic.propTypes = {
+  alt: string.isRequired,
+  sizes: shape({
+    aspectRatio: number,
+    base64: string,
+    sizes: string,
+    src: string,
+    srcSet: string
+  }).isRequired,
+  title: string.isRequired
+}
 
 export default ProfilePic

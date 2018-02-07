@@ -1,4 +1,16 @@
-# codybrunner.rocks
+# [codybrunner.rocks](https://codybrunner.rocks) :fire: :sunglasses: :metal:
+
+My personal website, portfolio, & tech blog.
+
+[![CircleCI](https://img.shields.io/circleci/project/github/rockchalkwushock/how-to-open-source.svg?style=flat-square)](https://circleci.com/gh/rockchalkwushock/codybrunner.rocks)
+[![Codecov](https://img.shields.io/codecov/c/github/rockchalkwushock/how-to-open-source.svg?style=flat-square)](https://codecov.io/gh/rockchalkwushock/codybrunner.rocks)
+
+[![GatsbyJS](https://img.shields.io/badge/built%20with-gatsbyjs-9D7CBF.svg?style=flat-square)](https://gatsbyjs.org)
+[![Now](https://img.shields.io/badge/deployed%20with-now--cli-orange.svg?style=flat-square)](https://github.com/zeit/now-cli)
+
+[![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Equimper](https://img.shields.io/badge/code%20style-equimper-blue.svg?style=flat-square)](https://github.com/EQuimper/eslint-config-equimper)
+[![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
 
 ## Notes to myself
 
@@ -24,8 +36,9 @@
 * [x] Add `offline`
 * [x] Customize `fontawesome` to cut down on bloat.
 * [x] `google-fonts` plugin or get static assets.
-* [ ] Check perf of image in CSS vs using `gatsby-image`.
+* [x] Check perf of image in CSS vs using `gatsby-image`.
 * [ ] Look at imports of `react-share`.
+* [x] Should really move to using `gatsby-image` for avatar on homepage. It will be more performant and the out of the box lazy-loading with blur up will be a better UX. At the moment importing the image into `js` & letting `webpack` do work loads 238KB :scream:
 
 ## Browser Troubleshooting
 
@@ -36,7 +49,5 @@
 * [ ] Related Posts
 * [ ] Projects
 * [ ] Certifications
-* [ ] Work more with `sharp`, `gatsby-image`. [Here](https://image-processing.gatsbyjs.org/) for more info.
 * [ ] Add [line highlighting](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/#implementation-notes) to markdown code blocks
 * [ ] Pagination for tags, not really needed at the moment but it should be implemented and will be easys
-* [ ] Should really move to using `gatsby-image` for avatar on homepage. It will be more performant and the out of the box lazy-loading with blur up will be a better UX. At the moment importing the image into `js` & letting `webpack` do work loads 238KB :scream:

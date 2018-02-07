@@ -32,11 +32,11 @@ const Heading4 = Heading.withComponent('h4')
  * c.className.split(', ') super boss!!
  */
 
-const HomeView = ({ meta, posts }) => (
+const HomeView = ({ meta, posts, profilePic }) => (
   <FlexContainer>
     <SEO site={meta} />
     <Grid headCard>
-      <ProfilePic />
+      <ProfilePic alt="Cody Brunner" sizes={profilePic} title="Cody Brunner" />
       <Heading>{meta.author}</Heading>
       <Heading4>{meta.jobTitle}</Heading4>
       <List flow="column" gap={10}>
