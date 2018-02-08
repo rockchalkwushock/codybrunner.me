@@ -17,12 +17,6 @@ const isProd = process.env.NODE_ENV === 'production'
 const SITE_DOMAIN = 'https://codybrunner-beta.now.sh'
 // Default Plugins
 const plugins = [
-  {
-    resolve: 'gatsby-plugin-google-fonts',
-    options: {
-      fonts: ['Raleway']
-    }
-  },
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-react-next',
   'gatsby-plugin-sharp',
@@ -186,12 +180,6 @@ const prodOnly = [
       color: '#ffe1b6',
       showSpinner: false
     }
-  },
-  {
-    resolve: 'gatsby-plugin-sentry',
-    options: {
-      dsn: `${process.env.SENTRY_DSN}`
-    }
   }
 ]
 
@@ -262,7 +250,7 @@ module.exports = {
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
       'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
-    lang: 'en_US',
+    lang: 'en',
     links: {
       creativeCommons: {
         href: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',

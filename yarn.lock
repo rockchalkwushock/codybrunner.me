@@ -4761,10 +4761,6 @@ gatsby-plugin-google-analytics@^1.0.17:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-google-fonts@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-0.0.3.tgz#36a09e7ed3b795b0a81e9404b4c487e0fdfa46ab"
-
 gatsby-plugin-no-sourcemaps@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-1.0.2.tgz#f02a4eea6e3536df786abf0a5ac0cd034d7463f6"
@@ -4797,12 +4793,6 @@ gatsby-plugin-react-next@^1.0.8:
     core-js "^2.5.1"
     react "^16.0.0"
     react-dom "^16.0.0"
-
-gatsby-plugin-sentry@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sentry/-/gatsby-plugin-sentry-0.0.2.tgz#c42bbb64937cb1c4e0a3fe3a1ca679b508c0eeaf"
-  dependencies:
-    babel-runtime "^6.26.0"
 
 gatsby-plugin-sharp@^1.6.27:
   version "1.6.27"
