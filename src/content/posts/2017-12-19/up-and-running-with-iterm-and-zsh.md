@@ -21,7 +21,7 @@ For the longest time I had seen people making use of this, but was too zealous a
 
 Now at the time of writing this iTerm2 is at version 3.1.5; why it is not _iTerm3_ I don't really know :confused:
 
-```zsh
+```bash
 # If you don't have `homebrew` installed I would suggest it. Makes life so much easier!
 # https://brew.sh/
 brew update
@@ -39,7 +39,7 @@ I had heard of this but wasn't to sure what it was besides that it was like bash
 
 ### Installation
 
-```zsh
+```bash
 # Mac comes with `zsh` present but lets get the latest version.
 brew install zsh
 # Get `oh-my-zsh`
@@ -54,7 +54,7 @@ You will now have a `~/.zshrc` file & `.oh-my-zsh/` directory in your home direc
 
 To use a theme we just add the theme to the line in our `~/.zshrc` below. I chose to use the [Powerlevel9k theme](https://github.com/bhilburn/powerlevel9k):
 
-```zsh
+```bash
 # install `powerlevel9k`
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 vi .zshrc
@@ -68,7 +68,7 @@ This is like the cadillac of themes in zsh and has some pretty awesome features 
 
 I wanted to use the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) library with powerlevel9k so I needed to add the following to my `~/.zshrc`:
 
-```zsh
+```bash
 POWERLEVEL9K_MODE="nerdfont-complete"
 ```
 
@@ -76,7 +76,7 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 
 One of the great things about zsh are the plugins you can utilize to make your life easier as a developer. Adding auto-complete and suggestions alone is a huge boost in productivity and less keystrokes :wink: The best part is that most of these plugins come pre-installed with `oh-my-zsh`. You can find them in `~/.oh-my-zsh/plugins/`. Here are just a few, in my honest opinion, must haves :smiley:
 
-```sh
+```bash
 plugins=(
   zsh-autosuggestions
   zsh-completions
