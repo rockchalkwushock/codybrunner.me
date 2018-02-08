@@ -111,6 +111,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           }
         })
       })
+
+      createPage({
+        path: '/certs',
+        component: resolve('src/templates/certs.js')
+      })
       // Finalize Promise
       _resolve()
     })

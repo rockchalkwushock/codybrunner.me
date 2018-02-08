@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: <AboutView /> should render correctly 1`] = `
-<Post
-  draft={false}
->
+exports[`Component: <CertsView /> should render correctly 1`] = `
+<CertsFlexContainer>
   <SEO
     site={
       Object {
@@ -59,12 +57,12 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
           },
         ],
         "copyright": "© 2017-2018 Cody Brunner",
-        "description": "Learn about Cody Brunner and his journey becoming a web developer.",
+        "description": "Cody's earned certifications.",
         "disqusShortname": "codybrunner-rocks",
         "employment": "Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.",
         "googleVerify": "TODO",
         "jobTitle": "Full-Stack JavaScript Developer",
-        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, about page, learn about Cody Brunner, autobiography",
+        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, tech certifications, Udemy, certified",
         "lang": "en_US",
         "links": Object {
           "creativeCommons": Object {
@@ -110,27 +108,147 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
           },
         ],
         "siteUrl": "/",
-        "title": "Cody Brunner - About Me",
+        "title": "Cody Brunner - Certifications",
         "twitter": "@RockChalkDev",
       }
     }
   />
-  <PostHeader
-    about={true}
-    date="02-03-99"
-    time={10}
-    title="All About JS"
-  />
-  <Content
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "hello world",
+  <Heading>
+    Cody's Certs
+  </Heading>
+  <CertsGrid
+    alternate={true}
+  >
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
       }
-    }
-  />
-  <Share
-    title="All About JS"
-    url="//turdsspace/"
-  />
-</Post>
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <CertImage
+      alt="advanced-react-redux"
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+  </CertsGrid>
+</CertsFlexContainer>
 `;

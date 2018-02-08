@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <CertImage /> should render correctly 1`] = `
+.c0 {
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.7);
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "borderRadius": "10px",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+        "shadow": "1px 1px 5px 1px rgba(0, 0, 0, 0.7)",
+        "transition": "all 0.3s ease-in-out",
+      },
+    }
+  }
+>
+  <CertImage
+    alt="a pic"
+    resolutions={Object {}}
+    title="HELLO"
+  >
+    <UnstyledImage
+      alt="a pic"
+      className="c0"
+      resolutions={Object {}}
+      title="HELLO"
+    >
+      <Image
+        alt="a pic"
+        className="c0"
+        fadeIn={true}
+        resolutions={Object {}}
+        title="HELLO"
+      >
+        <div
+          className=" gatsby-image-outer-wrapper"
+          style={
+            Object {
+              "position": "relative",
+              "zIndex": 0,
+            }
+          }
+        >
+          <div
+            className="c0 gatsby-image-wrapper"
+            style={
+              Object {
+                "display": "inline-block",
+                "height": undefined,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": undefined,
+                "zIndex": 1,
+              }
+            }
+          >
+            <Img
+              alt="a pic"
+              onLoad={[Function]}
+              opacity={1}
+              title="HELLO"
+            >
+              <img
+                alt="a pic"
+                onLoad={[Function]}
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "top": 0,
+                    "transition": "opacity 0.5s",
+                    "transitionDelay": "",
+                    "width": "100%",
+                  }
+                }
+                title="HELLO"
+              />
+            </Img>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<img width= height= src=\\"undefined\\" srcset=\\"undefined\\" alt=\\"a pic\\" title=\\"HELLO\\" sizes=\\"\\" style=\\"position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:;opacity:;width:100%;height:100%;object-fit:cover;objectPosition:center\\"/>",
+                }
+              }
+            />
+          </div>
+        </div>
+      </Image>
+    </UnstyledImage>
+  </CertImage>
+</ThemeProvider>
+`;
+
+exports[`Component: <CertsFlexContainer /> should render correctly 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+  text-align: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Component: <CertsGrid /> should render correctly 1`] = `
+.c0 {
+  background-color: inherit;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.7);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 1em 0;
+  padding: 2em 1em;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "post": Object {
+        "bg": "#f9f8eb",
+        "ftClr": "#000",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1.1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#7a9eb1",
+        "linkWt": "600",
+        "lnHt": "1.618",
+        "ltSp": "1px",
+      },
+      "screen": Object {
+        "large": "736px",
+      },
+      "site": Object {
+        "bg": "#7a9eb1",
+        "borderRadius": "10px",
+        "fg": "#ffe1b6",
+        "ftClr": "#143a52",
+        "ftFm": "\\"Raleway\\", sans-serif",
+        "ftSz": "1rem",
+        "ftWt": "400",
+        "linkClr": "#143a52",
+        "linkHvClr": "#ffe1b6",
+        "lnHt": "1.4",
+        "ltSp": "0px",
+        "shadow": "1px 1px 5px 1px rgba(0, 0, 0, 0.7)",
+        "transition": "all 0.3s ease-in-out",
+      },
+    }
+  }
+>
+  <CertsGrid>
+    <div
+      className="c0"
+    />
+  </CertsGrid>
+</ThemeProvider>
+`;

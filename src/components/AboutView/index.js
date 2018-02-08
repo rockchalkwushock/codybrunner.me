@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
 
+import { mergeStrings } from '../../lib/helpers'
 import { Content, Header, Post, Share } from '../Post'
 import SEO from '../SEO'
 
@@ -15,9 +16,19 @@ import SEO from '../SEO'
 const AboutView = ({ content, meta, modTime }) => {
   const { fields, frontmatter, html, timeToRead } = content
   const aboutUrl = `${meta.siteUrl}${fields.slug}`
+  const updatedMeta = {
+    ...meta,
+    description:
+      'Learn about Cody Brunner and his journey becoming a web developer.',
+    keywords: mergeStrings(
+      meta.keywords,
+      'about page, learn about Cody Brunner, autobiography'
+    ),
+    title: 'Cody Brunner - About Me'
+  }
   return (
     <Post draft={frontmatter.draft}>
-      <SEO site={meta} />
+      <SEO site={updatedMeta} />
       <Header
         about
         date={modTime}

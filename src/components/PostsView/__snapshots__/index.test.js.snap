@@ -57,12 +57,12 @@ exports[`Component: <PostsView /> should render correctly 1`] = `
           },
         ],
         "copyright": "© 2017-2018 Cody Brunner",
-        "description": "Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas",
+        "description": "Cody's personal and tech blog.",
         "disqusShortname": "codybrunner-rocks",
         "employment": "Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.",
         "googleVerify": "TODO",
         "jobTitle": "Full-Stack JavaScript Developer",
-        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL",
+        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, blog, personal blog, tech blog, reactjs blog, apollo/graphql blog, javascript blog, nodejs blog, web-development blog",
         "lang": "en_US",
         "links": Object {
           "creativeCommons": Object {
@@ -101,9 +101,14 @@ exports[`Component: <PostsView /> should render correctly 1`] = `
             "id": 3,
             "text": "Blog",
           },
+          Object {
+            "href": "/certs",
+            "id": 4,
+            "text": "Certifications",
+          },
         ],
         "siteUrl": "/",
-        "title": "Cody Brunner - Full-Stack JavaScript Developer",
+        "title": "Cody Brunner - Blog",
         "twitter": "@RockChalkDev",
       }
     }

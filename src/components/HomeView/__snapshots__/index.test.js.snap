@@ -101,6 +101,11 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "id": 3,
             "text": "Blog",
           },
+          Object {
+            "href": "/certs",
+            "id": 4,
+            "text": "Certifications",
+          },
         ],
         "siteUrl": "/",
         "title": "Cody Brunner - Full-Stack JavaScript Developer",

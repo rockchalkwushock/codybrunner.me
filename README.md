@@ -28,11 +28,12 @@ My personal website, portfolio, & tech blog.
 * [ ] Finalize updates to LinkedIn
 * [x] Remove Tags page and find a different way to supply _all_ tags.
 * [ ] Clean up tags
+* [x] Certifications
 
 ## Perf
 
 * [ ] Add `webpack-bundle-analyzer` and get baseline.
-* [x] Add`preact` -- Problems :cry: `Cannot read property 'pathname' of undefined`
+* [x] Add `preact` -- Problems :cry: `Cannot read property 'pathname' of undefined`
 * [x] Add `offline`
 * [x] Customize `fontawesome` to cut down on bloat.
 * [x] `google-fonts` plugin or get static assets.
@@ -42,12 +43,12 @@ My personal website, portfolio, & tech blog.
 
 ## Browser Troubleshooting
 
-1. Tags in Card are not displaying correclty in Safari on Mobile.
+1. ~~Tags in Card are not displaying correclty in Safari on Mobile.~~
 
 ## v2 features/wishlist
 
 * [ ] Related Posts
 * [ ] Projects
-* [ ] Certifications
+
 * [ ] Add [line highlighting](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/#implementation-notes) to markdown code blocks
-* [ ] Pagination for tags, not really needed at the moment but it should be implemented and will be easys
+* [ ] ~~Pagination for tags, not really needed at the moment but it should be implemented and will be easys~~
