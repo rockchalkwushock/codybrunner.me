@@ -5,9 +5,18 @@ import { injectGlobal } from 'styled-components'
  * Global Styling for application.
  *
  * NOTE: rem is figured from <html /> font-size.
+ * NOTE:
+ * `require(font)` is necessary for Gatsby's webpack config
+ * thanks to @mxstbr for his help in debugging this!
  */
 
 export default injectGlobal`
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(${require('../fonts/Raleway-Regular.ttf')});
+}
+
 *,
   *::before,
   *::after {
