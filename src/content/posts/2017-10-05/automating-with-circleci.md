@@ -113,7 +113,7 @@ Now when we move on to a job that _attaches_ the workspace we will have `~/circl
 
 By using these commands in specific jobs we can now run certain jobs in parallel instead of running all jobs in series.
 
-> _**NOTE**: When `persisting_to_workspace` keep in mind that you cannot persist concurrently running jobs, this can only be done in series._
+> _**NOTE**: When persisting to the workspace keep in mind that you cannot persist concurrently running jobs, this can only be done in series._
 
 ## Caching
 

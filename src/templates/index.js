@@ -21,6 +21,7 @@ export const homeQuery = graphql`
     }
     techIcons: allFile(
       filter: { dir: { regex: "/svgIcons/" }, name: { ne: ".DS_Store" } }
+      sort: { fields: [name], order: ASC }
     ) {
       edges {
         node {

@@ -7,6 +7,8 @@ const {
   createLinkedPages,
   createPaginationPages
 } = require('gatsby-pagination')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
 // Condition
 const isProd = process.env.NODE_ENV === 'production'
@@ -135,5 +137,25 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       node,
       value
     })
+  }
+}
+
+/* eslint-disable default-case */
+if (process.env.ANALYZE) {
+  exports.modifyWebpackConfig = ({ config, stage }) => {
+    switch (stage) {
+      case 'build-javascript':
+        config.plugin('Bundle Analyzer', BundleAnalyzerPlugin, [
+          {
+            analyzerMode: 'static',
+            openAnalyzer: false,
+            generateStatsFile: true
+          }
+        ])
+
+        break
+    }
+
+    return config
   }
 }

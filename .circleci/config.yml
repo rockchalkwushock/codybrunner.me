@@ -46,7 +46,16 @@ jobs:
       - attach_workspace:
           at: ~/codybrunner.rocks
       - run: yarn install
-      - run: GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SENTRY_DSN=${SENTRY_DSN} yarn ci_build
+      - run:
+          name: yarn build
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SITE_NAME=${SITE_NAME} yarn ci_build
+            elif [ "${CIRCLE_BRANCH}" == "development" ]; then
+              GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SITE_NAME=${SITE_NAME_BETA} yarn ci_build
+            else
+              echo "This failed miserably!"
+            fi
       - persist_to_workspace:
           root: .
           paths: .

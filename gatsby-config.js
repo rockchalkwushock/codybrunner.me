@@ -7,14 +7,13 @@ if (!process.env.CI) {
 const { dependencies } = require('./package.json')
 
 // Get Major.Minor
-const gatsbyVersion = dependencies.gatsby.substr(1, 3)
+// NOTE: Setup 0-3 for Exact version, switch to 1-3 when add ^x.x.x back.
+const gatsbyVersion = dependencies.gatsby.substr(0, 3)
 const styledVersion = dependencies['styled-components'].substr(1, 3)
 // Get current year.
 const year = new Date().getFullYear()
 // Condition
 const isProd = process.env.NODE_ENV === 'production'
-// REVIEW: Change when ready to role out of beta to actual domain.
-const SITE_DOMAIN = 'https://codybrunner-beta.now.sh'
 // Default Plugins
 const plugins = [
   'gatsby-plugin-react-helmet',
@@ -287,6 +286,6 @@ module.exports = {
       'The below are just some of the technologies I know and tooling I use frequently.',
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',
-    siteUrl: isProd ? SITE_DOMAIN : '/'
+    siteUrl: `${process.env.SITE_DOMAIN}`
   }
 }

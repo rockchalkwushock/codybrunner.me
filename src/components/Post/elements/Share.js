@@ -1,18 +1,16 @@
 import React from 'react'
-import {
-  FacebookIcon,
-  FacebookShareButton,
-  GooglePlusIcon,
-  GooglePlusShareButton,
-  LinkedinIcon,
-  LinkedinShareButton,
-  RedditIcon,
-  RedditShareButton,
-  TelegramIcon,
-  TelegramShareButton,
-  TwitterIcon,
-  TwitterShareButton
-} from 'react-share'
+import FacebookIcon from 'react-share/lib/FacebookIcon'
+import FacebookShareButton from 'react-share/lib/FacebookShareButton'
+import GooglePlusIcon from 'react-share/lib/GooglePlusIcon'
+import GooglePlusShareButton from 'react-share/lib/GooglePlusShareButton'
+import LinkedinIcon from 'react-share/lib/LinkedinIcon'
+import LinkedinShareButton from 'react-share/lib/LinkedinShareButton'
+import RedditIcon from 'react-share/lib/RedditIcon'
+import RedditShareButton from 'react-share/lib/RedditShareButton'
+import TelegramIcon from 'react-share/lib/TelegramIcon'
+import TelegramShareButton from 'react-share/lib/TelegramShareButton'
+import TwitterIcon from 'react-share/lib/TwitterIcon'
+import TwitterShareButton from 'react-share/lib/TwitterShareButton'
 import { string } from 'prop-types'
 
 import { List } from '../../commons'

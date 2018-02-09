@@ -25,7 +25,7 @@ console.log(AdditionWithHofs) // returns 6
 
 That syntax might look familiar if you use the connect() method (HOC!) from the React-Redux library:
 
-```javascript
+```jsx
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { someAction } from '../actions'
@@ -69,7 +69,7 @@ code .
 
 ## Writing the WithLayout HOC
 
-```javascript
+```jsx
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { loadGetInitialProps } from 'next/dist/lib/utils'
@@ -114,7 +114,7 @@ export default ComposedComponent =>
 
 ## Using the HOC in our Application
 
-```javascript
+```jsx
 // /pages/index.js
 import WithLayout from '../lib'
 
@@ -129,7 +129,7 @@ export default WithLayout(() => (
 
 Note that I could create a component called HomePage and write the syntax like below, or if you like decorators like I do you can use them as well. Just make sure you are using the proper babel-plugins so they work.
 
-```javascript
+```jsx
 // /pages/index.js
 import { Component } from 'react'
 import WithLayout from '../lib'
