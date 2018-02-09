@@ -225,6 +225,11 @@ module.exports = {
         label: 'LinkedIn'
       },
       {
+        className: 'fab, medium',
+        href: 'https://medium.com/@RockChalkDev',
+        label: 'Medium'
+      },
+      {
         className: 'fas, rss',
         href: 'rss.xml',
         label: 'RSS Feed'
@@ -278,6 +283,8 @@ module.exports = {
       { id: 3, href: '/posts/1', text: 'Blog' }, // '/posts/1' is from using `gatsby-paginate`
       { id: 4, href: '/certs', text: 'Certifications' }
     ],
+    tech:
+      'The below are just some of the technologies I know and tooling I use frequently.',
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
     twitter: '@RockChalkDev',
     siteUrl: isProd ? SITE_DOMAIN : '/'

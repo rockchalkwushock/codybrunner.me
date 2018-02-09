@@ -32,7 +32,7 @@ const Heading4 = Heading.withComponent('h4')
  * c.className.split(', ') super boss!!
  */
 
-const HomeView = ({ meta, posts, profilePic }) => (
+const HomeView = ({ meta, posts, profilePic, techIcons }) => (
   <FlexContainer>
     <SEO site={meta} />
     <Grid headCard>
@@ -59,6 +59,26 @@ const HomeView = ({ meta, posts, profilePic }) => (
         ))}
       </List>
     </ExtendedGrid>
+    <Grid alternate>
+      <Heading>Tech Stack</Heading>
+      <Text>{meta.tech}</Text>
+      <Text>
+        The following icons are from{' '}
+        <Link ext href="https://svgporn.com" text="SVG Porn" />
+      </Text>
+      <ul>
+        {techIcons.map(({ node }) => (
+          <img
+            alt={node.name}
+            aria-label={node.name}
+            key={node.relativePath}
+            style={{ height: '75px', margin: '10px', width: '75px' }}
+            src={require(`../../img/${node.relativePath}`)}
+            title={node.name}
+          />
+        ))}
+      </ul>
+    </Grid>
     <Grid alternate>
       <Heading>Recent Posts</Heading>
       <List gap={20}>

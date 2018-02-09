@@ -27,7 +27,7 @@ My personal website, portfolio, & tech blog.
 * [ ] Update Resume in Dropbox & link on HomePage
 * [ ] Finalize updates to LinkedIn
 * [x] Remove Tags page and find a different way to supply _all_ tags.
-* [ ] Clean up tags
+* [x] Clean up tags
 * [x] Certifications
 
 ## Perf
@@ -49,6 +49,5 @@ My personal website, portfolio, & tech blog.
 
 * [ ] Related Posts
 * [ ] Projects
-
 * [ ] Add [line highlighting](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/#implementation-notes) to markdown code blocks
 * [ ] ~~Pagination for tags, not really needed at the moment but it should be implemented and will be easys~~

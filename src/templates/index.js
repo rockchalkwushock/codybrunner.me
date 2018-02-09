@@ -8,6 +8,7 @@ const HomeTemplate = ({ data, pathContext }) => (
     meta={data.site.siteMetadata}
     posts={pathContext.posts}
     profilePic={data.profilePic.sizes}
+    techIcons={data.techIcons.edges}
   />
 )
 
@@ -16,6 +17,16 @@ export const homeQuery = graphql`
     profilePic: imageSharp(id: { regex: "/profile_pic/" }) {
       sizes(maxHeight: 200, maxWidth: 200, quality: 90) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    techIcons: allFile(
+      filter: { dir: { regex: "/svgIcons/" }, name: { ne: ".DS_Store" } }
+    ) {
+      edges {
+        node {
+          name
+          relativePath
+        }
       }
     }
     site {
@@ -45,6 +56,7 @@ export const homeQuery = graphql`
           text
         }
         siteUrl
+        tech
         title
         twitter
       }
