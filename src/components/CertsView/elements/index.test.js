@@ -1,23 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { CertImage, CertsFlexContainer, CertsGrid } from './'
+import { CertsFlexContainer, CertsGrid } from './'
 import renderWithTheme from '../../../lib/renderWithTheme'
-
-const resolutions = {}
-
-describe('Component: <CertImage />', () => {
-  let wrapper
-  beforeEach(() => {
-    wrapper = renderWithTheme(
-      <CertImage alt="a pic" resolutions={resolutions} title="HELLO" />
-    )
-  })
-
-  test('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-})
 
 describe('Component: <CertsFlexContainer />', () => {
   let wrapper

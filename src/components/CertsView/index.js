@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { mergeStrings } from '../../lib/helpers'
-import { Heading } from '../commons'
-import { CertImage, CertsFlexContainer, CertsGrid } from './elements'
+import { Heading, Image } from '../commons'
+import { CertsFlexContainer, CertsGrid } from './elements'
 import SEO from '../SEO'
 
 const CertsView = ({ certs, meta }) => {
@@ -20,12 +20,13 @@ const CertsView = ({ certs, meta }) => {
       <SEO site={updatedMeta} />
       <Heading>Cody's Certs</Heading>
       <CertsGrid alternate>
-        {certs.map(({ node: cert }) => (
-          <CertImage
-            alt={cert.parent.name}
-            key={cert.parent.name}
-            resolutions={cert.resolutions}
-            title={cert.parent.name}
+        {certs.map(({ node }) => (
+          <Image
+            alt={node.parent.name}
+            cert
+            key={node.parent.name}
+            resolutions={node.resolutions}
+            title={node.parent.name}
           />
         ))}
       </CertsGrid>

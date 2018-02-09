@@ -112,7 +112,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "text": "Certifications",
           },
         ],
-        "siteUrl": "/",
+        "siteUrl": "undefined",
         "tech": "The below are just some of the technologies I know and tooling I use frequently.",
         "title": "Cody Brunner - Full-Stack JavaScript Developer",
         "twitter": "@RockChalkDev",
@@ -122,8 +122,9 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
   <Grid
     headCard={true}
   >
-    <ProfilePic
+    <Image
       alt="Cody Brunner"
+      prof={true}
       sizes={
         Object {
           "aspectRatio": 1,
@@ -344,18 +345,11 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       />
     </Text>
     <ul>
-      <img
+      <Image
         alt="apollo"
         aria-label="apollo"
         key="svgIcons/apollo.svg"
-        src={null}
-        style={
-          Object {
-            "height": "75px",
-            "margin": "10px",
-            "width": "75px",
-          }
-        }
+        src="svgIcons/apollo.svg"
         title="apollo"
       />
     </ul>

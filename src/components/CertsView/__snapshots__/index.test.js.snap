@@ -112,7 +112,7 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
             "text": "Certifications",
           },
         ],
-        "siteUrl": "/",
+        "siteUrl": "undefined",
         "tech": "The below are just some of the technologies I know and tooling I use frequently.",
         "title": "Cody Brunner - Certifications",
         "twitter": "@RockChalkDev",
@@ -125,8 +125,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
   <CertsGrid
     alternate={true}
   >
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -138,8 +139,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -151,8 +153,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -164,8 +167,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -177,8 +181,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -190,8 +195,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -203,8 +209,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -216,8 +223,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -229,8 +237,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {
@@ -242,8 +251,9 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
       }
       title="advanced-react-redux"
     />
-    <CertImage
+    <Image
       alt="advanced-react-redux"
+      cert={true}
       key="advanced-react-redux"
       resolutions={
         Object {

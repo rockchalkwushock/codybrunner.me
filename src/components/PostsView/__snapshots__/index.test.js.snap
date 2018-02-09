@@ -112,7 +112,7 @@ exports[`Component: <PostsView /> should render correctly 1`] = `
             "text": "Certifications",
           },
         ],
-        "siteUrl": "/",
+        "siteUrl": "undefined",
         "tech": "The below are just some of the technologies I know and tooling I use frequently.",
         "title": "Cody Brunner - Blog",
         "twitter": "@RockChalkDev",

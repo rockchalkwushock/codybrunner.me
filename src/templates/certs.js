@@ -19,7 +19,7 @@ export const pageQuery = graphql`
             }
           }
           resolutions(quality: 70, width: 275) {
-            ...GatsbyImageSharpResolutions_noBase64
+            ...GatsbyImageSharpResolutions_withWebp_noBase64
           }
         }
       }

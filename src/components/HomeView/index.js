@@ -5,12 +5,12 @@ import {
   Grid,
   Heading,
   Icon,
+  Image,
   Link,
   List,
   Text
 } from '../commons'
 import Card from '../Card'
-import ProfilePic from '../ProfilePic'
 import SEO from '../SEO'
 
 const ExtendedGrid = Grid.extend`
@@ -36,7 +36,7 @@ const HomeView = ({ meta, posts, profilePic, techIcons }) => (
   <FlexContainer>
     <SEO site={meta} />
     <Grid headCard>
-      <ProfilePic alt="Cody Brunner" sizes={profilePic} title="Cody Brunner" />
+      <Image alt={meta.author} prof sizes={profilePic} title={meta.author} />
       <Heading>{meta.author}</Heading>
       <Heading4>{meta.jobTitle}</Heading4>
       <List flow="column" gap={10}>
@@ -68,12 +68,11 @@ const HomeView = ({ meta, posts, profilePic, techIcons }) => (
       </Text>
       <ul>
         {techIcons.map(({ node }) => (
-          <img
+          <Image
             alt={node.name}
             aria-label={node.name}
             key={node.relativePath}
-            style={{ height: '75px', margin: '10px', width: '75px' }}
-            src={require(`../../img/${node.relativePath}`)}
+            src={node.relativePath}
             title={node.name}
           />
         ))}
@@ -82,9 +81,7 @@ const HomeView = ({ meta, posts, profilePic, techIcons }) => (
     <Grid alternate>
       <Heading>Recent Posts</Heading>
       <List gap={20}>
-        {posts.map(({ node: post }) => (
-          <Card key={post.fields.slug} post={post} />
-        ))}
+        {posts.map(({ node }) => <Card key={node.fields.slug} post={node} />)}
       </List>
     </Grid>
   </FlexContainer>

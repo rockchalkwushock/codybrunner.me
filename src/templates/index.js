@@ -16,7 +16,7 @@ export const homeQuery = graphql`
   query HomePageQuery {
     profilePic: imageSharp(id: { regex: "/profile_pic/" }) {
       sizes(maxHeight: 200, maxWidth: 200, quality: 90) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     techIcons: allFile(

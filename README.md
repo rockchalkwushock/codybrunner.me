@@ -21,14 +21,9 @@ My personal website, portfolio, & tech blog.
 
 ## Left todo for v1
 
-* [x] Images in SEO
-* [x] Finalize styling of site & clean up `theme.js` & theme across site.
-* [x] Proofread posts, write up newest post.
 * [ ] Update Resume in Dropbox & link on HomePage
 * [ ] Finalize updates to LinkedIn
-* [x] Remove Tags page and find a different way to supply _all_ tags.
-* [x] Clean up tags
-* [x] Certifications
+* [ ] Google verification
 
 ## v2 features/wishlist
 

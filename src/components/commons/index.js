@@ -2,6 +2,7 @@ import FlexContainer from './FlexContainer'
 import Grid from './Grid'
 import Heading from './Heading'
 import Icon from './Icon'
+import Image from './Image'
 import Link from './Link'
 import List from './List'
 import Tag from './Tag'
@@ -14,6 +15,7 @@ export {
   Grid,
   Heading,
   Icon,
+  Image,
   Link,
   List,
   Tag,
