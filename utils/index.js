@@ -78,12 +78,16 @@ const devOnly = [
 ]
 // Prod Plugins
 const prodOnly = [
-  'gatsby-plugin-canonical-urls',
+  {
+    resolve: 'gatsby-plugin-canonical-urls',
+    options: {
+      siteUrl: `${domain}`
+    }
+  },
   'gatsby-plugin-catch-links',
   {
-    // NOTE: Currently the other options for the webpack plugin are
-    // not enabled. Will need to edit the manifest.json directly
-    // prior to publishing to fix some null values & missing values.
+    // REVIEW: I could just copy the output to another directory
+    // and just copy over to '/public/'
     resolve: 'gatsby-plugin-favicon',
     options: {
       logo: './src/assets/favicon.png',
