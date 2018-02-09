@@ -41,6 +41,11 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "label": "LinkedIn",
           },
           Object {
+            "className": "fab, medium",
+            "href": "https://medium.com/@RockChalkDev",
+            "label": "Medium",
+          },
+          Object {
             "className": "fas, rss",
             "href": "rss.xml",
             "label": "RSS Feed",
@@ -63,7 +68,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         "googleVerify": "TODO",
         "jobTitle": "Full-Stack JavaScript Developer",
         "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL",
-        "lang": "en_US",
+        "lang": "en",
         "links": Object {
           "creativeCommons": Object {
             "href": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
@@ -108,6 +113,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
           },
         ],
         "siteUrl": "/",
+        "tech": "The below are just some of the technologies I know and tooling I use frequently.",
         "title": "Cody Brunner - Full-Stack JavaScript Developer",
         "twitter": "@RockChalkDev",
       }
@@ -182,6 +188,22 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             Array [
               "fab",
               "linkedin",
+            ]
+          }
+          size="2x"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://medium.com/@RockChalkDev"
+        key="Medium"
+        label="Medium"
+      >
+        <SiteIcon
+          icon={
+            Array [
+              "fab",
+              "medium",
             ]
           }
           size="2x"
@@ -303,6 +325,41 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       </SiteLink>
     </List>
   </styled.div>
+  <Grid
+    alternate={true}
+  >
+    <Heading>
+      Tech Stack
+    </Heading>
+    <Text>
+      The below are just some of the technologies I know and tooling I use frequently.
+    </Text>
+    <Text>
+      The following icons are from
+       
+      <SiteLink
+        ext={true}
+        href="https://svgporn.com"
+        text="SVG Porn"
+      />
+    </Text>
+    <ul>
+      <img
+        alt="apollo"
+        aria-label="apollo"
+        key="svgIcons/apollo.svg"
+        src={null}
+        style={
+          Object {
+            "height": "75px",
+            "margin": "10px",
+            "width": "75px",
+          }
+        }
+        title="apollo"
+      />
+    </ul>
+  </Grid>
   <Grid
     alternate={true}
   >

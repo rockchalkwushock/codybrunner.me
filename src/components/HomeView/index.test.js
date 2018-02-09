@@ -30,11 +30,20 @@ const sizes = {
   srcSet: 'even longer'
 }
 
+const techIcons = [
+  { node: { relativePath: 'svgIcons/apollo.svg', name: 'apollo' } }
+]
+
 describe('Component: <HomeView />', () => {
   let wrapper
   beforeEach(() => {
     wrapper = shallow(
-      <HomeView meta={siteMetadata} posts={posts} profilePic={sizes} />
+      <HomeView
+        meta={siteMetadata}
+        posts={posts}
+        profilePic={sizes}
+        techIcons={techIcons}
+      />
     )
   })
 
