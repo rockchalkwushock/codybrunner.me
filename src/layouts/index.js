@@ -25,6 +25,8 @@ const LayoutWrapper = ({ children, data }) => {
             name="google-site-verification"
             content={siteMetadata.googleVerify}
           />
+          {/* NOTE: This is being set because gatsby-plugin-favicon does not set it.*/}
+          <meta name="theme-color" content="#ffe1b6" />
         </Helmet>
         <NavBar menu={menu} />
         {children()}

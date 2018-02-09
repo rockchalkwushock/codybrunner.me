@@ -8,8 +8,10 @@
   "repository": "https://github.com/rockchalkwushock/codybrunner.rocks.git",
   "scripts": {
     "analyze": "ANALYZE=1 yarn build",
-    "build": "SITE_NAME=http://localhost:9000 nps clean && gatsby build",
-    "ci_build": "gatsby build",
+    "build":
+      "nps clean && SITE_DOMAIN=http://localhost:9000 gatsby build && yarn copy",
+    "ci_build": "gatsby build && yarn copy",
+    "copy": "node ./scripts/replaceFiles.js",
     "cm": "nps commit",
     "dev": "nps clean && gatsby develop",
     "new": "nps generate",
@@ -60,6 +62,7 @@
     "styled-components": "^3.1.4"
   },
   "devDependencies": {
+    "chalk": "^2.3.0",
     "codecov": "^3.0.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",

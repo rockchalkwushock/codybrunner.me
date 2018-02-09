@@ -50,9 +50,9 @@ jobs:
           name: yarn build
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SITE_NAME=${SITE_NAME} yarn ci_build
+              GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SITE_DOMAIN=${SITE_DOMAIN} yarn ci_build
             elif [ "${CIRCLE_BRANCH}" == "development" ]; then
-              GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SITE_NAME=${SITE_NAME_BETA} yarn ci_build
+              GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} SITE_DOMAIN=${SITE_DOMAIN_BETA} yarn ci_build
             else
               echo "This failed miserably!"
             fi
