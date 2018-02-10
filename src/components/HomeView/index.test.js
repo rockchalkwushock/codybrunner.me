@@ -22,10 +22,29 @@ const posts = [
   }
 ]
 
+const sizes = {
+  aspectRatio: 1,
+  base64: 'really long string',
+  sizes: 'another string',
+  src: 'yep and another',
+  srcSet: 'even longer'
+}
+
+const techIcons = [
+  { node: { relativePath: 'svgIcons/apollo.svg', name: 'apollo' } }
+]
+
 describe('Component: <HomeView />', () => {
   let wrapper
   beforeEach(() => {
-    wrapper = shallow(<HomeView meta={siteMetadata} posts={posts} />)
+    wrapper = shallow(
+      <HomeView
+        meta={siteMetadata}
+        posts={posts}
+        profilePic={sizes}
+        techIcons={techIcons}
+      />
+    )
   })
 
   test('should render correctly', () => {

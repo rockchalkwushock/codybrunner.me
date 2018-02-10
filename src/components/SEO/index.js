@@ -79,7 +79,7 @@ const SEO = ({ post, postSeo, site }) => {
         content={postSeo ? `${site.siteUrl}${post.fields.slug}` : site.siteUrl}
       />
       <meta property="og:site_name" content={site.title} />
-      <meta property="og:locale" content={site.lang} />
+      <meta property="og:locale" content={`${site.lang}_US`} />
       <meta property="og:type" content={postSeo ? 'article' : 'website'} />
       {/* Twitter Tags */}
       <meta name="twitter:card" content="summary" />
@@ -98,7 +98,7 @@ const SEO = ({ post, postSeo, site }) => {
         name="twitter:url"
         content={postSeo ? `${site.siteUrl}${post.fields.slug}` : site.siteUrl}
       />
-      <title itemProp="name" lang={site.lang}>
+      <title itemProp="name" lang={`${site.lang}_US`}>
         {postSeo ? `Cody's Blog - ${post.frontmatter.title}` : site.title}
       </title>
     </Helmet>

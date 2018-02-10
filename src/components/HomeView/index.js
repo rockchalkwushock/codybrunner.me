@@ -5,12 +5,12 @@ import {
   Grid,
   Heading,
   Icon,
+  Image,
   Link,
   List,
   Text
 } from '../commons'
 import Card from '../Card'
-import ProfilePic from '../ProfilePic'
 import SEO from '../SEO'
 
 const ExtendedGrid = Grid.extend`
@@ -32,11 +32,11 @@ const Heading4 = Heading.withComponent('h4')
  * c.className.split(', ') super boss!!
  */
 
-const HomeView = ({ meta, posts }) => (
+const HomeView = ({ meta, posts, profilePic, techIcons }) => (
   <FlexContainer>
     <SEO site={meta} />
-    <Grid>
-      <ProfilePic />
+    <Grid headCard>
+      <Image alt={meta.author} prof sizes={profilePic} title={meta.author} />
       <Heading>{meta.author}</Heading>
       <Heading4>{meta.jobTitle}</Heading4>
       <List flow="column" gap={10}>
@@ -60,11 +60,28 @@ const HomeView = ({ meta, posts }) => (
       </List>
     </ExtendedGrid>
     <Grid alternate>
+      <Heading>Tech Stack</Heading>
+      <Text>{meta.tech}</Text>
+      <Text>
+        The following icons are from{' '}
+        <Link ext href="https://svgporn.com" text="SVG Porn" />
+      </Text>
+      <ul>
+        {techIcons.map(({ node }) => (
+          <Image
+            alt={node.name}
+            aria-label={node.name}
+            key={node.relativePath}
+            src={node.relativePath}
+            title={node.name}
+          />
+        ))}
+      </ul>
+    </Grid>
+    <Grid alternate>
       <Heading>Recent Posts</Heading>
       <List gap={20}>
-        {posts.map(({ node: post }) => (
-          <Card key={post.fields.slug} post={post} />
-        ))}
+        {posts.map(({ node }) => <Card key={node.fields.slug} post={node} />)}
       </List>
     </Grid>
   </FlexContainer>

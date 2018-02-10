@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: <CertsView /> should render correctly 1`] = `
+<CertsFlexContainer>
+  <SEO
+    site={
+      Object {
+        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!",
+        "author": "Cody Brunner",
+        "business": Array [
+          Object {
+            "className": "fas, envelope",
+            "href": "mailto:rockchalkwushock@icloud.com",
+            "label": "Email",
+          },
+          Object {
+            "className": "fab, telegram-plane",
+            "href": "https://t.me/rockchalkwushock",
+            "label": "Telegram",
+          },
+          Object {
+            "className": "fas, file-pdf",
+            "href": "https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1",
+            "label": "Resume",
+          },
+        ],
+        "contacts": Array [
+          Object {
+            "className": "fab, github",
+            "href": "https://github.com/rockchalkwushock",
+            "label": "Github",
+          },
+          Object {
+            "className": "fab, instagram",
+            "href": "https://www.instagram.com/rockchalkwushock",
+            "label": "Instagram",
+          },
+          Object {
+            "className": "fab, linkedin",
+            "href": "https://www.linkedin.com/in/cody-brunner",
+            "label": "LinkedIn",
+          },
+          Object {
+            "className": "fab, medium",
+            "href": "https://medium.com/@RockChalkDev",
+            "label": "Medium",
+          },
+          Object {
+            "className": "fas, rss",
+            "href": "rss.xml",
+            "label": "RSS Feed",
+          },
+          Object {
+            "className": "fab, twitter",
+            "href": "https://twitter.com/RockChalkDev",
+            "label": "Twitter",
+          },
+          Object {
+            "className": "fab, youtube",
+            "href": "https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw",
+            "label": "Youtube",
+          },
+        ],
+        "copyright": "© 2017-2018 Cody Brunner",
+        "description": "Cody's earned certifications.",
+        "disqusShortname": "codybrunner-rocks",
+        "employment": "Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.",
+        "googleVerify": "TODO",
+        "jobTitle": "Full-Stack JavaScript Developer",
+        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, tech certifications, Udemy, certified",
+        "lang": "en",
+        "links": Object {
+          "creativeCommons": Object {
+            "href": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+            "text": "All Rights Reserved.",
+          },
+          "gatsby": Object {
+            "href": "https://gatsbyjs.org",
+            "text": "Powered by Gatsby 1.9",
+          },
+          "now": Object {
+            "href": "https://zeit.co/now",
+            "text": "Hosted on Now",
+          },
+          "src": Object {
+            "href": "https://github.com/rockchalkwushock/codybrunner.rocks",
+          },
+          "styled": Object {
+            "href": "https://www.styled-components.com",
+            "text": "Styled with Styled-Components 3.1",
+          },
+        },
+        "menu": Array [
+          Object {
+            "href": "/",
+            "id": 1,
+            "text": "Home",
+          },
+          Object {
+            "href": "/about",
+            "id": 2,
+            "text": "About",
+          },
+          Object {
+            "href": "/posts/1",
+            "id": 3,
+            "text": "Blog",
+          },
+          Object {
+            "href": "/certs",
+            "id": 4,
+            "text": "Certifications",
+          },
+        ],
+        "siteUrl": "undefined",
+        "tech": "The below are just some of the technologies I know and tooling I use frequently.",
+        "title": "Cody Brunner - Certifications",
+        "twitter": "@RockChalkDev",
+      }
+    }
+  />
+  <Heading>
+    Cody's Certs
+  </Heading>
+  <CertsGrid
+    alternate={true}
+  >
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+    <Image
+      alt="advanced-react-redux"
+      cert={true}
+      key="advanced-react-redux"
+      resolutions={
+        Object {
+          "height": 300,
+          "src": "a pic",
+          "srcSet": "a longer string representing a pic",
+          "width": 275,
+        }
+      }
+      title="advanced-react-redux"
+    />
+  </CertsGrid>
+</CertsFlexContainer>
+`;

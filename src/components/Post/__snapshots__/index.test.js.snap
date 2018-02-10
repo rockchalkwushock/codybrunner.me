@@ -59,9 +59,9 @@ exports[`Component: <SitePost /> should render correctly 1`] = `
     }
   />
   <Paginate
-    nextPage={Object {}}
+    nextPage="/posts/2"
     post={true}
-    prevPage={Object {}}
+    prevPage="/posts/1"
   />
   <Share
     title="All About JS"

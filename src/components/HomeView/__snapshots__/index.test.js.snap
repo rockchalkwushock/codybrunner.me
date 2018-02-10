@@ -5,7 +5,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
   <SEO
     site={
       Object {
-        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!",
+        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!",
         "author": "Cody Brunner",
         "business": Array [
           Object {
@@ -41,6 +41,11 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "label": "LinkedIn",
           },
           Object {
+            "className": "fab, medium",
+            "href": "https://medium.com/@RockChalkDev",
+            "label": "Medium",
+          },
+          Object {
             "className": "fas, rss",
             "href": "rss.xml",
             "label": "RSS Feed",
@@ -63,7 +68,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
         "googleVerify": "TODO",
         "jobTitle": "Full-Stack JavaScript Developer",
         "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL",
-        "lang": "en_US",
+        "lang": "en",
         "links": Object {
           "creativeCommons": Object {
             "href": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
@@ -101,15 +106,36 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             "id": 3,
             "text": "Blog",
           },
+          Object {
+            "href": "/certs",
+            "id": 4,
+            "text": "Certifications",
+          },
         ],
-        "siteUrl": "/",
+        "siteUrl": "undefined",
+        "tech": "The below are just some of the technologies I know and tooling I use frequently.",
         "title": "Cody Brunner - Full-Stack JavaScript Developer",
         "twitter": "@RockChalkDev",
       }
     }
   />
-  <Grid>
-    <ProfilePic />
+  <Grid
+    headCard={true}
+  >
+    <Image
+      alt="Cody Brunner"
+      prof={true}
+      sizes={
+        Object {
+          "aspectRatio": 1,
+          "base64": "really long string",
+          "sizes": "another string",
+          "src": "yep and another",
+          "srcSet": "even longer",
+        }
+      }
+      title="Cody Brunner"
+    />
     <Heading>
       Cody Brunner
     </Heading>
@@ -163,6 +189,22 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
             Array [
               "fab",
               "linkedin",
+            ]
+          }
+          size="2x"
+        />
+      </SiteLink>
+      <SiteLink
+        ext={true}
+        href="https://medium.com/@RockChalkDev"
+        key="Medium"
+        label="Medium"
+      >
+        <SiteIcon
+          icon={
+            Array [
+              "fab",
+              "medium",
             ]
           }
           size="2x"
@@ -225,7 +267,7 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       About
     </Heading>
     <Text>
-      Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!
+      Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!
     </Text>
     <Text>
       Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.
@@ -284,6 +326,34 @@ exports[`Component: <HomeView /> should render correctly 1`] = `
       </SiteLink>
     </List>
   </styled.div>
+  <Grid
+    alternate={true}
+  >
+    <Heading>
+      Tech Stack
+    </Heading>
+    <Text>
+      The below are just some of the technologies I know and tooling I use frequently.
+    </Text>
+    <Text>
+      The following icons are from
+       
+      <SiteLink
+        ext={true}
+        href="https://svgporn.com"
+        text="SVG Porn"
+      />
+    </Text>
+    <ul>
+      <Image
+        alt="apollo"
+        aria-label="apollo"
+        key="svgIcons/apollo.svg"
+        src="svgIcons/apollo.svg"
+        title="apollo"
+      />
+    </ul>
+  </Grid>
   <Grid
     alternate={true}
   >

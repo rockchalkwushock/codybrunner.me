@@ -4,8 +4,8 @@ import { shallow } from 'enzyme'
 import SitePost from './'
 
 const ctx = {
-  next: {},
-  prev: {},
+  next: '/posts/2',
+  prev: '/posts/1',
   slug: '/turdsspace/'
 }
 const meta = {

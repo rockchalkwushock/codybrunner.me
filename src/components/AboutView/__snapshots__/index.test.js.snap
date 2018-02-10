@@ -7,7 +7,7 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
   <SEO
     site={
       Object {
-        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watchhis Jayhawks win!",
+        "aboutSnippet": "Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!",
         "author": "Cody Brunner",
         "business": Array [
           Object {
@@ -43,6 +43,11 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
             "label": "LinkedIn",
           },
           Object {
+            "className": "fab, medium",
+            "href": "https://medium.com/@RockChalkDev",
+            "label": "Medium",
+          },
+          Object {
             "className": "fas, rss",
             "href": "rss.xml",
             "label": "RSS Feed",
@@ -59,13 +64,13 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
           },
         ],
         "copyright": "© 2017-2018 Cody Brunner",
-        "description": "Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas",
+        "description": "Learn about Cody Brunner and his journey becoming a web developer.",
         "disqusShortname": "codybrunner-rocks",
         "employment": "Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.",
         "googleVerify": "TODO",
         "jobTitle": "Full-Stack JavaScript Developer",
-        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL",
-        "lang": "en_US",
+        "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, about page, learn about Cody Brunner, autobiography",
+        "lang": "en",
         "links": Object {
           "creativeCommons": Object {
             "href": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
@@ -103,9 +108,15 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
             "id": 3,
             "text": "Blog",
           },
+          Object {
+            "href": "/certs",
+            "id": 4,
+            "text": "Certifications",
+          },
         ],
-        "siteUrl": "/",
-        "title": "Cody Brunner - Full-Stack JavaScript Developer",
+        "siteUrl": "undefined",
+        "tech": "The below are just some of the technologies I know and tooling I use frequently.",
+        "title": "Cody Brunner - About Me",
         "twitter": "@RockChalkDev",
       }
     }
@@ -125,7 +136,7 @@ exports[`Component: <AboutView /> should render correctly 1`] = `
   />
   <Share
     title="All About JS"
-    url="//turdsspace/"
+    url="undefined/turdsspace/"
   />
 </Post>
 `;

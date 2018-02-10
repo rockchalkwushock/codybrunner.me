@@ -18,7 +18,7 @@ import { PostsView } from '../components'
  */
 
 const PostsTemplate = ({ data, pathContext }) => (
-  <PostsView ctx={pathContext} site={data.site.siteMetadata} />
+  <PostsView ctx={pathContext} meta={data.site.siteMetadata} />
 )
 
 export const PostsPageQuery = graphql`
@@ -32,7 +32,6 @@ export const PostsPageQuery = graphql`
         lang
         siteUrl
         title
-        twitter
       }
     }
   }

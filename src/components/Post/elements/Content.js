@@ -29,7 +29,6 @@ const Content = styled.section`
     font-family: ${({ theme }) => theme.post.ftFm};
     font-size: ${({ theme }) => theme.post.ftSz};
     font-weight: ${({ theme }) => theme.post.ftWt};
-    letter-spacing: ${({ theme }) => theme.post.ltSp};
     line-height: ${({ theme }) => theme.post.lnHt};
     padding: 0.5em 0;
   }
@@ -62,11 +61,11 @@ const Content = styled.section`
 
   > blockquote {
     background-color: rgba(0, 0, 0, 0.1);
-    border-left: 10px solid ${({ theme }) => theme.site.bg};
-    border-radius: 20px 0px;
-    border-right: 10px solid ${({ theme }) => theme.site.bg};
-    margin: 0.5em 0;
+    border-left: 5px solid ${({ theme }) => theme.site.bg};
+    border-radius: 5px;
+    margin: 0.5em auto;
     padding: 0.25em 0.75em;
+    width: 100%;
   }
 
   > blockquote p {
@@ -101,6 +100,12 @@ const Content = styled.section`
 
   .gatsby-highlight pre {
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
+    > blockquote {
+      width: 62%;
+    }
   }
 `
 

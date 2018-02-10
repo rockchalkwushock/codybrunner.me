@@ -19,8 +19,7 @@ class NavBar extends Component {
         id: number.isRequired,
         text: string.isRequired
       })
-    ).isRequired,
-    location: string.isRequired
+    ).isRequired
   }
   state = {
     visible: false

@@ -13,7 +13,7 @@ import theme from '../lib/theme'
 // Layout Components
 import { Footer, NavBar, Wrapper } from '../components'
 
-const LayoutWrapper = ({ children, data, location }) => {
+const LayoutWrapper = ({ children, data }) => {
   const { buildTime, siteMetadata } = data.site
   const { copyright, links, menu, siteUrl } = siteMetadata
   return (
@@ -26,7 +26,7 @@ const LayoutWrapper = ({ children, data, location }) => {
             content={siteMetadata.googleVerify}
           />
         </Helmet>
-        <NavBar location={location.pathname} menu={menu} />
+        <NavBar menu={menu} />
         {children()}
         <Footer
           buildTime={buildTime}

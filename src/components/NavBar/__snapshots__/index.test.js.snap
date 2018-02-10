@@ -29,6 +29,11 @@ exports[`Component: <NavBar /> should render correctly 1`] = `
       key="3"
       text="Blog"
     />
+    <SiteLink
+      href="/certs"
+      key="4"
+      text="Certifications"
+    />
   </NavList>
 </Nav>
 `;

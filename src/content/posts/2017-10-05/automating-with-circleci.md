@@ -4,7 +4,7 @@ description: "How to automate your workflow with CircleCi 2.0 & Zeit's Now platf
 draft: false
 keywords: "continuous integration, continuous deployment, CircleCi, command-line, now-cli, Zeit, deploying, hosting"
 title: "Automating with CircleCi 2.0"
-tags: ["ci/cd", "CircleCi", "cli", "deploying"]
+tags: ["ci/cd", "cli", "deploying"]
 ---
 
 I’ve been playing around with CircleCi 2.0 for the last month or two on various projects and wanted to share what I have learned during that time. A project I will be starting soon will be using [create-react-app](https://github.com/facebookincubator/create-react-app) & the static build will be deployed to [Now](https://zeit.co/now) using the `now-cli`. So this article will show a method for automating this with CircleCi using workflows.
@@ -113,7 +113,7 @@ Now when we move on to a job that _attaches_ the workspace we will have `~/circl
 
 By using these commands in specific jobs we can now run certain jobs in parallel instead of running all jobs in series.
 
-> _**NOTE**: When `persisting_to_workspace` keep in mind that you cannot persist concurrently running jobs, this can only be done in series._
+> _**NOTE**: When persisting to the workspace keep in mind that you cannot persist concurrently running jobs, this can only be done in series._
 
 ## Caching
 

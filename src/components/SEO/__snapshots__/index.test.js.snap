@@ -87,7 +87,7 @@ exports[`Component: <SEO /> should render correctly as post data 1`] = `
     property="og:site_name"
   />
   <meta
-    content="sarcasm"
+    content="sarcasm_US"
     property="og:locale"
   />
   <meta
@@ -124,7 +124,7 @@ exports[`Component: <SEO /> should render correctly as post data 1`] = `
   />
   <title
     itemProp="name"
-    lang="sarcasm"
+    lang="sarcasm_US"
   >
     Cody's Blog - A funny article from a funny guy
   </title>
@@ -218,7 +218,7 @@ exports[`Component: <SEO /> should render correctly as site data 1`] = `
     property="og:site_name"
   />
   <meta
-    content="sarcasm"
+    content="sarcasm_US"
     property="og:locale"
   />
   <meta
@@ -255,7 +255,7 @@ exports[`Component: <SEO /> should render correctly as site data 1`] = `
   />
   <title
     itemProp="name"
-    lang="sarcasm"
+    lang="sarcasm_US"
   >
     That's a Funny Name
   </title>

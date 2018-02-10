@@ -1,15 +1,16 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 
 import renderWithTheme from '../../../lib/renderWithTheme'
 import Grid from '../Grid'
 
 describe('Component: <Grid />', () => {
   let alt
+  let headCard
   let wrapper
   beforeEach(() => {
     alt = renderWithTheme(<Grid alternate />)
-    wrapper = shallow(<Grid />)
+    headCard = renderWithTheme(<Grid headCard />)
+    wrapper = renderWithTheme(<Grid />)
   })
 
   test('should render correctly', () => {
@@ -20,6 +21,11 @@ describe('Component: <Grid />', () => {
   })
   test('should have styles', () => {
     expect(wrapper).toHaveStyleRule('background-color', 'inherit')
+    expect(wrapper).toHaveStyleRule('border-radius', '10px')
+    expect(wrapper).toHaveStyleRule(
+      'box-shadow',
+      '1px 1px 5px 1px rgba(0,0,0,0.7)'
+    )
     expect(wrapper).toHaveStyleRule('display', 'grid')
     expect(wrapper).toHaveStyleRule('grid-gap', '10px')
     expect(wrapper).toHaveStyleRule('grid-template-columns', '1fr')
@@ -29,5 +35,10 @@ describe('Component: <Grid />', () => {
   })
   test('should have styles as alternate', () => {
     expect(alt).toHaveStyleRule('background-color', '#f9f8eb')
+  })
+  test('should have differing styles with headCard prop', () => {
+    expect(headCard.children().props()).toHaveProperty('headCard', true)
+    expect(headCard).toHaveStyleRule('border-radius', '0px')
+    expect(headCard).toHaveStyleRule('box-shadow', 'unset')
   })
 })

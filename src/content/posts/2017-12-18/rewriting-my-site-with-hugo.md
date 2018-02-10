@@ -13,7 +13,7 @@ I had heard of [Hugo](https://gohugo.io) a while back, but never really looked i
 
 Super easy and you gotta love that as a developer. I’m on a Mac and use `homebrew` :
 
-```sh
+```bash
 brew update
 brew install hugo
 # verify install
@@ -24,7 +24,7 @@ hugo version
 
 With `hugo` you have quite a few commands and I advise you to run `hugo help` to get more acquainted with what you have available to you. To generate a new _site_ or project:
 
-```sh
+```bash
 hugo new site my-first-hugo-site
 ```
 
@@ -40,7 +40,7 @@ The file structure is very important with `hugo` so I will touch on each briefly
 
 The `archetypes` directory is going to hold these template like markdown files that you can customize. Basically when you run a command to generate new content `hugo` will add the default front matter to the file. If you want to customize the front matter that is placed in content then you can create custom archetypes such as `archetypes/posts.md` then when executing the below command `hugo` will look to `posts.md` instead of the default archetype values:
 
-```sh
+```bash
 hugo new posts/post-1.md
 ```
 
@@ -74,7 +74,7 @@ Coming from `react` I can say I’m not a fan of templates, but I understand now
 
 ### React
 
-```js
+```jsx
 // Post.jsx
 const Post props =>
   <div>
@@ -147,7 +147,7 @@ In `hugo` there is this thing called _context_ or `{{ . }}`. You will get really
 
 Probably the most significant function that will be used time and time again is the `range` function which if you are coming from a JavaScript background can be looked at as the `map` function. To see all the functions offered to you look [here](https://gohugo.io/functions/).
 
-```js
+```jsx
 const list = [{ id: 1, name: 'a' }, { id: 2, name: 'b' }, { id: 3, name: 'c' }]
 
 const ProjectList = ({ list }) => (
@@ -168,13 +168,13 @@ const ProjectList = ({ list }) => (
 
 To generate your production ready site simply run,
 
-```sh
+```bash
 hugo
 ```
 
 and you will see the `public/` directory has been generated. Since this is static content it can be deployed just about anywhere with relative ease. I am a Zeit fan so I made use of the `now-cli`. To streamline things I made my own function to handle the generation of the site, deployment, and aliasing of the instance to the domain name.
 
-```sh
+```bash
 # ~/.zshrc
 # Publish Hugo Site to Now
 # $1 - name of deployment

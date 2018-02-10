@@ -7,6 +7,8 @@ const {
   createLinkedPages,
   createPaginationPages
 } = require('gatsby-pagination')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
 // Condition
 const isProd = process.env.NODE_ENV === 'production'
@@ -99,14 +101,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           })
         }
       })
-      // Create tags page
-      // createPage({
-      //   path: '/tags',
-      //   component: resolve('src/templates/tags.js'),
-      //   context: {
-      //     tags: Object.entries(postsByTags)
-      //   }
-      // })
 
       Object.keys(postsByTags).forEach(term => {
         // Create term pages with corresponding pages.
@@ -118,6 +112,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             tag: term
           }
         })
+      })
+
+      createPage({
+        path: '/certs',
+        component: resolve('src/templates/certs.js')
       })
       // Finalize Promise
       _resolve()
@@ -138,5 +137,25 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       node,
       value
     })
+  }
+}
+
+/* eslint-disable default-case */
+if (process.env.ANALYZE) {
+  exports.modifyWebpackConfig = ({ config, stage }) => {
+    switch (stage) {
+      case 'build-javascript':
+        config.plugin('Bundle Analyzer', BundleAnalyzerPlugin, [
+          {
+            analyzerMode: 'static',
+            openAnalyzer: false,
+            generateStatsFile: true
+          }
+        ])
+
+        break
+    }
+
+    return config
   }
 }

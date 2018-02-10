@@ -29,14 +29,14 @@ const ctx = {
 describe('Component: <PostsView />', () => {
   let wrapper
   beforeEach(() => {
-    wrapper = shallow(<PostsView ctx={ctx} site={siteMetadata} />)
+    wrapper = shallow(<PostsView ctx={ctx} meta={siteMetadata} />)
   })
 
   test('should render correctly', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  test('should have 1 post in list', () => {
+  test('should have 15 posts in list', () => {
     expect(wrapper.find('List').children()).toHaveLength(15)
   })
 })

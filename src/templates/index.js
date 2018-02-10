@@ -4,11 +4,32 @@ import React from 'react'
 import { HomeView } from '../components'
 
 const HomeTemplate = ({ data, pathContext }) => (
-  <HomeView meta={data.site.siteMetadata} posts={pathContext.posts} />
+  <HomeView
+    meta={data.site.siteMetadata}
+    posts={pathContext.posts}
+    profilePic={data.profilePic.sizes}
+    techIcons={data.techIcons.edges}
+  />
 )
 
 export const homeQuery = graphql`
   query HomePageQuery {
+    profilePic: imageSharp(id: { regex: "/profile_pic/" }) {
+      sizes(maxHeight: 200, maxWidth: 200, quality: 90) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
+    techIcons: allFile(
+      filter: { dir: { regex: "/svgIcons/" }, name: { ne: ".DS_Store" } }
+      sort: { fields: [name], order: ASC }
+    ) {
+      edges {
+        node {
+          name
+          relativePath
+        }
+      }
+    }
     site {
       siteMetadata {
         aboutSnippet
@@ -36,6 +57,7 @@ export const homeQuery = graphql`
           text
         }
         siteUrl
+        tech
         title
         twitter
       }
