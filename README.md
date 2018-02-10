@@ -18,6 +18,7 @@ My personal website, portfolio, & tech blog.
 2. Payheed to the notes in `gatsby-node` they are there for a reason guy!
 3. Look [here](https://using-remark.gatsbyjs.org/hello-world-kitchen-sink/) for markdown writing in Gatsby.
 4. I can adjust properties on the embedded tweets, more [here](https://dev.twitter.com/web/embedded-tweets/parameters).
+5. Generated favicons with `gatsby-plugin-favicons`. Should site-logo/icon change reinstall and add to `gatsby-config` then copy the files to `/static/`.
 
 ## Left todo for v1
 

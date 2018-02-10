@@ -7,7 +7,7 @@ const {
   prodOnly,
   styledVersion,
   year
-} = require('./utils')
+} = require('./config')
 
 module.exports = {
   pathPrefix: '/',
@@ -30,7 +30,7 @@ module.exports = {
       {
         className: 'fas, file-pdf',
         href:
-          'https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1',
+          'https://www.dropbox.com/s/3tv6h9nbbiwksd7/Cody%20Brunner%20Resume.pdf?dl=1',
         label: 'Resume'
       }
     ],
