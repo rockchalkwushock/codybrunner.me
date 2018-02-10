@@ -19,17 +19,13 @@ My personal website, portfolio, & tech blog.
 3. Look [here](https://using-remark.gatsbyjs.org/hello-world-kitchen-sink/) for markdown writing in Gatsby.
 4. I can adjust properties on the embedded tweets, more [here](https://dev.twitter.com/web/embedded-tweets/parameters).
 5. Generated favicons with `gatsby-plugin-favicons`. Should site-logo/icon change reinstall and add to `gatsby-config` then copy the files to `/static/`.
-
-## Left todo for v1
-
-* [ ] Update Resume in Dropbox & link on HomePage
-* [ ] Finalize updates to LinkedIn
-* [ ] Google verification
+6. 404's are still not being used for static deployments on `now`, updates are coming to correct this. For now I could make my own server to serve the static assets & handle the 404 routing...easy to do..but I don't want to do that :joy:
 
 ## v2 features/wishlist
 
 * [ ] Related Posts
 * [ ] Projects
 * [ ] Add [line highlighting](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/#implementation-notes) to markdown code blocks
-* [ ] ~~Pagination for tags, not really needed at the moment but it should be implemented and will be easys~~
+* [ ] Pagination for term pages will need to be implemented.
 * [ ] Move from `prop-types` to `flowtypes`.
+* [ ] Need to find a lazy loading method for certs & svgIcons to help performance issues. `gatsby-image` should be taking care of it for the `/certs` page. Might have something implemented wrong. svgIcons are regular `<img/>`.

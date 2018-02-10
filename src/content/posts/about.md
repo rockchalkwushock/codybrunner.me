@@ -33,9 +33,7 @@ I really enjoy spending time out in nature camping & hiking. One of the reasons 
 
 ## Next Up
 
-Studying algorithms and job hunting is my primary goal at the moment. Side project include learning `elixir`. You can checkout my [Github](https://github.com/rockchalkwushock/) to see what I've been up too lately or checkout the [portfolio](https://codybrunner.rocks/portfolio/) section to see my featured projects. Should you happen to be one of those recruiter folks you can find me on [AngelList](https://angel.co/rockchalkdev?public_profile=1) & [LinkedIn](https://www.linkedin.com/in/cody-brunner-324930158/).
-
-<!-- TODO: step down hugo site, new alias & change portfolio link temporarily while I reconstruct similar in Gatsby -->
+Studying algorithms and job hunting is my primary goal at the moment. Side project include learning `elixir`. You can checkout my [Github](https://github.com/rockchalkwushock/) to see what I've been up to lately. Should you happen to be one of those recruiter folks you can find me on [AngelList](https://angel.co/rockchalkdev?public_profile=1) & [LinkedIn](https://www.linkedin.com/in/cody-brunner/).
 
 ## Contact
 

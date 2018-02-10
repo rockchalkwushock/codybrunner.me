@@ -154,7 +154,7 @@ export default class HomePage extends Component {
 
 ## Examples of HOCs in the wild
 
-* [my old website](https://rcws-development-v2.now.sh)
+* [my old website](https://github.com/rockchalkwushock/my-blog)
 * [Relate](https://github.com/relatenow/relate/tree/master/hocs)
 
 The next time you see yourself writing a lot of the same business logic code across multiple files in your application it might be time to think about using an HOC instead!

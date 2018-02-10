@@ -77,7 +77,7 @@ module.exports = {
     disqusShortname: 'codybrunner-rocks',
     employment:
       'Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.',
-    googleVerify: 'TODO',
+    googleVerify: '_P5Sbjg9dhez__QV3U70R-ydZn6ssT6qz5_nL0ZBzlE',
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
       'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',

@@ -4,6 +4,7 @@ import CertsView from './CertsView'
 import Footer from './Footer'
 import HomeView from './HomeView'
 import NavBar from './NavBar'
+import NotFoundView from './NotFoundView'
 import PostsView from './PostsView'
 import SinglePost from './Post'
 import TermView from './TermView'
@@ -16,6 +17,7 @@ export {
   Footer,
   HomeView,
   NavBar,
+  NotFoundView,
   PostsView,
   SinglePost,
   TermView,
