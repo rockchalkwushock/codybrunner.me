@@ -20,7 +20,7 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
           },
           Object {
             "className": "fas, file-pdf",
-            "href": "https://www.dropbox.com/s/hokjljqc8iob7xd/Cody%20A%20Brunner%20-%20Web%20Developer%20Resume.pdf?dl=1",
+            "href": "https://www.dropbox.com/s/3tv6h9nbbiwksd7/Cody%20Brunner%20Resume.pdf?dl=1",
             "label": "Resume",
           },
         ],
@@ -65,7 +65,7 @@ exports[`Component: <CertsView /> should render correctly 1`] = `
         "description": "Cody's earned certifications.",
         "disqusShortname": "codybrunner-rocks",
         "employment": "Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.",
-        "googleVerify": "TODO",
+        "googleVerify": "_P5Sbjg9dhez__QV3U70R-ydZn6ssT6qz5_nL0ZBzlE",
         "jobTitle": "Full-Stack JavaScript Developer",
         "keywords": "Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, tech certifications, Udemy, certified",
         "lang": "en",
