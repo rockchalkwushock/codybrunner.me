@@ -29,8 +29,7 @@ module.exports = {
       },
       {
         className: 'fas, file-pdf',
-        href:
-          'https://www.dropbox.com/s/3tv6h9nbbiwksd7/Cody%20Brunner%20Resume.pdf?dl=1',
+        href: 'https://www.dropbox.com/s/ihan4qjasbmwcx7/Cody%20Brunner%20Resume.pdf?dl=1',
         label: 'Resume'
       }
     ],
