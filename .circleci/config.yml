@@ -72,11 +72,11 @@ jobs:
           name: Deploy & Alias.
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              now public -t ${NOW_TOKEN} -n=my-site --static
-              now -t ${NOW_TOKEN} alias codybrunner.me
+              local url=$(now public -t ${NOW_TOKEN} -n=my-site --static 2>/dev/null)
+              now -t ${NOW_TOKEN} alias $url codybrunner.me
             elif [ "${CIRCLE_BRANCH}" == "development" ]; then
-              now public -t ${NOW_TOKEN} -n=my-site --static
-              now -t ${NOW_TOKEN} alias codybrunner-beta
+              local url=$(now public -t ${NOW_TOKEN} -n=my-site --static 2>/dev/null)
+              now -t ${NOW_TOKEN} alias $url codybrunner-beta
             else
               echo "This failed miserably!"
             fi
