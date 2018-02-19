@@ -14,7 +14,7 @@ module.exports = {
   plugins: isProd ? [...plugins, ...prodOnly] : [...plugins, ...devOnly],
   siteMetadata: {
     aboutSnippet:
-      'Hello I am Cody, a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. I primarily works with Node, React, & GraphQL. When not writing code I love to go hiking, play with my dog & niece, and watch my Jayhawks win!',
+      'Hello I am Cody, a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. I primarily work with Node, React, & GraphQL. When not writing code I love to go hiking, play with my dog & niece, and watch my Jayhawks win!',
     author: 'Cody Brunner',
     business: [
       {
