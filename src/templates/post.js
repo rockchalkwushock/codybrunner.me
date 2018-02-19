@@ -36,7 +36,6 @@ export const postQuery = graphql`
         author
         copyright
         description
-        disqusShortname
         keywords
         lang
         siteUrl

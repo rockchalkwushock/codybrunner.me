@@ -3,11 +3,11 @@ jobs:
   checkout_code:
     docker:
       - image: 'circleci/node:latest'
-    working_directory: ~/codybrunner.rocks
+    working_directory: ~/codybrunner.me
     steps:
       - checkout
       - attach_workspace:
-          at: ~/codybrunner.rocks
+          at: ~/codybrunner.me
       - restore_cache:
           keys:
             - 'yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}'
@@ -23,10 +23,10 @@ jobs:
   test_and_report:
     docker:
       - image: 'circleci/node:latest'
-    working_directory: ~/codybrunner.rocks
+    working_directory: ~/codybrunner.me
     steps:
       - attach_workspace:
-          at: ~/codybrunner.rocks
+          at: ~/codybrunner.me
       - run: yarn install
       - run: yarn start test.coverage
       - run: yarn start reportCoverage
@@ -41,10 +41,10 @@ jobs:
   build:
     docker:
       - image: 'circleci/node:latest'
-    working_directory: ~/codybrunner.rocks
+    working_directory: ~/codybrunner.me
     steps:
       - attach_workspace:
-          at: ~/codybrunner.rocks
+          at: ~/codybrunner.me
       - run: yarn install
       - run:
           name: yarn build
@@ -62,21 +62,21 @@ jobs:
   deployment:
     docker:
       - image: 'circleci/node:latest'
-    working_directory: ~/codybrunner.rocks
+    working_directory: ~/codybrunner.me
     steps:
       - attach_workspace:
-          at: ~/codybrunner.rocks
+          at: ~/codybrunner.me
       - run: yarn install
       - run: sudo yarn global add now
       - deploy:
           name: Deploy & Alias.
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              now public -t ${NOW_TOKEN} -n=my-site --static
-              now -t ${NOW_TOKEN} alias codybrunner.rocks
+              local url=$(now public -t ${NOW_TOKEN} -n=my-site --static 2>/dev/null)
+              now -t ${NOW_TOKEN} alias $url codybrunner.me
             elif [ "${CIRCLE_BRANCH}" == "development" ]; then
-              now public -t ${NOW_TOKEN} -n=my-site --static
-              now -t ${NOW_TOKEN} alias codybrunner-beta
+              local url=$(now public -t ${NOW_TOKEN} -n=my-site --static 2>/dev/null)
+              now -t ${NOW_TOKEN} alias $url codybrunner-beta
             else
               echo "This failed miserably!"
             fi

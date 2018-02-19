@@ -14,22 +14,23 @@ module.exports = {
   plugins: isProd ? [...plugins, ...prodOnly] : [...plugins, ...devOnly],
   siteMetadata: {
     aboutSnippet:
-      'Cody Brunner is a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. Cody primarily works with Node, React, & GraphQL. When not writing code he loves to go hiking, play with his dog & niece, and watch his Jayhawks win!',
+      'Hello I am Cody, a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. I primarily works with Node, React, & GraphQL. When not writing code I love to go hiking, play with my dog & niece, and watch my Jayhawks win!',
     author: 'Cody Brunner',
     business: [
       {
         className: 'fas, envelope',
-        href: 'mailto:rockchalkwushock@icloud.com',
+        href: 'mailto:cody.a.brunner@gmail.com',
         label: 'Email'
       },
       {
-        className: 'fab, telegram-plane',
-        href: 'https://t.me/rockchalkwushock',
-        label: 'Telegram'
+        className: 'fab, linkedin',
+        href: 'https://www.linkedin.com/in/cody-brunner',
+        label: 'LinkedIn'
       },
       {
         className: 'fas, file-pdf',
-        href: 'https://www.dropbox.com/s/ihan4qjasbmwcx7/Cody%20Brunner%20Resume.pdf?dl=1',
+        href:
+          'https://www.dropbox.com/s/ihan4qjasbmwcx7/Cody%20Brunner%20Resume.pdf?dl=1',
         label: 'Resume'
       }
     ],
@@ -43,16 +44,6 @@ module.exports = {
         className: 'fab, instagram',
         href: 'https://www.instagram.com/rockchalkwushock',
         label: 'Instagram'
-      },
-      {
-        className: 'fab, linkedin',
-        href: 'https://www.linkedin.com/in/cody-brunner',
-        label: 'LinkedIn'
-      },
-      {
-        className: 'fab, medium',
-        href: 'https://medium.com/@RockChalkDev',
-        label: 'Medium'
       },
       {
         className: 'fas, rss',
@@ -73,9 +64,8 @@ module.exports = {
     copyright: `© 2017-${year} Cody Brunner`,
     description:
       'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
-    disqusShortname: 'codybrunner-rocks',
     employment:
-      'Are you interested in contacting Cody for employment opportunities? Feel free to reach out to him via email, Telegram, or go ahead and checkout his resume hosted on DropBox.',
+      'Please feel free to reach out to me via email, LinkedIn, and chekout my resume.',
     googleVerify: '_P5Sbjg9dhez__QV3U70R-ydZn6ssT6qz5_nL0ZBzlE',
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
