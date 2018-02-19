@@ -62,10 +62,7 @@ const HomeView = ({ meta, posts, profilePic, techIcons }) => (
     <Grid alternate>
       <Heading>Tech Stack</Heading>
       <Text>{meta.tech}</Text>
-      <Text>
-        The following icons are from{' '}
-        <Link ext href="https://svgporn.com" text="SVG Porn" />
-      </Text>
+      <Link ext href="https://svgporn.com" text="SVG Icons Credit" />
       <ul>
         {techIcons.map(({ node }) => (
           <Image
