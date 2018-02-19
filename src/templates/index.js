@@ -8,6 +8,7 @@ const HomeTemplate = ({ data, pathContext }) => (
     meta={data.site.siteMetadata}
     posts={pathContext.posts}
     profilePic={data.profilePic.sizes}
+    projectPic={data.projectPic.resolutions}
     techIcons={data.techIcons.edges}
   />
 )
@@ -17,6 +18,11 @@ export const homeQuery = graphql`
     profilePic: imageSharp(id: { regex: "/profile_pic/" }) {
       sizes(maxHeight: 200, maxWidth: 200, quality: 90) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
+    projectPic: imageSharp(id: { regex: "/projects/mashaeltsova/" }) {
+      resolutions(quality: 80, width: 300) {
+        ...GatsbyImageSharpResolutions_withWebp_noBase64
       }
     }
     techIcons: allFile(
