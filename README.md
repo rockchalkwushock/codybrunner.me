@@ -1,4 +1,4 @@
-# [codybrunner.rocks](https://codybrunner.rocks) :fire: :sunglasses: :metal:
+# [codybrunner.me](https://codybrunner.me) :fire: :sunglasses: :metal:
 
 My personal website, portfolio, & tech blog.
 
