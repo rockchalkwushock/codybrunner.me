@@ -19,7 +19,7 @@ module.exports = {
     business: [
       {
         className: 'fas, envelope',
-        href: 'mailto:rockchalkwushock@icloud.com',
+        href: 'mailto:cody.a.brunner@gmail.com',
         label: 'Email'
       },
       {
@@ -64,7 +64,6 @@ module.exports = {
     copyright: `© 2017-${year} Cody Brunner`,
     description:
       'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
-    disqusShortname: 'codybrunner-rocks',
     employment:
       'Please feel free to reach out to me via email, LinkedIn, and chekout my resume.',
     googleVerify: '_P5Sbjg9dhez__QV3U70R-ydZn6ssT6qz5_nL0ZBzlE',

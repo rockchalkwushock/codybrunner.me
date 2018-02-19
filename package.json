@@ -2,17 +2,15 @@
   "name": "codybrunner.rocks",
   "version": "0.1.0",
   "license": "MIT",
-  "author":
-    "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.rocks)",
   "description": "My personal website & tech blog built with Gatsby.",
   "repository": "https://github.com/rockchalkwushock/codybrunner.rocks.git",
   "scripts": {
     "analyze": "ANALYZE=1 yarn build",
-    "build":
-      "nps clean && SITE_DOMAIN=http://localhost:9000 gatsby build --prefix-paths",
+    "build": "nps clean && SITE_DOMAIN=http://localhost:9000 gatsby build --prefix-paths",
     "ci_build": "gatsby build --prefix-paths",
     "cm": "nps commit",
-    "dev": "nps clean && gatsby develop",
+    "dev": "nps clean && SITE_DOMAIN=http://localhost:8000 gatsby develop",
     "manual": "gatsby build --prefix-paths",
     "new": "nps generate",
     "serve": "gatsby serve",
@@ -55,7 +53,6 @@
     "gatsby-transformer-sharp": "^1.6.18",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-disqus-comments": "^1.1.1",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
@@ -103,7 +100,9 @@
   },
   "jest": {
     "bail": true,
-    "collectCoverageFrom": ["src/components/**/*.js"],
+    "collectCoverageFrom": [
+      "src/components/**/*.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 50,
@@ -115,11 +114,18 @@
     "moduleNameMapper": {
       ".+\\.(png|jpg|jpeg|svg)$": "identity-obj-proxy"
     },
-    "setupFiles": ["./jest.setup.js"],
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
     "setupTestFrameworkScriptFile": "jest-styled-components",
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": ["/node_modules/", "/.cache/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.transform.js"
     }

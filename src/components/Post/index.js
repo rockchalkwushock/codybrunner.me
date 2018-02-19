@@ -2,7 +2,7 @@
 import React from 'react'
 import { arrayOf, bool, number, shape, string } from 'prop-types'
 
-import { Content, Disqus, Header, Post, Share } from './elements'
+import { Content, Header, Post, Share } from './elements'
 import { Tags } from '../commons'
 import Paginate from '../Paginate'
 import SEO from '../SEO'
@@ -13,12 +13,11 @@ import SEO from '../SEO'
  *
  * Accepts individual post, pathContext, & siteMetadata from GraphQL Query.
  * Has dynamic SEO based on post metadata.
- * <Disqus /> ONLY in production.
  */
 
 const SitePost = ({ ctx, meta, post }) => {
   const { fields, frontmatter, html, timeToRead, wordCount } = post
-  const { disqusShortname, siteUrl } = meta
+  const { siteUrl } = meta
   const postUrl = `${siteUrl}${fields.slug}`
   return (
     <Post draft={frontmatter.draft}>
@@ -33,13 +32,6 @@ const SitePost = ({ ctx, meta, post }) => {
       <Tags tags={frontmatter.tags} />
       <Paginate post nextPage={ctx.next} prevPage={ctx.prev} />
       <Share title={frontmatter.title} url={postUrl} />
-      {process.env.NODE_ENV === 'production' ? (
-        <Disqus
-          shortname={disqusShortname}
-          title={frontmatter.title}
-          url={postUrl}
-        />
-      ) : null}
     </Post>
   )
 }
@@ -55,7 +47,6 @@ SitePost.propTypes = {
   //   slug: string.isRequired
   // }),
   meta: shape({
-    disqusShortname: string.isRequired,
     siteUrl: string.isRequired
   }).isRequired,
   post: shape({
