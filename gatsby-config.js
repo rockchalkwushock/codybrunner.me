@@ -19,7 +19,7 @@ module.exports = {
     business: [
       {
         className: 'fas, envelope',
-        href: 'mailto:cody.a.brunner@gmail.com',
+        href: 'mailto:rockchalkwushock@icloud.com',
         label: 'Email'
       },
       {
@@ -30,7 +30,7 @@ module.exports = {
       {
         className: 'fas, file-pdf',
         href:
-          'https://www.dropbox.com/s/ihan4qjasbmwcx7/Cody%20Brunner%20Resume.pdf?dl=1',
+          'https://www.dropbox.com/s/pd2vugyzaar34f0/Cody%20Brunner%20Resume-1.pdf?dl=1',
         label: 'Resume'
       }
     ],
