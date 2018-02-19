@@ -14,7 +14,7 @@ export const ExternalLink = styled.a`
     color: ${({ theme }) => theme.site.linkClr};
   }
   :hover {
-    color: ${({ theme }) => theme.site.linkHvClr};
+    text-decoration: underline;
   }
 `
 

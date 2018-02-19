@@ -36,9 +36,6 @@ describe('Component: <ExternalLink />', () => {
     expect(wrapper).toHaveStyleRule('color', '#143a52', {
       modifier: ':visited'
     })
-    expect(wrapper).toHaveStyleRule('color', '#ffe1b6', {
-      modifier: ':hover'
-    })
   })
 })
 

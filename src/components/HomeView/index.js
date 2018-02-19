@@ -11,6 +11,7 @@ import {
   Text
 } from '../commons'
 import Card from '../Card'
+import FeaturedProject from '../FeaturedProject'
 import SEO from '../SEO'
 
 const ExtendedGrid = Grid.extend`
@@ -32,7 +33,7 @@ const Heading4 = Heading.withComponent('h4')
  * c.className.split(', ') super boss!!
  */
 
-const HomeView = ({ meta, posts, profilePic, techIcons }) => (
+const HomeView = ({ meta, posts, profilePic, projectPic, techIcons }) => (
   <FlexContainer>
     <SEO site={meta} />
     <Grid headCard>
@@ -75,6 +76,27 @@ const HomeView = ({ meta, posts, profilePic, techIcons }) => (
         ))}
       </ul>
     </Grid>
+    <ExtendedGrid alternate>
+      <Heading>Featured Project</Heading>
+      <FeaturedProject
+        img={projectPic}
+        name="Masha Eltsova Photography"
+        source="https://github.com/rockchalkwushock/mashaeltsova-photography"
+        summary="A photography business & portfolio
+        website built as a progressive web application using NextJS &
+        ReactJS for my friend Masha Eltsova. It implements both English
+        and Russian languages through the default browser language of
+        the user via React-Intl. By using the Cloudinary API and lazy-loading
+        the site is able to dynamically provide the end user with the best quality
+        version of Masha's hi-res photos with the smallest possible data
+        footprint leading to significantly better page load times for end
+        users with poor network resources or mobile devices. The form data
+        is processed by a MicroJS backend using Nodemailer to dispatch
+        the booking query to Masha. This same backend acts as the API for
+        querying the hi-res photos from a MongoDB collection."
+        url="https://mashaeltsovaphotography.com"
+      />
+    </ExtendedGrid>
     <Grid alternate>
       <Heading>Recent Posts</Heading>
       <List gap={20}>
