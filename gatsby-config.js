@@ -66,7 +66,7 @@ module.exports = {
       'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
     employment:
       'Please feel free to reach out to me via email, LinkedIn, and chekout my resume.',
-    googleVerify: '_P5Sbjg9dhez__QV3U70R-ydZn6ssT6qz5_nL0ZBzlE',
+    googleVerify: 'qNDU-jTYxpCxdkBdyG_M6GK1x6rDgtPQ-37chsjf0Uk',
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
       'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
@@ -93,10 +93,26 @@ module.exports = {
       }
     },
     menu: [
-      { id: 1, href: '/', text: 'Home' },
-      { id: 2, href: '/about', text: 'About' },
-      { id: 3, href: '/posts/1', text: 'Blog' }, // '/posts/1' is from using `gatsby-paginate`
-      { id: 4, href: '/certs', text: 'Certifications' }
+      {
+        id: 1,
+        href: '/',
+        text: 'Home'
+      },
+      {
+        id: 2,
+        href: '/about',
+        text: 'About'
+      },
+      {
+        id: 3,
+        href: '/posts/1',
+        text: 'Blog'
+      }, // '/posts/1' is from using `gatsby-paginate`
+      {
+        id: 4,
+        href: '/certs',
+        text: 'Certifications'
+      }
     ],
     tech:
       'The below are just some of the technologies I know and tooling I use frequently.',
