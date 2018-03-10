@@ -25,7 +25,7 @@ Since beginning I have become very proficient with React, _and have quit using R
 
 ## Skill Sets
 
-I am proficient in HTML5, CSS3, & Vanilla JavaScript (ES6 & Beyond) and possess basic and advanced `git` skills, yeah re-basing :sob:. On the frontend side I know jQuery and React with Redux as my state management tool. Moving to the backend I use Node with either Express.js or Micro.js. I enjoy writing tests, weird right? I've noticed that when writing tests for my code I have a better understanding of that code. Generally I will spend more time thinking and planning out what the code will do and considering the edge cases. I really prefer using Jest as my test runner, but cut my teeth on Mocha/Chai. On the database side I know SQL & noSQL in the forms of MongoDB & PostgreSQL. I am quite fond of GraphQL and would love love love any job that put me in a position to work with that awesome tech daily :raised_hands:.
+I am proficient in HTML5, CSS3, & Vanilla JavaScript (ES6 & Beyond) and possess basic and advanced `git` skills, yeah rebasing :sob:. On the frontend side I know jQuery and React with Redux as my state management tool. Moving to the backend I use Node with either Express.js or Micro.js. I enjoy writing tests, weird right? I've noticed that when writing tests for my code I have a better understanding of that code. Generally I will spend more time thinking and planning out what the code will do and considering the edge cases. I really prefer using Jest as my test runner, but cut my teeth on Mocha/Chai. On the database side I know SQL & noSQL in the forms of MongoDB & PostgreSQL. I am quite fond of GraphQL and would love love love any job that put me in a position to work with that awesome tech daily :raised_hands:.
 
 ## Free Time & Hobbies
 

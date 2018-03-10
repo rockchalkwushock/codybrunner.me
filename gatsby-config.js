@@ -46,6 +46,11 @@ module.exports = {
         label: 'Instagram'
       },
       {
+        className: 'fab, medium-m',
+        href: 'https://medium.com/@RockChalkDev',
+        label: 'Medium'
+      },
+      {
         className: 'fas, rss',
         href: 'rss.xml',
         label: 'RSS Feed'
@@ -85,7 +90,7 @@ module.exports = {
         text: 'Hosted on Now'
       },
       src: {
-        href: 'https://github.com/rockchalkwushock/codybrunner.rocks'
+        href: 'https://github.com/rockchalkwushock/codybrunner.me'
       },
       styled: {
         href: 'https://www.styled-components.com',

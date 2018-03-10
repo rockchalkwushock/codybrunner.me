@@ -76,6 +76,12 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 
 One of the great things about zsh are the plugins you can utilize to make your life easier as a developer. Adding auto-complete and suggestions alone is a huge boost in productivity and less keystrokes :wink: The best part is that most of these plugins come pre-installed with `oh-my-zsh`. You can find them in `~/.oh-my-zsh/plugins/`. Here are just a few, in my honest opinion, must haves :smiley:
 
+#### Installation instructions for plugins
+
+* [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions/#oh-my-zsh)
+* [`zsh-completions`](https://github.com/zsh-users/zsh-completions/#oh-my-zsh)
+* [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+
 ```bash
 plugins=(
   zsh-autosuggestions
