@@ -5,8 +5,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
-import faMedium from '@fortawesome/fontawesome-free-brands/faMedium'
-import faTelegramPlane from '@fortawesome/fontawesome-free-brands/faTelegramPlane'
+import faMediumM from '@fortawesome/fontawesome-free-brands/faMediumM'
 import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
 import faYoutube from '@fortawesome/fontawesome-free-brands/faYoutube'
 import faArrowCircleLeft from '@fortawesome/fontawesome-free-solid/faArrowCircleLeft'
@@ -22,8 +21,7 @@ fontawesome.library.add(
   faGithub,
   faInstagram,
   faLinkedin,
-  faMedium,
-  faTelegramPlane,
+  faMediumM,
   faTwitter,
   faYoutube,
   faArrowCircleLeft,
