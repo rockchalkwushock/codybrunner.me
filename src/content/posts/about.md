@@ -7,7 +7,7 @@ tags: []
 title: "About Cody"
 ---
 
-Why hello there you sexy bot...I mean possible user not trolling my site :wink: Pleasure to make your internet acquaintance. My name is Cody and I'm a 29 year old full-stack JavaScript developer from [Wichita, Kansas](https://www.google.com/maps/place/Wichita,+KS/@37.6645261,-97.5837757,11z/data=!3m1!4b1!4m5!3m4!1s0x87badb6ad27f182d:0x9396d5bf74d33d3e!8m2!3d37.6871761!4d-97.330053?hl=en). Yep I just linked where I'm from because you were like: _"Where?"_, oh it's a fly-over state, gotcha! I've walked a really long and interesting path to get where I am today. I have studied medicine, law, & engineering so I'm pretty learned at this point :joy:. I served in the US Navy & in Afghanistan in 2010.
+Why hello there you sexy bot...I mean possible user not trolling my site :wink: Pleasure to make your internet acquaintance. My name is Cody and I'm a 30 year old full-stack JavaScript developer from [Wichita, Kansas](https://www.google.com/maps/place/Wichita,+KS/@37.6645261,-97.5837757,11z/data=!3m1!4b1!4m5!3m4!1s0x87badb6ad27f182d:0x9396d5bf74d33d3e!8m2!3d37.6871761!4d-97.330053?hl=en) now residing in Portland, Oregon. Yep I just linked where I'm from because you were like: _"Where?"_, oh it's a fly-over state, gotcha! I've walked a really long and interesting path to get where I am today. I have studied medicine, law, & engineering so I'm pretty learned at this point :joy:. I served in the US Navy & deployed to Afghanistan in 2010.
 
 ## Two roads diverged in a yellow wood
 
@@ -17,7 +17,7 @@ In 2016, ultimately very unhappy with my last place of employment, the work I wa
 
 > _What was the last thing you were doing that really made you happy and challenged you?_
 
-It was pretty easy to answer looking back on it. All the time spent performing maintenance on a robot was tiresome, but when finally allowed the chance to show my chops programming the robots I instantly loved my job and was excited to be there.
+It was pretty easy to answer looking back on it. All the time spent performing maintenance on a robot was tiresome and soul sucking, but when finally allowed the chance to show my chops programming the robots I instantly loved my job and was excited to be there.
 
 It's the challenge. That's what intrigued me and got me to the point I'd go to the library and map out the logic on a whiteboard for a robot to go from a home position to pick up a part and place it on a spindle all in one fluid motion. So armed with a vague understanding of HTML & CSS and a summer class in C I set off to become a web developer.
 
@@ -29,11 +29,11 @@ I am proficient in HTML5, CSS3, & Vanilla JavaScript (ES6 & Beyond) and possess 
 
 ## Free Time & Hobbies
 
-I really enjoy spending time out in nature camping & hiking. One of the reasons I would :heart: to move to the Pacific Northwest and spend my weekends exploring the vast beauty of that region. I'm a dog lover. If you let me bring my dog to work I'll work pretty cheap! Kansas Jayhawks fan which obviously means vacation will be from mid-March to the first week of April for me every year, just go ahead and pencil me in right there! I enjoy live music, fishing, skydiving, a good dark beer from time to time, and learning new things that interest me.
+I really enjoy spending time out in nature camping & hiking, these are both just a few of the reasons I relocated to Portland. I'm a dog lover. If you let me bring my dog to work I'll work pretty cheap! Kansas Jayhawks fan which obviously means vacation will be from mid-March to the first week of April for me every year, just go ahead and pencil me in right there! I enjoy live music, fishing, skydiving, a good dark beer from time to time, and learning new things that interest me.
 
 ## Next Up
 
-Studying algorithms and job hunting is my primary goal at the moment. Side project include learning `elixir`. You can checkout my [Github](https://github.com/rockchalkwushock/) to see what I've been up to lately. Should you happen to be one of those recruiter folks you can find me on [AngelList](https://angel.co/rockchalkdev?public_profile=1) & [LinkedIn](https://www.linkedin.com/in/cody-brunner/).
+Studying algorithms and job hunting is my primary goal at the moment. My current side project is building a flashcard application using `react-native` for teaching myself Russian (two birds, one stone). You can checkout my [Github](https://github.com/rockchalkwushock/) to see what I've been up to lately. Should you happen to be one of those recruiter folks you can find me on [AngelList](https://angel.co/rockchalkdev?public_profile=1) & [LinkedIn](https://www.linkedin.com/in/cody-brunner/).
 
 ## Contact
 

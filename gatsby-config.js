@@ -14,7 +14,7 @@ module.exports = {
   plugins: isProd ? [...plugins, ...prodOnly] : [...plugins, ...devOnly],
   siteMetadata: {
     aboutSnippet:
-      'Hello I am Cody, a full-stack JavaScript developer & Navy Veteran residing in Wichita, Kansas. I primarily work with Node, React, & GraphQL. When not writing code I love to go hiking, play with my dog & niece, and watch my Jayhawks win!',
+      'Hello I am Cody, a full-stack JavaScript developer & Navy Veteran residing in Portland, Oregon. I primarily work with Node, React, & GraphQL. When not writing code I love to go hiking and watch my Jayhawks win!',
     author: 'Cody Brunner',
     business: [
       {
@@ -29,8 +29,7 @@ module.exports = {
       },
       {
         className: 'fas, file-pdf',
-        href:
-          'https://www.dropbox.com/s/pd2vugyzaar34f0/Cody%20Brunner%20Resume-1.pdf?dl=1',
+        href: 'https://www.dropbox.com/s/ydagcln6p0sk513/Resume.docx?dl=1',
         label: 'Resume'
       }
     ],
@@ -68,13 +67,13 @@ module.exports = {
     ],
     copyright: `© 2017-${year} Cody Brunner`,
     description:
-      'Cody Brunner is a Full-Stack JavaScript Developer living in Wichita, Kansas',
+      'Cody Brunner is a Full-Stack JavaScript Developer living in Portland, Oregon',
     employment:
       'Please feel free to reach out to me via email, LinkedIn, and chekout my resume.',
     googleVerify: 'qNDU-jTYxpCxdkBdyG_M6GK1x6rDgtPQ-37chsjf0Uk',
     jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
-      'Cody Brunner, Full-Stack JavaScript Developer, Wichita, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
+      'Cody Brunner, Full-Stack JavaScript Developer, Portland, Oregon, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
     lang: 'en',
     links: {
       creativeCommons: {

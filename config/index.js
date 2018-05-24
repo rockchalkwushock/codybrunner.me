@@ -108,7 +108,11 @@ const prodOnly = [
               ...edge.node.frontmatter,
               url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
               guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
-              custom_elements: [{ 'content:encoded': edge.node.html }]
+              custom_elements: [
+                {
+                  'content:encoded': edge.node.html
+                }
+              ]
             })),
           query: `
             {
@@ -146,8 +150,8 @@ const prodOnly = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: 'codybrunner.rocks',
-      short_name: 'Cody Rocks',
+      name: 'codybrunner.me',
+      short_name: 'Cody Brunner',
       description: 'Personal website, tech blog, & portfolio for Cody Brunner',
       start_url: '/',
       lang: 'en-US',
