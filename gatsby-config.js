@@ -1,20 +1,72 @@
-const {
-  devOnly,
-  domain,
-  gatsbyVersion,
-  isProd,
-  plugins,
-  prodOnly,
-  styledVersion,
-  year
-} = require('./config')
+// Native
+const { resolve } = require('path')
+
+const { dependencies } = require('./package.json')
+
+// Get Major.Minor
+// NOTE: Setup 0-3 for Exact version, switch to 1-3 when add ^x.x.x back.
+const gatsbyVersion = dependencies.gatsby.substr(0, 3)
+const styledVersion = dependencies['styled-components'].substr(1, 3)
+// Get current year.
+const year = new Date().getFullYear()
 
 module.exports = {
-  pathPrefix: '/',
-  plugins: isProd ? [...plugins, ...prodOnly] : [...plugins, ...devOnly],
+  plugins: [
+    // 'gatsby-plugin-canonical-urls',
+    'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: `${process.env.GOOGLE_ANALYTICS_ID}`,
+        anonymize: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'codybrunner.me',
+        short_name: 'Cody Brunner',
+        description: 'Web Development Portfolio and Resume for Cody Brunner',
+        start_url: '/',
+        lang: 'en-US',
+        orientation: 'any',
+        background_color: '#7a9eb1',
+        theme_color: '#ffe1b6',
+        display: 'standalone',
+        icon: 'src/assets/favicon.png'
+      }
+    },
+    'gatsby-plugin-no-sourcemaps',
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#ffe1b6',
+        showSpinner: false
+      }
+    },
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://codybrunner.me',
+        sitemap: 'https://codybrunner.me/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: `${resolve(__dirname, './src/img')}`
+      }
+    },
+    'gatsby-transformer-sharp'
+  ],
   siteMetadata: {
-    aboutSnippet:
-      'Hello I am Cody, a full-stack JavaScript developer & Navy Veteran residing in Portland, Oregon. I primarily work with Node, React, & GraphQL. When not writing code I love to go hiking and watch my Jayhawks win!',
     author: 'Cody Brunner',
     business: [
       {
@@ -50,11 +102,6 @@ module.exports = {
         label: 'Medium'
       },
       {
-        className: 'fas, rss',
-        href: 'rss.xml',
-        label: 'RSS Feed'
-      },
-      {
         className: 'fab, twitter',
         href: 'https://twitter.com/RockChalkDev',
         label: 'Twitter'
@@ -66,12 +113,8 @@ module.exports = {
       }
     ],
     copyright: `© 2017-${year} Cody Brunner`,
-    description:
-      'Cody Brunner is a Full-Stack JavaScript Developer living in Portland, Oregon',
-    employment:
-      'Please feel free to reach out to me via email, LinkedIn, and chekout my resume.',
+    description: 'Web Development Portfolio and Resume for Cody Brunner',
     googleVerify: 'qNDU-jTYxpCxdkBdyG_M6GK1x6rDgtPQ-37chsjf0Uk',
-    jobTitle: 'Full-Stack JavaScript Developer',
     keywords:
       'Cody Brunner, Full-Stack JavaScript Developer, Portland, Oregon, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
     lang: 'en',
@@ -118,10 +161,7 @@ module.exports = {
         text: 'Certifications'
       }
     ],
-    tech:
-      'The below are just some of the technologies I know and tooling I use frequently.',
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
-    twitter: '@RockChalkDev',
-    siteUrl: `${domain}`
+    siteUrl: 'https://codybrunner.me'
   }
 }
