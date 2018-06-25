@@ -147,18 +147,33 @@ module.exports = {
       },
       {
         id: 2,
-        href: '/about',
+        href: '#about',
         text: 'About'
       },
       {
         id: 3,
-        href: '/posts/1',
-        text: 'Blog'
-      }, // '/posts/1' is from using `gatsby-paginate`
+        href: '#experience',
+        text: 'Experience'
+      },
       {
         id: 4,
-        href: '/certs',
-        text: 'Certifications'
+        href: '#education',
+        text: 'Education'
+      },
+      {
+        id: 5,
+        href: '#projects',
+        text: 'Projects'
+      },
+      {
+        id: 6,
+        href: '#skills',
+        text: 'Skills'
+      },
+      {
+        id: 7,
+        href: '#contact',
+        text: 'Contact'
       }
     ],
     title: 'Cody Brunner - Full-Stack JavaScript Developer',
