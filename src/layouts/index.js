@@ -5,6 +5,8 @@ import { func } from 'prop-types'
 
 // Site Theme
 import theme from '../lib/theme'
+// Global Styling
+import '../lib/global'
 
 import { Footer, Menu } from '../components'
 
