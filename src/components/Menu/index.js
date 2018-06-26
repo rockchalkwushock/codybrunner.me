@@ -28,11 +28,20 @@ class Menu extends Component {
       ? this.setState(state => ({ ...state, isOpen: false }))
       : this.setState(state => ({ ...state, isOpen: true }))
   renderLinks = () =>
-    this.props.links.map(link => (
-      <NavItem key={link.id}>
-        <Link href={link.href} label={link.text} text={link.text} />{' '}
-      </NavItem>
-    ))
+    this.props.links.map(link => {
+      if (link.id === 3) {
+        return (
+          <NavItem key={link.id}>
+            <Link ext href={link.href} label={link.text} text={link.text} />
+          </NavItem>
+        )
+      }
+      return (
+        <NavItem key={link.id}>
+          <Link href={link.href} label={link.text} text={link.text} />
+        </NavItem>
+      )
+    })
   render() {
     return (
       <Nav>

@@ -152,26 +152,31 @@ module.exports = {
       },
       {
         id: 3,
+        href: 'https://codybrunner.blog',
+        text: 'Blog'
+      },
+      {
+        id: 4,
         href: '#experience',
         text: 'Experience'
       },
       {
-        id: 4,
+        id: 5,
         href: '#education',
         text: 'Education'
       },
       {
-        id: 5,
+        id: 6,
         href: '#projects',
         text: 'Projects'
       },
       {
-        id: 6,
+        id: 7,
         href: '#skills',
         text: 'Skills'
       },
       {
-        id: 7,
+        id: 8,
         href: '#contact',
         text: 'Contact'
       }
