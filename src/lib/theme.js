@@ -24,34 +24,18 @@
  */
 
 export default {
-  post: {
-    bg: '#f9f8eb',
-    ftClr: '#000',
-    ftFm: '"Raleway", sans-serif',
-    ftSz: '1.1rem',
-    ftWt: '400',
-    linkClr: '#143a52',
-    linkHvClr: '#7a9eb1',
-    linkWt: '600',
-    lnHt: '1.618',
-    ltSp: '1px'
+  colors: {
+    primary: '#143a52',
+    secondary: '#e3eff3'
   },
+  nav: {
+    padding: '1rem',
+    shadow: '2px 2px 2px rgba(0, 0, 0, 0.2)'
+  },
+  radius: '5px',
+  reset: 'unset',
   screen: {
     large: '736px'
   },
-  site: {
-    bg: '#7a9eb1',
-    borderRadius: '10px',
-    fg: '#ffe1b6',
-    ftClr: '#143a52',
-    ftFm: '"Raleway", sans-serif',
-    ftSz: '1rem',
-    ftWt: '400',
-    linkClr: '#143a52',
-    linkHvClr: '#ffe1b6',
-    lnHt: '1.4',
-    ltSp: '0px',
-    shadow: '1px 1px 5px 1px rgba(0, 0, 0, 0.7)',
-    transition: 'all 0.3s ease-in-out'
-  }
+  spacing: '1rem'
 }

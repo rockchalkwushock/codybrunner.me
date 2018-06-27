@@ -6,11 +6,23 @@ import { bool, string } from 'prop-types'
 const UnstyledLink = props => <Link {...props} />
 
 export const ExternalLink = styled.a`
+  background-image: ${({ theme }) => theme.reset};
   text-decoration: none;
+  text-shadow: ${({ theme }) => theme.reset};
+
+  :hover {
+    text-decoration: underline;
+  }
 `
 
 export const InternalLink = styled(UnstyledLink)`
+  background-image: ${({ theme }) => theme.reset};
   text-decoration: none;
+  text-shadow: ${({ theme }) => theme.reset};
+
+  :hover {
+    text-decoration: underline;
+  }
 `
 
 const SiteLink = ({ children, ext, href, label, text }) =>
