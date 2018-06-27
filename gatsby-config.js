@@ -81,11 +81,6 @@ module.exports = {
         label: 'Email'
       },
       {
-        className: 'fab, linkedin',
-        href: 'https://www.linkedin.com/in/cody-brunner',
-        label: 'LinkedIn'
-      },
-      {
         className: 'fas, file-pdf',
         href: 'https://www.dropbox.com/s/ydagcln6p0sk513/Resume.docx?dl=1',
         label: 'Resume'
@@ -101,6 +96,11 @@ module.exports = {
         className: 'fab, instagram',
         href: 'https://www.instagram.com/rockchalkwushock',
         label: 'Instagram'
+      },
+      {
+        className: 'fab, linkedin',
+        href: 'https://www.linkedin.com/in/cody-brunner',
+        label: 'LinkedIn'
       },
       {
         className: 'fab, medium-m',

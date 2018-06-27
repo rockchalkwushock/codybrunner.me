@@ -26,7 +26,13 @@ fontawesome.library.add(
 
 const UnstyledIcon = props => <FontAwesomeIcon {...props} />
 
-export const StyledIcon = styled(UnstyledIcon)``
+export const StyledIcon = styled(UnstyledIcon)`
+  margin: 0 0.5rem;
+
+  :hover {
+    color: yellow;
+  }
+`
 
 const SiteIcon = ({ icon, size }) => <StyledIcon icon={icon} size={size} />
 

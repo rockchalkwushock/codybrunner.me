@@ -1,12 +1,11 @@
+/* eslint-disable no-undef */
 import React from 'react'
 
-import { Main, Section } from '../components'
+import { Landing, Main, Section } from '../components'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Main>
-    <Section id="landing" landing>
-      LANDING
-    </Section>
+    <Landing icons={data.site.siteMetadata.contacts} />
     <Section id="about" alt>
       About
     </Section>
@@ -21,5 +20,19 @@ const IndexPage = () => (
     <Section id="contact">Contact</Section>
   </Main>
 )
+
+export const query = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        contacts {
+          className
+          href
+          label
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
