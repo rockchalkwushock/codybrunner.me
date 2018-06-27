@@ -58,6 +58,12 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/lib/typography.js'
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
