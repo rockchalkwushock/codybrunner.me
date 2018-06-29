@@ -27,13 +27,22 @@ fontawesome.library.add(
 const UnstyledIcon = props => <FontAwesomeIcon {...props} />
 
 export const StyledIcon = styled(UnstyledIcon)`
+  color: ${({ nav, theme }) =>
+    nav ? theme.colors.alt : theme.colors.secondary};
+  font-size: 1.75rem;
   margin: 0 0.5rem;
 
   :hover {
     color: yellow;
   }
+
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
+    font-size: 2em;
+  }
 `
 
-const SiteIcon = ({ icon, size }) => <StyledIcon icon={icon} size={size} />
+const SiteIcon = ({ nav, icon, size }) => (
+  <StyledIcon nav={nav} icon={icon} size={size} />
+)
 
 export default SiteIcon

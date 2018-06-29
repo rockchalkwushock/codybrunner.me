@@ -15,4 +15,8 @@ export default injectGlobal`
   body {
     height: 100%;
   }
+
+  ul {
+    margin: 0;
+  }
 `

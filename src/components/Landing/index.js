@@ -4,6 +4,7 @@ import { Heading, Icon, Link, Section } from '../commons'
 
 const LandingSection = Section.extend`
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.alt};
   display: flex;
   flex-direction: column;
   justify-content: center;

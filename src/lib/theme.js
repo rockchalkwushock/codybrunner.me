@@ -25,6 +25,7 @@
 
 export default {
   colors: {
+    alt: '#415865',
     primary: '#143a52',
     secondary: '#e3eff3'
   },

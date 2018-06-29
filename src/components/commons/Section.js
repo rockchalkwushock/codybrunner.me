@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 const Section = styled.section`
-  background-color: ${({ alt }) => (alt ? 'lightblue' : 'lightsalmon')};
+  background-color: ${({ alt, theme }) =>
+    alt ? theme.colors.secondary : theme.colors.alt};
   min-height: ${({ landing }) => (landing ? '100vh' : '400px')};
-  padding: 1em 2em;
+  padding: 1rem;
 `
 
 export default Section

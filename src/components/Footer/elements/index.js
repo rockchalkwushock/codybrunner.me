@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Footer = styled.footer`
-  background-color: lightcoral;
+  background-color: ${({ theme }) => theme.colors.secondary};
   padding: 1.5rem 0;
   width: 100%;
 `
@@ -12,11 +12,12 @@ const FooterList = styled.ul`
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  margin: unset;
-  padding: unset;
+  margin: ${({ theme }) => theme.reset};
+  padding: ${({ theme }) => theme.reset};
 `
 
 const FooterItem = styled.li`
+  margin: ${({ theme }) => theme.reset};
   padding: 0.25rem 0;
 `
 
