@@ -73,6 +73,8 @@ module.exports = {
     'gatsby-transformer-sharp'
   ],
   siteMetadata: {
+    about:
+      'Hello my name is Cody and I am a full stack developer living in Portland, Oregon. I am currently a student of the PDX Code Guild Full Stack Python based web development boot camp and will be completing the program in September. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node.',
     author: 'Cody Brunner',
     business: [
       {

@@ -5,6 +5,7 @@ const Nav = styled.nav`
   box-shadow: ${({ theme }) => theme.nav.shadow};
   position: fixed;
   width: 100%;
+  z-index: 1;
 `
 
 const NavList = styled.ul`
