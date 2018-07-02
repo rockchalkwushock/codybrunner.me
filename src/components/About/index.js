@@ -12,7 +12,7 @@ const AboutSection = Section.extend`
   @media (min-width: ${({ theme }) => theme.screen.large}) {
     align-items: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
   }
 `
 

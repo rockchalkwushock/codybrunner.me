@@ -7,6 +7,7 @@ const StyledText = styled.p`
 
   @media (min-width: ${({ theme }) => theme.screen.large}) {
     padding: 2rem;
+    width: 50%;
   }
 `
 

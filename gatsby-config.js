@@ -122,6 +122,36 @@ module.exports = {
     ],
     copyright: `© 2017-${year} Cody Brunner`,
     description: 'Web Development Portfolio and Resume for Cody Brunner',
+    education: [
+      {
+        id: 'pdx',
+        location: 'PDX Code Guild',
+        name: 'Full Stack Web Development Boot Camp',
+        dates: 'June - September 2018'
+      },
+      {
+        id: 'watc',
+        location: 'Wichita Area Technical College',
+        name: 'A.A.S in Robotic Technology',
+        dates: 'August 2013 - May 2015'
+      },
+      {
+        id: 'kwu',
+        location: 'Kansas Wesleyan University',
+        name: 'B.A. Criminal Justice, B.A. Sociology',
+        dates: 'August 2008 - May 2011'
+      }
+    ],
+    experience: [
+      {
+        id: 'bothofus',
+        company: 'BøthofUs',
+        role: 'Frontend Developer',
+        dates: 'March - May 2018',
+        desc:
+          "Worked as a freelance frontend developer working on the beta-release of Mate.org. The project made use of VueJS and Apollo GraphQL, requiring me to learn a new framework overnight. I successfuly implemented the project's test suite and continuous integration as well as cleaned up the build process."
+      }
+    ],
     googleVerify: 'qNDU-jTYxpCxdkBdyG_M6GK1x6rDgtPQ-37chsjf0Uk',
     keywords:
       'Cody Brunner, Full-Stack JavaScript Developer, Portland, Oregon, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
@@ -189,7 +219,77 @@ module.exports = {
         text: 'Contact'
       }
     ],
-    title: 'Cody Brunner - Full-Stack JavaScript Developer',
-    siteUrl: 'https://codybrunner.me'
+    projects: [
+      {
+        desc: 'Personal & Technology blog written in GatsbyJS.',
+        href: 'https://codybrunner.blog',
+        id: 'codybrunner.blog',
+        name: 'codybrunner.blog',
+        src: 'https://github.com/rockchalkwushock/codybrunner.blog'
+      },
+      {
+        desc: 'Authentication package for MicroJS framework.',
+        href: 'https://www.npmjs.com/package/microauth-vkontakte',
+        id: 'microauth-vkontakte',
+        name: 'microauth-vkontakte',
+        src: 'https://github.com/microauth/microauth-vkontakte'
+      },
+      {
+        desc:
+          'Package/Tutorial for learning how to write open source software.',
+        href: 'https://www.npmjs.com/package/how-to-open-source',
+        id: 'how-to-open-source',
+        name: 'how-to-open-source',
+        src: 'https://github.com/rockchalkwushock/how-to-open-source'
+      },
+      {
+        desc:
+          'Assisted in the rebuild of this non-profit webpage through a hackathon.',
+        href: 'https://highfivesfoundation.org/',
+        id: 'h5s',
+        name: 'High Fives Foundation Website',
+        src: 'https://github.com/HighFivesFoundation/website'
+      },
+      {
+        desc:
+          'Photography Business Website for Masha Eltsova written in NextJS.',
+        href: 'https://mashaeltsovaphotography.com',
+        id: 'mashaeltsova',
+        name: 'Masha Eltsova Photography',
+        src: 'https://github.com/rockchalkwushock/mashaeltsova-photography'
+      },
+      {
+        desc:
+          'My personal website & web development portfolio written in GatsbyJS.',
+        href: 'https://codybrunner.me',
+        id: 'codybrunner.me',
+        name: 'codybrunner.me',
+        src: 'https://github.com/rockchalkwushock/codybrunner.me'
+      },
+      {
+        desc:
+          'Simple weather app built using ReactJS, Apollo GraphQL, & APIXU API.',
+        href: 'https://the-rising-sun.now.sh/',
+        id: 'rising-sun',
+        name: 'the-rising-sun',
+        src: 'https://github.com/rockchalkwushock/react-weather-app'
+      }
+    ],
+    skills: [
+      'HTML5',
+      'CSS3',
+      'ES6 JavaScript',
+      'Git',
+      'Node',
+      'MongoDB',
+      'PostgreSQL',
+      'ExpressJS',
+      'ReactJS + Redux',
+      'VueJS',
+      'Python',
+      'Elixir'
+    ],
+    siteUrl: 'https://codybrunner.me',
+    title: 'Cody Brunner - Full-Stack JavaScript Developer'
   }
 }

@@ -37,6 +37,26 @@ export const query = graphql`
           href
           label
         }
+        education {
+          id
+          location
+          name
+          dates
+        }
+        experience {
+          id
+          company
+          role
+          dates
+          desc
+        }
+        projects {
+          desc
+          href
+          id
+          name
+          src
+        }
       }
     }
   }
