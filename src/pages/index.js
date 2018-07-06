@@ -8,7 +8,8 @@ import {
   Landing,
   Main,
   Projects,
-  Section
+  Section,
+  Skills
 } from '../components'
 
 const IndexPage = ({ data }) => {
@@ -17,7 +18,8 @@ const IndexPage = ({ data }) => {
     contacts,
     education,
     experience,
-    projects
+    projects,
+    skills
   } = data.site.siteMetadata
   return (
     <Main>
@@ -26,9 +28,7 @@ const IndexPage = ({ data }) => {
       <Experience jobs={experience} />
       <Education education={education} />
       <Projects projects={projects} />
-      <Section id="skills" alt>
-        Skills
-      </Section>
+      <Skills skills={skills} />
       <Section id="contact">Contact</Section>
     </Main>
   )
@@ -68,6 +68,10 @@ export const query = graphql`
           id
           name
           src
+        }
+        skills {
+          id
+          text
         }
       }
     }

@@ -276,18 +276,20 @@ module.exports = {
       }
     ],
     skills: [
-      'HTML5',
-      'CSS3',
-      'ES6 JavaScript',
-      'Git',
-      'Node',
-      'MongoDB',
-      'PostgreSQL',
-      'ExpressJS',
-      'ReactJS + Redux',
-      'VueJS',
-      'Python',
-      'Elixir'
+      { id: 'html', text: 'HTML5' },
+      { id: 'css', text: 'CSS3' },
+      { id: 'es6', text: 'ES6 JavaScript' },
+      { id: 'git', text: 'Git' },
+      { id: 'node', text: 'Node' },
+      { id: 'mongo', text: 'MongoDB' },
+      { id: 'psql', text: 'PostgreSQL' },
+      { id: 'exjs', text: 'ExpressJS' },
+      { id: 'react', text: 'ReactJS + Redux' },
+      { id: 'vue', text: 'VueJS' },
+      { id: 'python', text: 'Python' },
+      { id: 'elixir', text: 'Elixir' },
+      { id: 'bdd', text: 'BDD/TDD' },
+      { id: 'ci', text: 'CI/CD' }
     ],
     siteUrl: 'https://codybrunner.me',
     title: 'Cody Brunner - Full-Stack JavaScript Developer'

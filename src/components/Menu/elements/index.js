@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.secondary};
   box-shadow: ${({ theme }) => theme.nav.shadow};
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 1;
 `
