@@ -1,19 +1,31 @@
 /* eslint-disable no-undef */
 import React from 'react'
 
-import { About, Experience, Landing, Main, Section } from '../components'
+import {
+  About,
+  Education,
+  Experience,
+  Landing,
+  Main,
+  Projects,
+  Section
+} from '../components'
 
 const IndexPage = ({ data }) => {
-  const { about, contacts, experience } = data.site.siteMetadata
+  const {
+    about,
+    contacts,
+    education,
+    experience,
+    projects
+  } = data.site.siteMetadata
   return (
     <Main>
       <Landing icons={contacts} />
       <About about={about} image={data.aboutPic} />
       <Experience jobs={experience} />
-      <Section id="education" alt>
-        Education
-      </Section>
-      <Section id="projects">Projects</Section>
+      <Education education={education} />
+      <Projects projects={projects} />
       <Section id="skills" alt>
         Skills
       </Section>

@@ -1,12 +1,29 @@
 import React from 'react'
 
-import { CardContainer, CardDate, CardInfo, CardTitle } from './elements'
+import Link from '../Link'
+import {
+  CardContainer,
+  CardDate,
+  CardInfo,
+  CardLinks,
+  CardTitle
+} from './elements'
 
-const Card = ({ date, info, title }) => (
-  <CardContainer>
-    <CardTitle>{title}</CardTitle>
-    <CardDate>{date}</CardDate>
-    <CardInfo>{info}</CardInfo>
+const Card = ({ alt, date, href, info, src, title }) => (
+  <CardContainer alt={alt}>
+    <CardTitle alt={alt}>{title}</CardTitle>
+    {href && src ? null : <CardDate alt={alt}>{date}</CardDate>}
+    <CardInfo alt={alt}>{info}</CardInfo>
+    {href && src ? (
+      <CardLinks>
+        <Link alt ext href={src}>
+          Source
+        </Link>
+        <Link alt ext href={href}>
+          Live
+        </Link>
+      </CardLinks>
+    ) : null}
   </CardContainer>
 )
 

@@ -7,6 +7,8 @@ const UnstyledLink = props => <Link {...props} />
 
 export const ExternalLink = styled.a`
   background-image: ${({ theme }) => theme.reset};
+  color: ${({ alt, theme }) =>
+    alt ? theme.colors.secondary : theme.colors.alt};
   text-decoration: none;
   text-shadow: ${({ theme }) => theme.reset};
 
@@ -17,6 +19,7 @@ export const ExternalLink = styled.a`
 
 export const InternalLink = styled(UnstyledLink)`
   background-image: ${({ theme }) => theme.reset};
+  color: ${({ theme }) => theme.colors.alt};
   text-decoration: none;
   text-shadow: ${({ theme }) => theme.reset};
 
@@ -25,9 +28,9 @@ export const InternalLink = styled(UnstyledLink)`
   }
 `
 
-const SiteLink = ({ children, ext, href, label, text }) =>
+const SiteLink = ({ alt, children, ext, href, label, text }) =>
   ext ? (
-    <ExternalLink href={href} aria-label={label}>
+    <ExternalLink alt={alt} href={href} aria-label={label}>
       {children || text}
     </ExternalLink>
   ) : (

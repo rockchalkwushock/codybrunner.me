@@ -14,8 +14,10 @@ const SubHeading = Heading.withComponent('h3')
 
 const Landing = ({ icons }) => (
   <LandingSection id="landing" landing>
-    <Heading size="4rem">Cody Brunner</Heading>
-    <SubHeading size="2rem">
+    <Heading alt size="4rem">
+      Cody Brunner
+    </Heading>
+    <SubHeading alt size="2rem">
       Full Stack Web Developer in Portland, Oregon
     </SubHeading>
     <ul>
