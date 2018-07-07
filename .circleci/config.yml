@@ -20,24 +20,6 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: .
-  test_and_report:
-    docker:
-      - image: 'circleci/node:latest'
-    working_directory: ~/codybrunner.me
-    steps:
-      - attach_workspace:
-          at: ~/codybrunner.me
-      - run: yarn install
-      - run: yarn start test.coverage
-      - run: yarn start reportCoverage
-      - store_artifacts:
-          path: ./coverage/clover.xml
-          prefix: tests
-      - store_artifacts:
-          path: coverage
-          prefix: coverage
-      - store_test_results:
-          path: ./coverage/clover.xml
   build:
     docker:
       - image: 'circleci/node:latest'
@@ -45,7 +27,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/codybrunner.me
-      - run: yarn install
       - run:
           name: yarn build
           command: |
@@ -89,15 +70,9 @@ workflows:
   test_build_deploy:
     jobs:
       - checkout_code
-      - test_and_report:
-          requires:
-            - checkout_code
-      - build:
-          requires:
-            - test_and_report
+      - build
       - deployment:
           requires:
-            - test_and_report
             - build
           filters:
             branches:
