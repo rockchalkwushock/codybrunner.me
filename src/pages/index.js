@@ -3,12 +3,12 @@ import React from 'react'
 
 import {
   About,
+  Contact,
   Education,
   Experience,
   Landing,
   Main,
   Projects,
-  Section,
   Skills
 } from '../components'
 
@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
       <Education education={education} />
       <Projects projects={projects} />
       <Skills skills={skills} />
-      <Section id="contact">Contact</Section>
+      <Contact />
     </Main>
   )
 }

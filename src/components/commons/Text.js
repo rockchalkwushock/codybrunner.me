@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledText = styled.p`
+  color: ${({ alt, theme }) =>
+    alt ? theme.colors.secondary : theme.colors.alt};
   margin: unset;
   padding: 1rem 0;
 
@@ -11,6 +13,8 @@ const StyledText = styled.p`
   }
 `
 
-const Text = ({ text }) => <StyledText>{text}</StyledText>
+const Text = ({ alt, children, text }) => (
+  <StyledText alt={alt}>{text || children}</StyledText>
+)
 
 export default Text
