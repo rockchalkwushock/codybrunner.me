@@ -3,14 +3,21 @@ import styled from 'styled-components'
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.secondary};
   box-shadow: ${({ theme }) => theme.nav.shadow};
-  position: sticky;
+  height: 4.236rem;
+  left: 0;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
+    height: 5.438rem;
+  }
 `
 
 const NavList = styled.ul`
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.secondary};
   display: ${({ show }) => (show ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: center;
@@ -31,7 +38,7 @@ const NavIcon = styled.button`
   outline: none;
   padding: ${({ theme }) => theme.nav.padding};
 
-  @media (min-width: 736px) {
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
     display: none;
   }
 `

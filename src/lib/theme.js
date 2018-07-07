@@ -36,7 +36,7 @@ export default {
   radius: '5px',
   reset: 'unset',
   screen: {
-    large: '736px'
+    large: '46rem'
   },
   spacing: '1rem'
 }

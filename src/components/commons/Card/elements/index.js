@@ -11,8 +11,13 @@ const CardContainer = styled.div`
 const CardTitle = styled.h1`
   color: ${({ alt, theme }) =>
     alt ? theme.colors.secondary : theme.colors.alt};
+  font-size: 1.55rem;
   margin: unset;
   text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.screen.large}) {
+    font-size: 2rem;
+  }
 `
 
 const CardDate = styled.h5`
