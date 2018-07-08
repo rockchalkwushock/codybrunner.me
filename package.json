@@ -6,86 +6,67 @@
   "description": "My personal website & tech blog built with Gatsby.",
   "repository": "https://github.com/rockchalkwushock/codybrunner.me.git",
   "scripts": {
-    "analyze": "ANALYZE=1 yarn build",
-    "build": "nps clean && SITE_DOMAIN=http://localhost:9000 gatsby build --prefix-paths",
-    "ci_build": "gatsby build --prefix-paths",
-    "cm": "nps commit",
-    "dev": "nps clean && SITE_DOMAIN=http://localhost:8000 gatsby develop",
-    "manual": "gatsby build --prefix-paths",
-    "new": "nps generate",
-    "serve": "gatsby serve",
-    "start": "nps",
-    "test": "nps test"
+    "build": "gatsby build",
+    "cm": "git cz",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3",
     "@fortawesome/fontawesome-free-brands": "^5.0.6",
     "@fortawesome/fontawesome-free-solid": "^5.0.6",
     "@fortawesome/react-fontawesome": "^0.0.20",
-    "dotenv-safe": "^5.0.1",
-    "gatsby": "1.9.261",
-    "gatsby-image": "^1.0.51",
+    "axios": "^0.18.0",
+    "gatsby": "1.9.272",
+    "gatsby-image": "^1.0.54",
     "gatsby-link": "^1.6.35",
-    "gatsby-pagination": "^1.1.0",
-    "gatsby-plugin-accessibilityjs": "^1.0.2",
-    "gatsby-plugin-canonical-urls": "^1.0.12",
-    "gatsby-plugin-catch-links": "^1.0.15",
-    "gatsby-plugin-feed": "^1.3.16",
+    "gatsby-plugin-catch-links": "^1.0.24",
     "gatsby-plugin-google-analytics": "^1.0.17",
-    "gatsby-plugin-manifest": "^1.0.13",
+    "gatsby-plugin-manifest": "^1.0.27",
     "gatsby-plugin-no-sourcemaps": "^1.0.2",
     "gatsby-plugin-nprogress": "^1.0.11",
-    "gatsby-plugin-offline": "^1.0.13",
+    "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "^2.0.4",
-    "gatsby-plugin-react-next": "^1.0.8",
-    "gatsby-plugin-sharp": "^1.6.44",
-    "gatsby-plugin-sitemap": "^1.2.12",
+    "gatsby-plugin-robots-txt": "^1.0.2",
+    "gatsby-plugin-sharp": "^1.6.48",
+    "gatsby-plugin-sitemap": "^1.2.25",
     "gatsby-plugin-styled-components": "^2.0.5",
-    "gatsby-plugin-twitter": "^1.0.16",
-    "gatsby-remark-autolink-headers": "^1.4.11",
-    "gatsby-remark-emoji": "^0.0.2",
-    "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-remark-images": "^1.5.63",
-    "gatsby-remark-prismjs": "^2.0.2",
-    "gatsby-remark-responsive-iframe": "^1.4.18",
-    "gatsby-source-filesystem": "^1.5.16",
-    "gatsby-transformer-remark": "^1.7.41",
-    "gatsby-transformer-sharp": "^1.6.24",
-    "prismjs": "^1.14.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "gatsby-plugin-twitter": "^1.0.20",
+    "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-sharp": "^1.6.27",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-share": "^2.0.0",
-    "styled-components": "^3.1.4"
+    "styled-components": "^3.3.2",
+    "typography": "^0.16.17",
+    "typography-theme-lincoln": "^0.15.11"
   },
   "devDependencies": {
-    "codecov": "^3.0.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.1",
     "eslint": "^4.16.0",
     "eslint-config-equimper": "^2.2.2",
     "eslint-config-prettier": "^2.9.0",
     "husky": "^0.15.0-rc.3",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.0.0",
-    "jest-styled-components": "^5.0.1",
-    "lint-staged": "^7.1.2",
-    "nps": "^5.7.1",
-    "nps-utils": "^1.5.0",
-    "plop": "^2.0.0",
-    "prettier": "^1.10.2",
-    "react-test-renderer": "^16.2.0",
-    "webpack-bundle-analyzer": "^2.10.0"
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "equimper",
+      "prettier"
+    ]
   },
   "husky": {
     "hooks": {
@@ -98,37 +79,5 @@
       "prettier --single-quote --no-semi --write",
       "git add"
     ]
-  },
-  "jest": {
-    "bail": true,
-    "collectCoverageFrom": [
-      "src/components/**/*.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
-      }
-    },
-    "moduleNameMapper": {
-      ".+\\.(png|jpg|jpeg|svg)$": "identity-obj-proxy"
-    },
-    "setupFiles": [
-      "./jest.setup.js"
-    ],
-    "setupTestFrameworkScriptFile": "jest-styled-components",
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/.cache/"
-    ],
-    "transform": {
-      "^.+\\.js$": "<rootDir>/jest.transform.js"
-    }
   }
 }

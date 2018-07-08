@@ -1,37 +1,24 @@
 import styled from 'styled-components'
-import { bool } from 'prop-types'
-
-const Container = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-
-  @media (min-width: ${({ theme }) => theme.screen.large}) {
-    align-items: ${({ left }) => (left ? 'left' : 'right')};
-  }
-`
 
 const Footer = styled.footer`
+  background-color: ${({ theme }) => theme.colors.secondary};
+  padding: 1.5rem 0;
+  width: 100%;
+`
+
+const FooterList = styled.ul`
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 80%;
   justify-content: center;
-  padding: 1em;
-
-  @media (min-width: ${({ theme }) => theme.screen.large}) {
-    flex-direction: row;
-    font-size: 100%;
-    justify-content: space-between;
-  }
+  list-style: none;
+  margin: ${({ theme }) => theme.reset};
+  padding: ${({ theme }) => theme.reset};
 `
 
-Footer.displayName = 'Footer'
-Container.displayName = 'Container'
-Container.propTypes = {
-  left: bool
-}
+const FooterItem = styled.li`
+  margin: ${({ theme }) => theme.reset};
+  padding: 0.25rem 0;
+`
 
-export { Container, Footer }
+export { Footer, FooterItem, FooterList }

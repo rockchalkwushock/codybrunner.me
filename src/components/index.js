@@ -1,25 +1,24 @@
-import AboutView from './AboutView'
-import Card from './Card'
-import CertsView from './CertsView'
+import About from './About'
+import Contact from './Contact'
+import Education from './Education'
+import Experience from './Experience'
 import Footer from './Footer'
-import HomeView from './HomeView'
-import NavBar from './NavBar'
-import NotFoundView from './NotFoundView'
-import PostsView from './PostsView'
-import SinglePost from './Post'
-import TermView from './TermView'
-import { Wrapper } from './commons'
+import Landing from './Landing'
+import Menu from './Menu'
+import Projects from './Projects'
+import Seo from './SEO'
+import Skills from './Skills'
 
+export * from './commons'
 export {
-  AboutView,
-  Card,
-  CertsView,
+  About,
+  Contact,
+  Education,
+  Experience,
   Footer,
-  HomeView,
-  NavBar,
-  NotFoundView,
-  PostsView,
-  SinglePost,
-  TermView,
-  Wrapper
+  Landing,
+  Menu,
+  Projects,
+  Seo,
+  Skills
 }
