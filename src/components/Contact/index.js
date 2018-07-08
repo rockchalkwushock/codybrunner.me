@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 import { Heading, Section } from '../commons'
 import { Button, Form, FormItem, Input, Label, TextArea } from './elements'
 
+// TODO:
+// 1. Nothing is being validated on input or submission.
+// 2. UX for validation.
+// 3. Display message for successful sent message.
 class Contact extends Component {
   state = {
     company: '',
@@ -14,11 +19,22 @@ class Contact extends Component {
   handleOnChange = e => {
     const name = e.target.name
     const query = e.target.value
-    this.setState(state => ({ ...state, [name]: query }))
+    this.setState(state => ({
+      ...state,
+      [name]: query
+    }))
   }
-  handleOnSubmit = e => {
+  handleOnSubmit = async e => {
     e.preventDefault()
-    // TODO: Build email API.
+    await axios.post('https://codybrunner-api.now.sh/form', this.state)
+    this.setState(state => ({
+      ...state,
+      company: '',
+      email: '',
+      message: '',
+      name: '',
+      phone: ''
+    }))
   }
   render() {
     return (
@@ -28,7 +44,7 @@ class Contact extends Component {
         </Heading>
         <Form onSubmit={this.handleOnSubmit}>
           <FormItem>
-            <Label>Name</Label>
+            <Label> Name </Label>
             <Input
               name="name"
               onChange={this.handleOnChange}
@@ -37,7 +53,7 @@ class Contact extends Component {
             />
           </FormItem>
           <FormItem>
-            <Label>Company</Label>
+            <Label> Company </Label>
             <Input
               name="company"
               onChange={this.handleOnChange}
@@ -46,7 +62,7 @@ class Contact extends Component {
             />
           </FormItem>
           <FormItem>
-            <Label>Email</Label>
+            <Label> Email </Label>
             <Input
               name="email"
               onChange={this.handleOnChange}
@@ -55,7 +71,7 @@ class Contact extends Component {
             />
           </FormItem>
           <FormItem>
-            <Label>Phone</Label>
+            <Label> Phone </Label>
             <Input
               name="phone"
               onChange={this.handleOnChange}
@@ -64,7 +80,7 @@ class Contact extends Component {
             />
           </FormItem>
           <FormItem full>
-            <Label>Message</Label>
+            <Label> Message </Label>
             <TextArea
               name="message"
               onChange={this.handleOnChange}
@@ -72,7 +88,9 @@ class Contact extends Component {
             />
           </FormItem>
           <FormItem full>
-            <Button>Submit</Button>
+            <Button onClick={this.handleOnSubmit} type="submit">
+              Submit
+            </Button>
           </FormItem>
         </Form>
       </Section>
