@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { bool } from 'prop-types'
 
 const Section = styled.section`
   background-color: ${({ alt, theme }) =>
@@ -10,5 +11,9 @@ const Section = styled.section`
     padding: 5.438rem 1rem;
   }
 `
+
+Section.propTypes = {
+  alt: bool
+}
 
 export default Section

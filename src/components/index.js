@@ -6,6 +6,7 @@ import Footer from './Footer'
 import Landing from './Landing'
 import Menu from './Menu'
 import Projects from './Projects'
+import Seo from './SEO'
 import Skills from './Skills'
 
 export * from './commons'
@@ -18,5 +19,6 @@ export {
   Landing,
   Menu,
   Projects,
+  Seo,
   Skills
 }

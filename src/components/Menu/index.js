@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
-import { arrayOf, number, string } from 'prop-types'
+import { arrayOf, number, shape, string } from 'prop-types'
 
 import { Icon, Link } from '../commons'
 import { Nav, NavIcon, NavItem, NavList } from './elements'
 
 class Menu extends Component {
   static propTypes = {
-    links: arrayOf({
-      id: number,
-      href: string,
-      text: string
-    }).isRequired
+    links: arrayOf(
+      shape({
+        id: number,
+        href: string,
+        text: string
+      })
+    ).isRequired
   }
   state = {
     isOpen: false
@@ -29,7 +31,7 @@ class Menu extends Component {
       : this.setState(state => ({ ...state, isOpen: true }))
   renderLinks = () =>
     this.props.links.map(link => {
-      if (link.id === 3) {
+      if (link.id === 3 || link.id === 8) {
         return (
           <NavItem key={link.id}>
             <Link ext href={link.href} label={link.text} text={link.text} />

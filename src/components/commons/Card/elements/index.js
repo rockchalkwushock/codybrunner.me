@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { bool } from 'prop-types'
 
 const CardContainer = styled.div`
   border: 1px solid
@@ -7,6 +8,10 @@ const CardContainer = styled.div`
   margin: 0.75rem auto;
   max-width: 900px;
 `
+
+CardContainer.propTypes = {
+  alt: bool
+}
 
 const CardTitle = styled.h1`
   color: ${({ alt, theme }) =>
@@ -20,6 +25,10 @@ const CardTitle = styled.h1`
   }
 `
 
+CardTitle.propTypes = {
+  alt: bool
+}
+
 const CardDate = styled.h5`
   color: ${({ alt, theme }) =>
     alt ? theme.colors.secondary : theme.colors.alt};
@@ -28,6 +37,10 @@ const CardDate = styled.h5`
   text-align: center;
 `
 
+CardDate.propTypes = {
+  alt: bool
+}
+
 const CardInfo = styled.p`
   color: ${({ alt, theme }) =>
     alt ? theme.colors.secondary : theme.colors.alt};
@@ -35,6 +48,10 @@ const CardInfo = styled.p`
   padding-top: 0.5rem;
   text-align: center;
 `
+
+CardInfo.propTypes = {
+  alt: bool
+}
 
 const CardLinks = styled.div`
   display: flex;

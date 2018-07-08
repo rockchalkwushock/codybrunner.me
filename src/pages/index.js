@@ -9,6 +9,7 @@ import {
   Landing,
   Main,
   Projects,
+  Seo,
   Skills
 } from '../components'
 
@@ -23,6 +24,7 @@ const IndexPage = ({ data }) => {
   } = data.site.siteMetadata
   return (
     <Main>
+      <Seo site={data.site.siteMetadata} />
       <Landing icons={contacts} />
       <About about={about} image={data.aboutPic} />
       <Experience jobs={experience} />
@@ -44,11 +46,13 @@ export const query = graphql`
     site {
       siteMetadata {
         about
+        author
         contacts {
           className
           href
           label
         }
+        description
         education {
           id
           location
@@ -62,6 +66,8 @@ export const query = graphql`
           dates
           desc
         }
+        keywords
+        lang
         projects {
           desc
           href
@@ -69,10 +75,13 @@ export const query = graphql`
           name
           src
         }
+        siteUrl
         skills {
           id
           text
         }
+        title
+        twitter
       }
     }
   }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { bool } from 'prop-types'
 
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -30,6 +31,10 @@ const NavList = styled.ul`
     flex-direction: row;
   }
 `
+
+NavList.propTypes = {
+  show: bool
+}
 
 const NavIcon = styled.button`
   background-color: transparent;

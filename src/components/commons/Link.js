@@ -17,6 +17,10 @@ export const ExternalLink = styled.a`
   }
 `
 
+ExternalLink.propTypes = {
+  alt: bool
+}
+
 export const InternalLink = styled(UnstyledLink)`
   background-image: ${({ theme }) => theme.reset};
   color: ${({ theme }) => theme.colors.alt};
@@ -40,6 +44,7 @@ const SiteLink = ({ alt, children, ext, href, label, text }) =>
   )
 
 SiteLink.propTypes = {
+  alt: bool,
   ext: bool,
   href: string.isRequired,
   label: string,

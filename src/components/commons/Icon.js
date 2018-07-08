@@ -1,5 +1,7 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react'
 import styled from 'styled-components'
+import { array, bool, string } from 'prop-types'
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
@@ -41,8 +43,18 @@ export const StyledIcon = styled(UnstyledIcon)`
   }
 `
 
+StyledIcon.propTypes = {
+  nav: bool
+}
+
 const SiteIcon = ({ nav, icon, size }) => (
   <StyledIcon nav={nav} icon={icon} size={size} />
 )
+
+SiteIcon.propTypes = {
+  nav: bool,
+  icon: array,
+  size: string
+}
 
 export default SiteIcon

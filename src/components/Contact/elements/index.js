@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { bool } from 'prop-types'
 
 const Form = styled.form`
   display: grid;
@@ -16,6 +17,10 @@ const FormItem = styled.div`
     grid-column: ${({ full }) => (full ? '1 / 3' : 'initial')};
   }
 `
+
+FormItem.propTypes = {
+  full: bool
+}
 
 const Label = styled.label`
   color: ${({ theme }) => theme.colors.secondary};

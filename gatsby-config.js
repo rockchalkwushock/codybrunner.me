@@ -12,7 +12,6 @@ const year = new Date().getFullYear()
 
 module.exports = {
   plugins: [
-    // 'gatsby-plugin-canonical-urls',
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -30,8 +29,8 @@ module.exports = {
         start_url: '/',
         lang: 'en-US',
         orientation: 'any',
-        background_color: '#7a9eb1',
-        theme_color: '#ffe1b6',
+        background_color: '#415865',
+        theme_color: '#e3eff3',
         display: 'standalone',
         icon: 'src/assets/favicon.png'
       }
@@ -41,7 +40,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: '#ffe1b6',
+        color: '#e3eff3',
         showSpinner: false
       }
     },
@@ -57,6 +56,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-twitter',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -74,20 +74,8 @@ module.exports = {
   ],
   siteMetadata: {
     about:
-      'Hello my name is Cody and I am a full stack developer living in Portland, Oregon. I am currently a student of the PDX Code Guild Full Stack Python based web development boot camp and will be completing the program in September. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node.',
+      "Hello my name is Cody and I am a full stack developer and Navy veteran living in Portland, Oregon. I am currently a student of the PDX Code Guild's Full Stack Python-based web development boot camp and will be completing the program in September. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node. When not writing code I can be found exploring my new stomping grounds and cheering on my Jayhawks.",
     author: 'Cody Brunner',
-    business: [
-      {
-        className: 'fas, envelope',
-        href: 'mailto:rockchalkwushock@icloud.com',
-        label: 'Email'
-      },
-      {
-        className: 'fas, file-pdf',
-        href: 'https://www.dropbox.com/s/ydagcln6p0sk513/Resume.docx?dl=1',
-        label: 'Resume'
-      }
-    ],
     contacts: [
       {
         className: 'fab, github',
@@ -215,6 +203,11 @@ module.exports = {
       },
       {
         id: 8,
+        href: 'https://www.dropbox.com/s/ydagcln6p0sk513/Resume.docx?dl=1',
+        text: 'Resume'
+      },
+      {
+        id: 9,
         href: '#contact',
         text: 'Contact'
       }
@@ -292,6 +285,7 @@ module.exports = {
       { id: 'ci', text: 'CI/CD' }
     ],
     siteUrl: 'https://codybrunner.me',
-    title: 'Cody Brunner - Full-Stack JavaScript Developer'
+    title: 'Cody Brunner - Full-Stack JavaScript Developer',
+    twitter: '@RockChalkDev'
   }
 }

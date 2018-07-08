@@ -23,7 +23,7 @@ const Landing = ({ icons }) => (
     <ul>
       {icons.map(icon => (
         <Link ext href={icon.href} key={icon.id} label={icon.lable}>
-          <Icon icon={icon.className.split(', ')} size="2x" />
+          <Icon icon={icon.className.split(', ')} key={icon.id} size="2x" />
         </Link>
       ))}
     </ul>
