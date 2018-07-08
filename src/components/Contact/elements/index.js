@@ -5,6 +5,8 @@ const Form = styled.form`
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 56.25rem;
 
   @media (min-width: ${({ theme }) => theme.screen.large}) {
     grid-template-columns: repeat(2, 1fr);
