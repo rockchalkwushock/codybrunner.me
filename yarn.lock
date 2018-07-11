@@ -4864,6 +4864,12 @@ gatsby-link@^2.0.0-beta.4:
     react-lifecycles-compat "^3.0.2"
     ric "^1.3.0"
 
+gatsby-plugin-canonical-urls@^2.0.0-beta.2:
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.0.0-beta.2.tgz#6dc0d8078180e4d188202e2bd5a114e0dc2e23a9"
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.51"
+
 gatsby-plugin-catch-links@^2.0.2-beta.2:
   version "2.0.2-beta.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.0.2-beta.2.tgz#f9e9f1ccc1e9138aabf1318e5f00286b02c3088f"

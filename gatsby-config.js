@@ -4,7 +4,6 @@ const { resolve } = require('path')
 const { dependencies } = require('./package.json')
 
 // Get Major.Minor
-// NOTE: Setup 0-3 for Exact version, switch to 1-3 when add ^x.x.x back.
 const gatsbyVersion = dependencies.gatsby.substr(1, 3)
 const styledVersion = dependencies['styled-components'].substr(1, 3)
 // Get current year.
@@ -12,6 +11,12 @@ const year = new Date().getFullYear()
 
 module.exports = {
   plugins: [
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: process.env.SITE_DOMAIN
+      }
+    },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -73,7 +78,7 @@ module.exports = {
   ],
   siteMetadata: {
     about:
-      "Hello my name is Cody and I am a full stack developer and Navy veteran living in Portland, Oregon. I am currently a student of the PDX Code Guild's Full Stack Python-based web development boot camp and will be completing the program in September. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node. When not writing code I can be found exploring my new stomping grounds and cheering on my Jayhawks.",
+      "Hello my name is Cody, and I am a full stack developer and Navy veteran living in Portland, Oregon. I am currently a student of the PDX Code Guild's Full Stack Python-based web development boot camp, and will be completing the program in September. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node, can work with both SQL and noSQL databases, and have worked with GraphQL. Ideally I am looking for a full stack role that will give me a balance of working with both the front and backend code bases and I’d love to work more with GraphQL. When not writing code I can be found exploring my new stomping grounds in Oregon and cheering on my Jayhawks.",
     author: 'Cody Brunner',
     contacts: [
       {
