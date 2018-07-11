@@ -60,7 +60,7 @@ class Contact extends Component {
       // 3. Make Request
       const { data } = await axios.post(
         'https://codybrunner-api.now.sh/form',
-        this.state
+        this.state.values
       )
       // 4. Error State
       if (!data.message) {
