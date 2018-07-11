@@ -6,7 +6,7 @@ const Form = styled.form`
   grid-gap: 20px;
   grid-template-columns: 1fr;
   margin: 0 auto;
-  max-width: 56.25rem;
+  max-width: ${({ theme }) => theme.maxWidth};
 
   @media (min-width: ${({ theme }) => theme.screen.large}) {
     grid-template-columns: repeat(2, 1fr);
@@ -49,16 +49,18 @@ const Button = styled.button`
 
   :focus {
     outline: none;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
   }
 
   :hover {
-    outline: none;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
+    background-color: ${({ theme }) => theme.colors.alt};
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
   }
 `
 
@@ -70,4 +72,15 @@ const TextArea = styled.textarea`
   width: 100%;
 `
 
-export { Button, Form, FormItem, Input, Label, TextArea }
+const Message = styled.h2`
+  color: ${({ theme }) => theme.colors.secondary};
+  text-align: center;
+`
+
+const Oops = styled.h5`
+  color: yellow;
+  margin: unset;
+  margin-bottom: 0.5rem;
+`
+
+export { Button, Form, FormItem, Input, Label, Message, Oops, TextArea }

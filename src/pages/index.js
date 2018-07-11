@@ -1,87 +1,87 @@
-/* eslint-disable no-undef */
 import React from 'react'
+import { graphql } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 
+// Site Theme
+import theme from '../utils/theme'
+// Global Styling
+import '../utils/global'
+// Components
 import {
   About,
   Contact,
   Education,
   Experience,
+  Footer,
   Landing,
   Main,
+  Menu,
   Projects,
   Seo,
   Skills
 } from '../components'
 
 const IndexPage = ({ data }) => {
-  const {
-    about,
-    contacts,
-    education,
-    experience,
-    projects,
-    skills
-  } = data.site.siteMetadata
+  const { buildTime, siteMetadata } = data.site
+  const { copyright, links, menu, siteUrl } = siteMetadata
   return (
-    <Main>
-      <Seo site={data.site.siteMetadata} />
-      <Landing icons={contacts} />
-      <About about={about} image={data.aboutPic} />
-      <Experience jobs={experience} />
-      <Education education={education} />
-      <Projects projects={projects} />
-      <Skills skills={skills} />
-      <Contact />
-    </Main>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Seo />
+        <Menu links={menu} />
+        <Main>
+          <Landing />
+          <About />
+          <Experience />
+          <Education />
+          <Projects />
+          <Skills />
+          <Contact />
+        </Main>
+        <Footer
+          buildTime={buildTime}
+          copyright={copyright}
+          links={links}
+          siteUrl={siteUrl}
+        />
+      </div>
+    </ThemeProvider>
   )
 }
 
 export const query = graphql`
   query HomePageQuery {
-    aboutPic: imageSharp(id: { regex: "/profile_pic/" }) {
-      sizes(maxHeight: 200, maxWidth: 200, quality: 90) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
     site {
+      buildTime(formatString: "DD MMM YYYY")
       siteMetadata {
-        about
-        author
-        contacts {
-          className
+        copyright
+        links {
+          creativeCommons {
+            href
+            text
+          }
+          gatsby {
+            href
+            text
+          }
+          now {
+            href
+            text
+          }
+          src {
+            href
+          }
+          styled {
+            href
+            text
+          }
+        }
+        menu {
+          id
           href
-          label
-        }
-        description
-        education {
-          id
-          location
-          name
-          dates
-        }
-        experience {
-          id
-          company
-          role
-          dates
-          desc
-        }
-        keywords
-        lang
-        projects {
-          desc
-          href
-          id
-          name
-          src
-        }
-        siteUrl
-        skills {
-          id
           text
         }
-        title
-        twitter
+        siteUrl
       }
     }
   }

@@ -6,7 +6,7 @@ const SkillsList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
   margin: 0.75rem auto;
-  max-width: 56.25rem;
+  max-width: ${({ theme }) => theme.maxWidth};
   text-align: center;
 `
 

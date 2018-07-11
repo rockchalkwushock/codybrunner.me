@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Component } from 'react'
 import { arrayOf, number, shape, string } from 'prop-types'
 
@@ -17,7 +18,7 @@ class Menu extends Component {
   state = {
     isOpen: false
   }
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.location !== this.props.location) {
       // Handle different route navigation & closing menu.
       this.setState(state => ({ ...state, isOpen: false }))

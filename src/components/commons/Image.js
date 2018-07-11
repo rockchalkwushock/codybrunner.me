@@ -6,8 +6,8 @@ const UnstyledImage = props => <Img {...props} />
 
 const StyledImage = styled(UnstyledImage)`
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 225px;
+  width: 225px;
 
   img {
     margin: unset;
@@ -19,6 +19,6 @@ const StyledImage = styled(UnstyledImage)`
   }
 `
 
-const Image = props => <StyledImage {...props} />
+const Image = ({ fluid }) => <StyledImage fluid={fluid} />
 
 export default Image

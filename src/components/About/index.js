@@ -1,8 +1,8 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
 import { Image, Section, Text } from '../commons'
 
-// ! Maybe go with CSS Grid here.
 const AboutSection = Section.extend`
   align-items: center;
   display: flex;
@@ -16,11 +16,31 @@ const AboutSection = Section.extend`
   }
 `
 
-const About = ({ about, image }) => (
-  <AboutSection alt id="about">
-    <Image {...image} />
-    <Text text={about} />
-  </AboutSection>
+const About = () => (
+  <StaticQuery
+    query={graphql`
+      query AboutQuery {
+        file(relativePath: { eq: "profile_pic.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 200, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+        site {
+          siteMetadata {
+            about
+          }
+        }
+      }
+    `}
+    render={data => (
+      <AboutSection alt id="about">
+        <Image fluid={data.file.childImageSharp.fluid} />
+        <Text text={data.site.siteMetadata.about} />
+      </AboutSection>
+    )}
+  />
 )
 
 export default About

@@ -6,7 +6,7 @@ const CardContainer = styled.div`
     ${({ alt, theme }) => (alt ? theme.colors.secondary : theme.colors.alt)};
   padding: 1rem;
   margin: 0.75rem auto;
-  max-width: 56.25rem;
+  max-width: ${({ theme }) => theme.maxWidth};
 `
 
 CardContainer.propTypes = {

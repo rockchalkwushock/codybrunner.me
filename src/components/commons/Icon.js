@@ -2,28 +2,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import { array, bool, string } from 'prop-types'
-import fontawesome from '@fortawesome/fontawesome'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
-import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
-import faMediumM from '@fortawesome/fontawesome-free-brands/faMediumM'
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
-import faYoutube from '@fortawesome/fontawesome-free-brands/faYoutube'
-import faBars from '@fortawesome/fontawesome-free-solid/faBars'
-import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faMediumM,
+  faTwitter,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
+import { faBars, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 // By setting things up like this react-fontawesome knows of the icons
 // I am also only using these icons from the libraries so less overhead.
-fontawesome.library.add(
+library.add(
   faGithub,
   faInstagram,
   faLinkedin,
   faMediumM,
   faTwitter,
   faYoutube,
-  faBars,
-  faEnvelope
+  faBars
 )
 
 const UnstyledIcon = props => <FontAwesomeIcon {...props} />
@@ -57,4 +57,19 @@ SiteIcon.propTypes = {
   size: string
 }
 
+const StyledLoader = styled.div`
+  align-items: center;
+  color: ${({ theme }) => theme.colors.secondary};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+const Loading = () => (
+  <StyledLoader>
+    <FontAwesomeIcon icon={faSpinner} size="3x" spin />
+  </StyledLoader>
+)
+
+export { Loading }
 export default SiteIcon

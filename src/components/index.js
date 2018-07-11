@@ -6,7 +6,7 @@ import Footer from './Footer'
 import Landing from './Landing'
 import Menu from './Menu'
 import Projects from './Projects'
-import Seo from './SEO'
+import Seo from './Seo'
 import Skills from './Skills'
 
 export * from './commons'

@@ -58,7 +58,7 @@ jobs:
               now -t ${NOW_TOKEN} alias $url codybrunner.me
               echo "${url} aliased to https://codybrunner.me"
             elif [ "${CIRCLE_BRANCH}" == "development" ]; then
-              url=$(now public -t ${NOW_TOKEN} -n=my-site --static 2>/dev/null)
+              url=$(now public -t ${NOW_TOKEN} -n=my-site-beta --static 2>/dev/null)
               echo "Site deployed to ${url}."
               now -t ${NOW_TOKEN} alias $url codybrunner-beta
               echo "${url} aliased to https://codybrunner-beta.now.sh"
