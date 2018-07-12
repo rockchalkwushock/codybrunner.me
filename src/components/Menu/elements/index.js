@@ -6,8 +6,11 @@ const Nav = styled.nav`
   box-shadow: ${({ theme }) => theme.nav.shadow};
   height: 4.236rem;
   left: 0;
+  opacity: ${({ hide }) => (hide ? 0 : 1)};
   position: fixed;
   top: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+  visibility: ${({ hide }) => (hide ? 'hidden' : 'visible')};
   width: 100%;
   z-index: 1;
 
@@ -15,6 +18,10 @@ const Nav = styled.nav`
     height: 5.438rem;
   }
 `
+
+Nav.propTypes = {
+  hide: bool
+}
 
 const NavList = styled.ul`
   align-items: center;

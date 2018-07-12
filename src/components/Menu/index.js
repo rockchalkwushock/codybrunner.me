@@ -16,7 +16,12 @@ class Menu extends Component {
     ).isRequired
   }
   state = {
-    isOpen: false
+    hidden: false,
+    isOpen: false,
+    position: 0
+  }
+  componentWillMount() {
+    window.addEventListener('scroll', this.handleOnScroll)
   }
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.location !== this.props.location) {
@@ -26,10 +31,23 @@ class Menu extends Component {
     // Handles traveling to same route & closing menu.
     this.setState(state => ({ ...state, isOpen: false }))
   }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleOnScroll)
+  }
   handleOnClick = () =>
     this.state.isOpen
       ? this.setState(state => ({ ...state, isOpen: false }))
       : this.setState(state => ({ ...state, isOpen: true }))
+  handleOnScroll = () => {
+    const currentY = window.scrollY
+
+    if (currentY > this.state.position) {
+      this.setState(state => ({ ...state, hidden: true }))
+    } else {
+      this.setState(state => ({ ...state, hidden: false }))
+    }
+    this.setState(state => ({ ...state, position: currentY }))
+  }
   renderLinks = () =>
     this.props.links.map(link => {
       if (link.id === 3 || link.id === 8) {
@@ -47,7 +65,7 @@ class Menu extends Component {
     })
   render() {
     return (
-      <Nav>
+      <Nav hide={this.state.hidden}>
         <NavIcon onClick={this.handleOnClick}>
           <Icon nav icon="bars" size="2x" />
         </NavIcon>
