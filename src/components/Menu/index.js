@@ -20,7 +20,7 @@ class Menu extends Component {
     isOpen: false,
     position: 0
   }
-  componentWillMount() {
+  componentDidMount() {
     window.addEventListener('scroll', this.handleOnScroll)
   }
   UNSAFE_componentWillReceiveProps(nextProps) {
