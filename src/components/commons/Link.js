@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { bool, string } from 'prop-types'
+import { bool, number, string } from 'prop-types'
 
 const UnstyledLink = props => <Link {...props} />
 
 export const ExternalLink = styled.a`
   background-image: ${({ theme }) => theme.reset};
-  color: ${({ alt, theme }) =>
-    alt ? theme.colors.secondary : theme.colors.alt};
+  color: ${({ altClr, theme }) =>
+    altClr ? theme.colors.secondary : theme.colors.alt};
   text-decoration: none;
   text-shadow: ${({ theme }) => theme.reset};
 
@@ -18,7 +18,7 @@ export const ExternalLink = styled.a`
 `
 
 ExternalLink.propTypes = {
-  alt: bool
+  altClr: bool
 }
 
 export const InternalLink = styled(UnstyledLink)`
@@ -32,21 +32,29 @@ export const InternalLink = styled(UnstyledLink)`
   }
 `
 
-const SiteLink = ({ alt, children, ext, href, label, text }) =>
+const SiteLink = ({ alt, altClr, children, ext, href, key, label, text }) =>
   ext ? (
-    <ExternalLink alt={alt} href={href} aria-label={label}>
+    <ExternalLink
+      alt={alt}
+      altClr={altClr}
+      aria-label={label}
+      href={href}
+      key={key}
+    >
       {children || text}
     </ExternalLink>
   ) : (
-    <InternalLink to={href} aria-label={label}>
+    <InternalLink altClr={altClr} aria-label={label} key={key} to={href}>
       {children || text}
     </InternalLink>
   )
 
 SiteLink.propTypes = {
-  alt: bool,
+  alt: string,
+  altClr: bool,
   ext: bool,
   href: string.isRequired,
+  key: number,
   label: string,
   text: string
 }

@@ -67,7 +67,7 @@ class Menu extends Component {
     return (
       <Nav hide={this.state.hidden}>
         <NavIcon onClick={this.handleOnClick}>
-          <Icon nav icon="bars" size="2x" />
+          <Icon nav="true" icon="bars" size="2x" />
         </NavIcon>
         <NavList show={this.state.isOpen}> {this.renderLinks()} </NavList>{' '}
       </Nav>

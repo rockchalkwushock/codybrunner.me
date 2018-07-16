@@ -22,12 +22,12 @@ export default () => (
     `}
     render={data => (
       <Section id="experience">
-        <Heading alt size="2rem">
+        <Heading alt="true" size="2rem">
           Experience
         </Heading>
         {data.site.siteMetadata.experience.map(job => (
           <Card
-            alt
+            alt="true"
             date={job.dates}
             info={job.desc}
             key={job.id}

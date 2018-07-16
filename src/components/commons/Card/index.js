@@ -16,10 +16,10 @@ const Card = ({ alt, date, href, info, src, title }) => (
     <CardInfo alt={alt}>{info}</CardInfo>
     {href && src ? (
       <CardLinks>
-        <Link alt ext href={src}>
+        <Link altClr ext href={src}>
           Source
         </Link>
-        <Link alt ext href={href}>
+        <Link altClr ext href={href}>
           Live
         </Link>
       </CardLinks>

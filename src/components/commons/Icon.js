@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react'
 import styled from 'styled-components'
-import { array, bool, string } from 'prop-types'
+import { any, string } from 'prop-types'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -30,7 +30,7 @@ const UnstyledIcon = props => <FontAwesomeIcon {...props} />
 
 export const StyledIcon = styled(UnstyledIcon)`
   color: ${({ nav, theme }) =>
-    nav ? theme.colors.alt : theme.colors.secondary};
+    nav === 'true' ? theme.colors.alt : theme.colors.secondary};
   font-size: 1.75rem;
   margin: 0 0.5rem;
 
@@ -44,7 +44,7 @@ export const StyledIcon = styled(UnstyledIcon)`
 `
 
 StyledIcon.propTypes = {
-  nav: bool
+  nav: string
 }
 
 const SiteIcon = ({ nav, icon, size }) => (
@@ -52,8 +52,8 @@ const SiteIcon = ({ nav, icon, size }) => (
 )
 
 SiteIcon.propTypes = {
-  nav: bool,
-  icon: array,
+  nav: string,
+  icon: any,
   size: string
 }
 

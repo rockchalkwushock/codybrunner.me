@@ -22,12 +22,12 @@ export default () => (
     `}
     render={data => (
       <Section id="projects">
-        <Heading alt size="2rem">
+        <Heading alt="true" size="2rem">
           Projects
         </Heading>
         {data.site.siteMetadata.projects.map(prj => (
           <Card
-            alt
+            alt="true"
             href={prj.href}
             info={prj.desc}
             key={prj.id}

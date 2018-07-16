@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { bool } from 'prop-types'
+import { string } from 'prop-types'
 
 const Heading = styled.h1`
   color: ${({ alt, theme }) =>
-    alt ? theme.colors.secondary : theme.colors.alt};
+    alt === 'true' ? theme.colors.secondary : theme.colors.alt};
   font-size: ${({ size }) => size};
   margin: unset;
   padding-bottom: 1rem;
@@ -15,7 +15,8 @@ Heading.defaultProps = {
 }
 
 Heading.propTypes = {
-  alt: bool
+  alt: string,
+  size: string
 }
 
 export default Heading

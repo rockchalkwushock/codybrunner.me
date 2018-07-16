@@ -20,7 +20,7 @@ export default () => (
       }
     `}
     render={data => (
-      <Section alt id="education">
+      <Section alt="true" id="education">
         <Heading size="2rem">Education</Heading>
         {data.site.siteMetadata.education.map(ed => (
           <Card

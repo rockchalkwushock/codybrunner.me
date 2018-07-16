@@ -30,16 +30,22 @@ export default () => (
     `}
     render={data => (
       <LandingSection id="landing" landing>
-        <Heading alt size="4rem">
+        <Heading alt="true" size="4rem">
           Cody Brunner
         </Heading>
-        <SubHeading alt size="2rem">
+        <SubHeading alt="true" size="2rem">
           Full Stack Web Developer in Portland, Oregon
         </SubHeading>
         <ul>
           {data.site.siteMetadata.contacts.map(icon => (
-            <Link ext href={icon.href} key={icon.id} label={icon.lable}>
-              <Icon icon={icon.className.split(', ')} key={icon.id} size="2x" />
+            <Link
+              alt={icon.label}
+              ext
+              href={icon.href}
+              key={icon.id}
+              label={icon.lable}
+            >
+              <Icon icon={icon.className.split(', ')} size="2x" />
             </Link>
           ))}
         </ul>

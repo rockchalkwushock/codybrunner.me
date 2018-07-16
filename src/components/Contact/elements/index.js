@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { bool } from 'prop-types'
+import { bool, string } from 'prop-types'
 
 const Form = styled.form`
   display: grid;
@@ -30,6 +30,11 @@ const Label = styled.label`
   padding-bottom: 0.5rem;
 `
 
+Label.propTypes = {
+  'aria-controls': string,
+  'aria-label': string
+}
+
 const Input = styled.input`
   background-color: ${({ theme }) => theme.colors.alt};
   border: 1px solid ${({ theme }) => theme.colors.secondary};
@@ -37,6 +42,11 @@ const Input = styled.input`
   padding: 0.85rem;
   width: 100%;
 `
+
+Input.propTypes = {
+  'aria-controls': string,
+  'aria-label': string
+}
 
 const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -64,6 +74,11 @@ const Button = styled.button`
   }
 `
 
+Button.propTypes = {
+  'aria-controls': string,
+  'aria-label': string
+}
+
 const TextArea = styled.textarea`
   background-color: ${({ theme }) => theme.colors.alt};
   border: 1px solid ${({ theme }) => theme.colors.secondary};
@@ -71,6 +86,11 @@ const TextArea = styled.textarea`
   padding: 0.85rem;
   width: 100%;
 `
+
+TextArea.propTypes = {
+  'aria-controls': string,
+  'aria-label': string
+}
 
 const Message = styled.h2`
   color: ${({ theme }) => theme.colors.secondary};

@@ -1,4 +1,4 @@
-/* eslint-disable no-nested-ternary */
+/* eslint-disable no-nested-ternary, jsx-a11y/aria-proptypes */
 import React, { Component } from 'react'
 import axios from 'axios'
 
@@ -116,7 +116,7 @@ class Contact extends Component {
   render() {
     return (
       <Section id="contact">
-        <Heading alt size="2rem">
+        <Heading alt="true" size="2rem">
           Contact Me
         </Heading>
         {this.state.loading ? (
@@ -126,11 +126,19 @@ class Contact extends Component {
         ) : (
           <Form onSubmit={this.handleOnSubmit}>
             <FormItem>
-              <Label> First Name </Label>
+              <Label
+                aria-label="first name"
+                aria-controls="#name"
+                htmlFor="name"
+              >
+                First Name
+              </Label>
               {this.state.errors.name ? (
                 <Oops>{this.state.errors.name}</Oops>
               ) : null}
               <Input
+                aria-label="first name input"
+                id="name"
                 name="name"
                 onChange={this.handleOnChange}
                 type="text"
@@ -138,11 +146,19 @@ class Contact extends Component {
               />
             </FormItem>
             <FormItem>
-              <Label> Company </Label>
+              <Label
+                aria-label="company"
+                aria-controls="#company"
+                htmlFor="company"
+              >
+                Company
+              </Label>
               {this.state.errors.company ? (
                 <Oops>{this.state.errors.company}</Oops>
               ) : null}
               <Input
+                aria-label="company input"
+                id="company"
                 name="company"
                 onChange={this.handleOnChange}
                 type="text"
@@ -150,11 +166,15 @@ class Contact extends Component {
               />
             </FormItem>
             <FormItem>
-              <Label> Email </Label>
+              <Label aria-label="email" aria-controls="#email" htmlFor="email">
+                Email
+              </Label>
               {this.state.errors.email ? (
                 <Oops>{this.state.errors.email}</Oops>
               ) : null}
               <Input
+                aria-label="email input"
+                id="email"
                 name="email"
                 onChange={this.handleOnChange}
                 type="email"
@@ -162,11 +182,19 @@ class Contact extends Component {
               />
             </FormItem>
             <FormItem>
-              <Label> Phone (no dashes) </Label>
+              <Label
+                aria-label="phone number"
+                aria-controls="#phone"
+                htmlFor="phone"
+              >
+                Phone (no dashes)
+              </Label>
               {this.state.errors.phone ? (
                 <Oops>{this.state.errors.phone}</Oops>
               ) : null}
               <Input
+                aria-label="phone input"
+                id="phone"
                 name="phone"
                 onChange={this.handleOnChange}
                 type="tel"
@@ -174,18 +202,30 @@ class Contact extends Component {
               />
             </FormItem>
             <FormItem full>
-              <Label> Message </Label>
+              <Label
+                aria-label="message"
+                aria-controls="#message"
+                htmlFor="message"
+              >
+                Message
+              </Label>
               {this.state.errors.message ? (
                 <Oops>{this.state.errors.message}</Oops>
               ) : null}
               <TextArea
+                aria-label="message box"
+                id="message"
                 name="message"
                 onChange={this.handleOnChange}
                 value={this.state.values.message}
               />
             </FormItem>
             <FormItem full>
-              <Button onClick={this.handleOnSubmit} type="submit">
+              <Button
+                aria-label="button for sending message"
+                onClick={this.handleOnSubmit}
+                type="submit"
+              >
                 Submit
               </Button>
             </FormItem>

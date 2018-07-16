@@ -35,7 +35,7 @@ const About = () => (
       }
     `}
     render={data => (
-      <AboutSection alt id="about">
+      <AboutSection alt="true" id="about">
         <Image fluid={data.file.childImageSharp.fluid} />
         <Text text={data.site.siteMetadata.about} />
       </AboutSection>

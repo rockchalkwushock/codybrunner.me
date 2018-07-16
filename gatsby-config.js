@@ -11,6 +11,7 @@ const year = new Date().getFullYear()
 
 module.exports = {
   plugins: [
+    'gatsby-plugin-accessibilityjs',
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
