@@ -12,4 +12,9 @@ const SkillsList = styled.ul`
 
 const SkillItem = styled.li``
 
-export { SkillItem, SkillsList }
+const Carousel = styled.div`
+  margin: 0.75rem auto;
+  max-width: ${({ theme }) => theme.maxWidth};
+`
+
+export { Carousel, SkillItem, SkillsList }

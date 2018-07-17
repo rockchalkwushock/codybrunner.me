@@ -1,6 +1,6 @@
 {
   "name": "codybrunner.me",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.me)",
   "description": "My personal website & portfolio built with Gatsby.",
@@ -41,7 +41,9 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-slick": "^0.23.1",
     "react-typography": "^0.16.13",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^3.3.3",
     "typography": "^0.16.17",
     "typography-theme-lincoln": "^0.15.11",
