@@ -247,14 +247,14 @@ module.exports = {
         name: 'High Fives Foundation Website',
         src: 'https://github.com/HighFivesFoundation/website'
       },
-      // {
-      //   desc:
-      //     'Photography Business Website for Masha Eltsova written in NextJS.',
-      //   href: 'https://mashaeltsovaphotography.com',
-      //   id: 'mashaeltsova',
-      //   name: 'Masha Eltsova Photography',
-      //   src: 'https://github.com/rockchalkwushock/mashaeltsova-photography'
-      // },
+      {
+        desc:
+          'Photography Business Website for Masha Eltsova written in NextJS.',
+        href: 'https://mashaeltsovaphotography.com',
+        id: 'mashaeltsova',
+        name: 'Masha Eltsova Photography',
+        src: 'https://github.com/rockchalkwushock/mashaeltsova-photography'
+      },
       {
         desc:
           'My personal website & web development portfolio written in GatsbyJS.',
