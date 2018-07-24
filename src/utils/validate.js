@@ -4,8 +4,9 @@ import isMobilePhone from 'validator/lib/isMobilePhone'
 import matches from 'validator/lib/matches'
 
 const REGEX = /^[0-9A-Z.!?,;'\s]+$/i
-const REQUIRED = 'Required'
-const VALID = 'Not a valid entry'
+const REQUIRED = 'Required.'
+const VALID = 'Not a valid entry.'
+const VALID_MESSAGE = 'Message must be between 10 and 280 characters.'
 
 export default values => {
   const errors = {}
@@ -23,9 +24,9 @@ export default values => {
   if (!values.message) {
     errors.message = REQUIRED
   } else if (values.message.length < 10) {
-    errors.message = VALID
-  } else if (values.message.length > 140) {
-    errors.message = VALID
+    errors.message = VALID_MESSAGE
+  } else if (values.message.length > 280) {
+    errors.message = VALID_MESSAGE
   } else if (!matches(values.message, REGEX)) {
     errors.message = VALID
   }

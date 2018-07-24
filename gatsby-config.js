@@ -241,21 +241,20 @@ module.exports = {
         src: 'https://github.com/rockchalkwushock/how-to-open-source'
       },
       {
-        desc:
-          'Assisted in the rebuild of this non-profit webpage through a hackathon.',
+        desc: 'Assisting in the ongoing rebuild of this non-profit webpage.',
         href: 'https://highfivesfoundation.org/',
         id: 'h5s',
         name: 'High Fives Foundation Website',
         src: 'https://github.com/HighFivesFoundation/website'
       },
-      {
-        desc:
-          'Photography Business Website for Masha Eltsova written in NextJS.',
-        href: 'https://mashaeltsovaphotography.com',
-        id: 'mashaeltsova',
-        name: 'Masha Eltsova Photography',
-        src: 'https://github.com/rockchalkwushock/mashaeltsova-photography'
-      },
+      // {
+      //   desc:
+      //     'Photography Business Website for Masha Eltsova written in NextJS.',
+      //   href: 'https://mashaeltsovaphotography.com',
+      //   id: 'mashaeltsova',
+      //   name: 'Masha Eltsova Photography',
+      //   src: 'https://github.com/rockchalkwushock/mashaeltsova-photography'
+      // },
       {
         desc:
           'My personal website & web development portfolio written in GatsbyJS.',
@@ -271,6 +270,20 @@ module.exports = {
         id: 'rising-sun',
         name: 'the-rising-sun',
         src: 'https://github.com/rockchalkwushock/react-weather-app'
+      },
+      {
+        desc: 'Pomodoro app built using NextJS.',
+        href: 'https://blindfold-em.now.sh/',
+        id: 'blindfold-em',
+        name: 'blindfold-em',
+        src: 'https://github.com/rockchalkwushock/blindfold-em'
+      },
+      {
+        desc: 'Chuck Norris bot for the popular chat service Telegram.',
+        href: 'https://telegram.me/ChuckNorrisJokeBot',
+        id: 'chuck-norris',
+        name: 'chuck norris telegram bot',
+        src: 'https://github.com/rockchalkwushock/telegram_chuck_norris_bot'
       }
     ],
     skills: [
