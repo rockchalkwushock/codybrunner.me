@@ -79,7 +79,7 @@ module.exports = {
   ],
   siteMetadata: {
     about:
-      "Hello my name is Cody, and I am a full stack developer and Navy veteran living in Portland, Oregon. I am currently a student of the PDX Code Guild's Full Stack Python-based web development boot camp, and will be completing the program in September. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node, can work with both SQL and noSQL databases, and have worked with GraphQL. Ideally I am looking for a full stack role that will give me a balance of working with both the front and backend code bases and I’d love to work more with GraphQL. When not writing code I can be found exploring my new stomping grounds in Oregon and cheering on my Jayhawks.",
+      'Hello my name is Cody, and I am a full stack developer and Navy veteran living in Portland, Oregon. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node, can work with both SQL and noSQL databases, and have worked with GraphQL. When not writing code I can be found exploring my new stomping grounds in Oregon and cheering on my Jayhawks.',
     author: 'Cody Brunner',
     contacts: [
       {
@@ -137,6 +137,13 @@ module.exports = {
     ],
     experience: [
       {
+        id: 'appointlet',
+        company: 'Appointlet',
+        role: 'Web Developer',
+        dates: 'September 2018 - present',
+        desc: ''
+      },
+      {
         id: 'bothofus',
         company: 'BøthofUs',
         role: 'Frontend Developer',
@@ -147,7 +154,7 @@ module.exports = {
     ],
     googleVerify: 'qNDU-jTYxpCxdkBdyG_M6GK1x6rDgtPQ-37chsjf0Uk',
     keywords:
-      'Cody Brunner, Full-Stack JavaScript Developer, Portland, Oregon, web-development, tech blog, Node.js, React.js, Apollo/GraphQL',
+      'Cody Brunner, Full-Stack Developer, Portland, Oregon, web-development, tech blog, Node.js, React.js, Apollo/GraphQL, JavaScript, Python, Django, VueJS',
     lang: 'en',
     links: {
       creativeCommons: {
@@ -218,6 +225,13 @@ module.exports = {
       }
     ],
     projects: [
+      {
+        desc: 'Fitbit dashboard written in Django, Vue, & Chart JS.',
+        href: 'http://rockchalkwushock.pythonanywhere.com/',
+        id: 'django-fit',
+        name: 'django-fit',
+        src: 'https://github.com/rockchalkwushock/django-fit'
+      },
       {
         desc: 'Personal & Technology blog written in GatsbyJS.',
         href: 'https://codybrunner.blog',
@@ -300,10 +314,11 @@ module.exports = {
       { id: 'python', text: 'Python' },
       { id: 'elixir', text: 'Elixir' },
       { id: 'bdd', text: 'BDD/TDD' },
-      { id: 'ci', text: 'CI/CD' }
+      { id: 'ci', text: 'CI/CD' },
+      { id: 'django', text: 'Django' }
     ],
     siteUrl: process.env.SITE_DOMAIN,
-    title: 'Cody Brunner - Full-Stack JavaScript Developer',
+    title: 'Cody Brunner - Full-Stack Developer',
     twitter: '@RockChalkDev'
   }
 }
