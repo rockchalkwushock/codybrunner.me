@@ -11,7 +11,9 @@
     "cm": "git cz",
     "dev_build": "SITE_DOMAIN=http://localhost:9000 gatsby build",
     "develop": "SITE_DOMAIN=http://localhost:8000 gatsby develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
@@ -47,7 +49,8 @@
     "styled-components": "^3.3.3",
     "typography": "^0.16.17",
     "typography-theme-lincoln": "^0.15.11",
-    "validator": "^10.4.0"
+    "validator": "^10.4.0",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
@@ -85,5 +88,6 @@
       "prettier --single-quote --no-semi --write",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
