@@ -255,21 +255,6 @@ module.exports = {
         src: 'https://github.com/rockchalkwushock/how-to-open-source'
       },
       {
-        desc: 'Assisting in the ongoing rebuild of this non-profit webpage.',
-        href: 'https://highfivesfoundation.org/',
-        id: 'h5s',
-        name: 'High Fives Foundation Website',
-        src: 'https://github.com/HighFivesFoundation/website'
-      },
-      {
-        desc:
-          'Photography Business Website for Masha Eltsova written in NextJS.',
-        href: 'https://mashaeltsovaphotography.com',
-        id: 'mashaeltsova',
-        name: 'Masha Eltsova Photography',
-        src: 'https://github.com/rockchalkwushock/mashaeltsova-photography'
-      },
-      {
         desc:
           'My personal website & web development portfolio written in GatsbyJS.',
         href: 'https://codybrunner.me',
