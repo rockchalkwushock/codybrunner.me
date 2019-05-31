@@ -33,6 +33,53 @@ module.exports = {
         text: `Styled with Styled-Components ${styledVersion}`
       }
     },
+    menu: [
+      {
+        id: 1,
+        href: '/',
+        text: 'Home'
+      },
+      {
+        id: 2,
+        href: '#about',
+        text: 'About'
+      },
+      {
+        id: 3,
+        href: 'https://codybrunner.blog',
+        text: 'Blog'
+      },
+      {
+        id: 4,
+        href: '#experience',
+        text: 'Experience'
+      },
+      {
+        id: 5,
+        href: '#education',
+        text: 'Education'
+      },
+      {
+        id: 6,
+        href: '#projects',
+        text: 'Projects'
+      },
+      {
+        id: 7,
+        href: '#skills',
+        text: 'Skills'
+      },
+      {
+        id: 8,
+        href: 'https://www.dropbox.com/s/ydagcln6p0sk513/Resume.docx?dl=1',
+        text: 'Resume'
+      },
+      {
+        id: 9,
+        href: '#contact',
+        text: 'Contact'
+      }
+    ],
     siteUrl: 'https://www.codybrunner.me',
   },
   plugins: [

@@ -1,3 +1,4 @@
+import Icon from './Icon'
 import Link from './Link'
 
-export { Link }
+export { Icon, Link }
