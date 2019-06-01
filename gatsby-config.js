@@ -10,6 +10,23 @@ module.exports = {
   siteMetadata: {
     about:
       'Hello my name is Cody, and I am a full stack developer and Navy veteran living in Portland, Oregon. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node, can work with both SQL and noSQL databases, and have worked with GraphQL. When not writing code I can be found exploring my new stomping grounds in Oregon and cheering on my Jayhawks.',
+    experience: [
+      {
+        id: 'appointlet',
+        company: 'Appointlet',
+        role: 'Web Developer',
+        dates: 'September 2018 - present',
+        desc: ''
+      },
+      {
+        id: 'bothofus',
+        company: 'BøthofUs',
+        role: 'Frontend Developer',
+        dates: 'March - May 2018',
+        desc:
+          "Worked as a freelance frontend developer working on the beta-release of Mate.org. The project made use of VueJS and Apollo GraphQL, requiring me to learn a new framework overnight. I successfuly implemented the project's test suite and continuous integration as well as cleaned up the build process."
+      }
+    ],
     title: 'Gatsby Default Starter',
     description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: '@gatsbyjs',

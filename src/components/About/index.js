@@ -34,7 +34,7 @@ query AboutQuery {
 }
 `
 
-const About = () => {
+export default () => {
   const { profilePic, site } = useStaticQuery(query)
   return (
     <AboutSection alt="true" id="about">
@@ -42,5 +42,3 @@ const About = () => {
       <Text text={site.siteMetadata.about} />
     </AboutSection>
 )}
-
-export default About
