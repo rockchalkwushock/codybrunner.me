@@ -10,6 +10,38 @@ module.exports = {
   siteMetadata: {
     about:
       'Hello my name is Cody, and I am a full stack developer and Navy veteran living in Portland, Oregon. I have 2 years of experience working with JavaScript technologies such as React, Redux, and Node, can work with both SQL and noSQL databases, and have worked with GraphQL. When not writing code I can be found exploring my new stomping grounds in Oregon and cheering on my Jayhawks.',
+    contacts: [
+      {
+        className: 'fab, github',
+        href: 'https://github.com/rockchalkwushock',
+        label: 'Github'
+      },
+      {
+        className: 'fab, instagram',
+        href: 'https://www.instagram.com/rockchalkwushock',
+        label: 'Instagram'
+      },
+      {
+        className: 'fab, linkedin',
+        href: 'https://www.linkedin.com/in/cody-brunner',
+        label: 'LinkedIn'
+      },
+      {
+        className: 'fab, medium-m',
+        href: 'https://medium.com/@RockChalkDev',
+        label: 'Medium'
+      },
+      {
+        className: 'fab, twitter',
+        href: 'https://twitter.com/RockChalkDev',
+        label: 'Twitter'
+      },
+      {
+        className: 'fab, youtube',
+        href: 'https://www.youtube.com/channel/UCZgBTMhX7jZTkbm7Fpv2bWw',
+        label: 'Youtube'
+      }
+    ],
     experience: [
       {
         id: 'appointlet',
