@@ -212,6 +212,23 @@ module.exports = {
         src: 'https://github.com/rockchalkwushock/telegram_chuck_norris_bot'
       }
     ],
+    skills: [
+      { id: 'html', text: 'HTML5' },
+      { id: 'css', text: 'CSS3' },
+      { id: 'es6', text: 'ES6 JavaScript' },
+      { id: 'git', text: 'Git' },
+      { id: 'node', text: 'Node' },
+      { id: 'mongo', text: 'MongoDB' },
+      { id: 'psql', text: 'PostgreSQL' },
+      { id: 'exjs', text: 'ExpressJS' },
+      { id: 'react', text: 'ReactJS + Redux' },
+      { id: 'vue', text: 'VueJS' },
+      { id: 'python', text: 'Python' },
+      { id: 'elixir', text: 'Elixir' },
+      { id: 'bdd', text: 'BDD/TDD' },
+      { id: 'ci', text: 'CI/CD' },
+      { id: 'django', text: 'Django' }
+    ],
     siteUrl: 'https://www.codybrunner.me',
   },
   plugins: [
