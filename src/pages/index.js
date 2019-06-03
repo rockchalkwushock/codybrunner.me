@@ -5,6 +5,7 @@ import About from '../components/About'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Landing from '../components/Landing'
+import Projects from '../components/Projects'
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <About />
     <Experience />
     <Education />
+    <Projects />
   </Layout>
 )
 

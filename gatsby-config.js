@@ -151,6 +151,67 @@ module.exports = {
         text: 'Contact'
       }
     ],
+    projects: [
+      {
+        desc: 'Fitbit dashboard written in Django, Vue, & Chart JS.',
+        href: 'http://rockchalkwushock.pythonanywhere.com/',
+        id: 'django-fit',
+        name: 'django-fit',
+        src: 'https://github.com/rockchalkwushock/django-fit'
+      },
+      {
+        desc: 'Personal & Technology blog written in GatsbyJS.',
+        href: 'https://codybrunner.blog',
+        id: 'codybrunner.blog',
+        name: 'codybrunner.blog',
+        src: 'https://github.com/rockchalkwushock/codybrunner.blog'
+      },
+      {
+        desc: 'Authentication package for MicroJS framework.',
+        href: 'https://www.npmjs.com/package/microauth-vkontakte',
+        id: 'microauth-vkontakte',
+        name: 'microauth-vkontakte',
+        src: 'https://github.com/microauth/microauth-vkontakte'
+      },
+      {
+        desc:
+          'Package/Tutorial for learning how to write open source software.',
+        href: 'https://www.npmjs.com/package/how-to-open-source',
+        id: 'how-to-open-source',
+        name: 'how-to-open-source',
+        src: 'https://github.com/rockchalkwushock/how-to-open-source'
+      },
+      {
+        desc:
+          'My personal website & web development portfolio written in GatsbyJS.',
+        href: 'https://codybrunner.me',
+        id: 'codybrunner.me',
+        name: 'codybrunner.me',
+        src: 'https://github.com/rockchalkwushock/codybrunner.me'
+      },
+      {
+        desc:
+          'Simple weather app built using ReactJS, Apollo GraphQL, & APIXU API.',
+        href: 'https://the-rising-sun.now.sh/',
+        id: 'rising-sun',
+        name: 'the-rising-sun',
+        src: 'https://github.com/rockchalkwushock/react-weather-app'
+      },
+      {
+        desc: 'Pomodoro app built using NextJS.',
+        href: 'https://blindfold-em.now.sh/',
+        id: 'blindfold-em',
+        name: 'blindfold-em',
+        src: 'https://github.com/rockchalkwushock/blindfold-em'
+      },
+      {
+        desc: 'Chuck Norris bot for the popular chat service Telegram.',
+        href: 'https://telegram.me/ChuckNorrisJokeBot',
+        id: 'chuck-norris',
+        name: 'chuck norris telegram bot',
+        src: 'https://github.com/rockchalkwushock/telegram_chuck_norris_bot'
+      }
+    ],
     siteUrl: 'https://www.codybrunner.me',
   },
   plugins: [
