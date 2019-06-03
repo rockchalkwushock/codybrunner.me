@@ -42,6 +42,26 @@ module.exports = {
         label: 'Youtube'
       }
     ],
+    education: [
+      {
+        id: 'pdx',
+        location: 'PDX Code Guild',
+        name: 'Full Stack Web Development Boot Camp',
+        dates: 'June - September 2018'
+      },
+      {
+        id: 'watc',
+        location: 'Wichita Area Technical College',
+        name: 'A.A.S in Robotic Technology',
+        dates: 'August 2013 - May 2015'
+      },
+      {
+        id: 'kwu',
+        location: 'Kansas Wesleyan University',
+        name: 'B.A. Criminal Justice, B.A. Sociology',
+        dates: 'August 2008 - May 2011'
+      }
+    ],
     experience: [
       {
         id: 'appointlet',
